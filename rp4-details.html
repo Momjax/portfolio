@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP4 - Solution Cloud - Portfolio BTS SIO SLAM</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/wii.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code"></i> Portfolio
+            </a>
+            
+            <!-- Burger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="realisations-professionnelles.html">Réalisations Professionnelles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="veille-technologiquenew.html">Veille Technologique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="realisations-professionnelles.html" class="btn btn-outline-light btn-sm">
+                    <i class="fas fa-arrow-left me-2"></i>Retour aux RP
+                </a>
+            </div>
+            <i class="fas fa-cloud fa-3x text-info mb-3"></i>
+            <h1 class="display-4 mb-4 text-info">RP4 - Solution Cloud</h1>
+            <p class="lead mb-5">Déploiement et gestion d'infrastructure cloud moderne</p>
+        </div>
+    </section>
+
+    <!-- Détails du Projet -->
+    <section id="details" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Description générale -->
+                <div class="col-lg-8">
+                    <div class="card bg-dark border-secondary h-100">
+                        <div class="card-header">
+                            <h4 class="text-info mb-0">
+                                <i class="fas fa-info-circle me-2"></i>Description du Projet
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="text-info">Contexte</h5>
+                            <p class="text-light">
+                                Cette réalisation professionnelle portait sur la migration et le déploiement d'applications 
+                                vers le cloud. Le projet incluait la conteneurisation des applications, l'automatisation 
+                                du déploiement et la mise en place d'une infrastructure évolutive et sécurisée.
+                            </p>
+                            
+                            <h5 class="text-info mt-4">Objectifs</h5>
+                            <ul class="text-light">
+                                <li>Migrer des applications legacy vers le cloud</li>
+                                <li>Mettre en place une infrastructure as code</li>
+                                <li>Automatiser les processus de déploiement</li>
+                                <li>Assurer la scalabilité et la haute disponibilité</li>
+                                <li>Optimiser les coûts d'infrastructure</li>
+                            </ul>
+
+                            <h5 class="text-info mt-4">Services Déployés</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="feature-item">
+                                        <i class="fas fa-server text-info me-2"></i>
+                                        <strong>Serveurs Web</strong> - Applications conteneurisées
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item">
+                                        <i class="fas fa-database text-info me-2"></i>
+                                        <strong>Bases de Données</strong> - Services managés RDS
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item">
+                                        <i class="fas fa-balance-scale text-info me-2"></i>
+                                        <strong>Load Balancer</strong> - Répartition de charge
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item">
+                                        <i class="fas fa-chart-line text-info me-2"></i>
+                                        <strong>Monitoring</strong> - Surveillance et alertes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations techniques -->
+                <div class="col-lg-4">
+                    <div class="card bg-dark border-secondary h-100">
+                        <div class="card-header">
+                            <h4 class="text-info mb-0">
+                                <i class="fas fa-cog me-2"></i>Informations Techniques
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-light">Cloud Provider</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-info text-dark me-1">AWS</span>
+                                <span class="badge bg-info text-dark me-1">EC2</span>
+                                <span class="badge bg-info text-dark">S3</span>
+                            </div>
+
+                            <h6 class="text-light">Conteneurisation</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Docker</span>
+                                <span class="badge bg-secondary me-1">Kubernetes</span>
+                                <span class="badge bg-secondary">EKS</span>
+                            </div>
+
+                            <h6 class="text-light">Infrastructure as Code</h6>
+                            <div class="mb-3">
+                                <span class="badge bg-success me-1">Terraform</span>
+                                <span class="badge bg-success me-1">Ansible</span>
+                                <span class="badge bg-success">CloudFormation</span>
+                            </div>
+
+                            <hr class="border-secondary">
+
+                            <h6 class="text-light">Durée du Projet</h6>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-calendar me-2"></i>12 semaines
+                            </p>
+
+                            <h6 class="text-light">Environnements</h6>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-layer-group me-2"></i>Dev, Test, Prod
+                            </p>
+
+                            <h6 class="text-light">Status</h6>
+                            <span class="badge bg-success">
+                                <i class="fas fa-check me-1"></i>En Production
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+
+    <!-- Démonstration -->
+    <section id="demo" class="py-5 bg-dark-secondary">
+        <div class="container">            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card bg-dark border-secondary">
+                        <div class="card-body text-center">
+                            <div class="mb-4">
+                                <p class="card-text text-muted">
+                                    Testez l'application en ligne et découvrez toutes ses fonctionnalités
+                                </p>
+                            </div>
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <a href="#" class="btn btn-outline-primary btn-lg">
+                                    <i class="fab fa-github me-2"></i>Code Source
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary btn-lg">
+                                    <i class="fas fa-file-pdf me-2"></i>Documentation
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-muted small">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Identifiants de test disponibles dans la documentation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Acquises -->
+    <section id="competences" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <i class="fas fa-graduation-cap text-warning me-3"></i>Compétences Acquises
+            </h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark border-secondary text-center h-100">
+                        <div class="card-body">
+                            <i class="fab fa-aws fa-2x text-warning mb-3"></i>
+                            <h5 class="text-warning">Cloud AWS</h5>
+                            <p class="text-muted small">
+                                Maîtrise des services Amazon Web Services
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark border-secondary text-center h-100">
+                        <div class="card-body">
+                            <i class="fab fa-docker fa-2x text-warning mb-3"></i>
+                            <h5 class="text-warning">DevOps</h5>
+                            <p class="text-muted small">
+                                Conteneurisation et orchestration
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark border-secondary text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-code fa-2x text-warning mb-3"></i>
+                            <h5 class="text-warning">Infrastructure as Code</h5>
+                            <p class="text-muted small">
+                                Automatisation avec Terraform
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark border-secondary text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line fa-2x text-warning mb-3"></i>
+                            <h5 class="text-warning">Monitoring</h5>
+                            <p class="text-muted small">
+                                Surveillance et optimisation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark-secondary">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Des Questions sur ce Projet ?</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <p class="lead mb-4">
+                            N'hésitez pas à me contacter pour plus d'informations sur cette réalisation professionnelle
+                        </p>
+                        <a href="realisations-professionnelles.html#contact" class="btn btn-info btn-lg text-dark">
+                            <i class="fas fa-envelope me-2"></i>Me Contacter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="realisations-professionnelles.html" class="text-decoration-none me-3">
+                        <i class="fas fa-arrow-left"></i> Retour aux RP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+/* Custom CSS for Tech Watch Page */
+
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --card-bg: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-blue: #007bff;
+    --accent-success: #28a745;
+    --accent-warning: #ffc107;
+    --accent-danger: #dc3545;
+    --accent-info: #17a2b8;
+    --border-color: #444444;
+    --react-color: #61dafb;
+    --vue-color: #4fc08d;
+    --angular-color: #dd0031;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-blue) !important;
+}
+
+/* Bootstrap Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Navigation */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(18, 18, 18, 0.98);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Header/Hero Section */
+.hero-section {
+    min-height: 300px;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    position: relative;
+    margin-top: 76px;
+}
+
+.hero-section h1 {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-success));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 0;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title i {
+    margin-right: 1rem;
+}
+
+/* Technology-specific colors */
+.text-react {
+    color: var(--react-color) !important;
+}
+
+.text-vue {
+    color: var(--vue-color) !important;
+}
+
+.text-angular {
+    color: var(--angular-color) !important;
+}
+
+/* Background Variants */
+.bg-dark-secondary {
+    background-color: var(--secondary-bg) !important;
+}
+
+/* Technology Cards */
+.tech-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-success));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tech-card .card-body {
+    padding: 2rem;
+}
+
+/* React Section Styling */
+#react .tech-card::before {
+    background: linear-gradient(90deg, var(--react-color), #4fa8da);
+}
+
+#react .tech-card:hover {
+    box-shadow: 0 20px 40px rgba(97, 218, 251, 0.2);
+}
+
+/* Vue Section Styling */
+#vue .tech-card::before {
+    background: linear-gradient(90deg, var(--vue-color), #42b883);
+}
+
+#vue .tech-card:hover {
+    box-shadow: 0 20px 40px rgba(79, 192, 141, 0.2);
+}
+
+/* Angular Section Styling */
+#angular .tech-card::before {
+    background: linear-gradient(90deg, var(--angular-color), #c3002f);
+}
+
+#angular .tech-card:hover {
+    box-shadow: 0 20px 40px rgba(221, 0, 49, 0.2);
+}
+
+/* AI Section Styling */
+#ai .tech-card::before {
+    background: linear-gradient(90deg, var(--accent-warning), #e0a800);
+}
+
+#ai .tech-card:hover {
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-control, .form-select {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--secondary-bg);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-select option {
+    background-color: var(--secondary-bg);
+    color: var(--text-primary);
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-bg) !important;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Technology Icons Animation */
+.section-title i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* List Styling */
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.list-unstyled i {
+    width: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 250px;
+        margin-top: 70px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-title i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tech-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 200px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .tech-card .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tech Cards Hover Effects */
+.tech-card .card-title {
+    transition: color 0.3s ease;
+}
+
+#react .tech-card:hover .card-title {
+    color: var(--react-color) !important;
+}
+
+#vue .tech-card:hover .card-title {
+    color: var(--vue-color) !important;
+}
+
+#angular .tech-card:hover .card-title {
+    color: var(--angular-color) !important;
+}
+
+#ai .tech-card:hover .card-title {
+    color: var(--accent-warning) !important;
+}

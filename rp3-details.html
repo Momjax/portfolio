@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RP1 - Jeu d'Arène - Portfolio BTS SIO SLAM</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/wii.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-code"></i> Portfolio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="realisations-professionnelles.html">Réalisations Professionnelles</a></li>
+                <li class="nav-item"><a class="nav-link" href="veille-technologiquenew.html">Veille Technologique</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+    <style>
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('/Capture\ d\'écran\ 2025-07-09\ 185036.png'); /* Remplace par ton image */
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-section .content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+
+    <div class="overlay"></div>
+
+    <div class="container content">
+        <div class="mb-3">
+            <a href="realisations-professionnelles.html" class="btn btn-outline-light btn-sm">
+                <i class="fas fa-arrow-left me-2"></i>Retour aux RP
+            </a>
+        </div>
+        <i class="fas fa-gamepad fa-3x text-success mb-3"></i>
+        <h1 class="display-4 mb-4 text-success">RP3 - Jeu d'Arène Multijoueur</h1>
+        <p class="lead mb-5">Développement d'un jeu en Java avec interface graphique et réseau</p>
+    </div>
+</section>
+
+<!-- Détails du Projet -->
+<section id="details" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Description -->
+            <div class="col-lg-8">
+                <div class="card bg-dark border-secondary h-100">
+                    <div class="card-header">
+                        <h4 class="text-success mb-0">
+                            <i class="fas fa-info-circle me-2"></i>Description du Projet
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-success">Contexte</h5>
+                        <p class="text-light">
+                            Ce projet a été réalisé dans le cadre du BTS SIO SLAM. Il s'agit d'un jeu multijoueur basé sur une architecture client-serveur en Java.
+                            L'application gère une arène graphique dans laquelle les joueurs peuvent interagir, se déplacer, et discuter via un tchat en temps réel.
+                        </p>
+
+                        <h5 class="text-success mt-4">Objectifs</h5>
+                        <ul class="text-light">
+                            <li>Développer une interface graphique interactive avec Swing</li>
+                            <li>Gérer les connexions réseau (clients et serveur)</li>
+                            <li>Synchroniser les objets du jeu : murs, personnages, boules</li>
+                            <li>Mettre en place un tchat fonctionnel</li>
+                            <li>Assurer un bon affichage côté client et serveur</li>
+                        </ul>
+
+                        <h5 class="text-success mt-4">Fonctionnalités Clés</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fas fa-users text-success me-2"></i>
+                                    <strong>Connexion multi-joueurs</strong> via réseau
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fas fa-comments text-success me-2"></i>
+                                    <strong>Tchat en direct</strong> intégré à l’arène
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fas fa-cube text-success me-2"></i>
+                                    <strong>Murs dynamiques</strong> générés aléatoirement
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fas fa-sync text-success me-2"></i>
+                                    <strong>Synchronisation</strong> client/serveur en temps réel
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infos techniques -->
+            <div class="col-lg-4">
+                <div class="card bg-dark border-secondary h-100">
+                    <div class="card-header">
+                        <h4 class="text-success mb-0">
+                            <i class="fas fa-cog me-2"></i>Informations Techniques
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-light">Langage & Bibliothèques</h6>
+                        <div class="mb-3">
+                            <span class="badge bg-success me-1">Java</span>
+                            <span class="badge bg-success me-1">Swing</span>
+                        </div>
+
+                        <h6 class="text-light">Architecture</h6>
+                        <p class="text-light mb-3">
+                            <i class="fas fa-network-wired me-2"></i>Client - Serveur
+                        </p>
+
+                        <h6 class="text-light">Durée</h6>
+                        <p class="text-light mb-3">
+                            <i class="fas fa-calendar me-2"></i>6 semaines
+                        </p>
+
+                        <h6 class="text-light">Équipe</h6>
+                        <p class="text-light mb-3">
+                            <i class="fas fa-user me-2"></i>Individuel
+                        </p>
+
+                        <h6 class="text-light">Statut</h6>
+                        <span class="badge bg-success"><i class="fas fa-check me-1"></i>Terminé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Démo & Docs -->
+<section id="demo" class="py-5 bg-dark-secondary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card bg-dark border-secondary text-center">
+                    <div class="card-body">
+                        <p class="card-text text-muted">
+                            Consultez la documentation du projet pour plus de détails
+                        </p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="https://github.com/username/repo" class="btn btn-outline-primary btn-lg">
+                                <i class="fab fa-github me-2"></i>Code Source
+                            </a>
+                            <a href="docs/Cours_Projet_Java_partie2.pdf" class="btn btn-outline-secondary btn-lg" target="_blank">
+                                <i class="fas fa-file-pdf me-2"></i>Documentation
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-muted small">
+                                <i class="fas fa-info-circle me-1"></i>
+                                Projet réalisé en environnement local avec interactions réseau.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compétences -->
+<section id="competences" class="py-5 bg-dark-secondary">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">
+            <i class="fas fa-graduation-cap text-success me-3"></i>Compétences Acquises
+        </h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-dark border-secondary text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-network-wired fa-2x text-success mb-3"></i>
+                        <h5 class="text-success">Java Réseau</h5>
+                        <p class="text-light small">Communication client/serveur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-dark border-secondary text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-window-restore fa-2x text-success mb-3"></i>
+                        <h5 class="text-success">Interface Swing</h5>
+                        <p class="text-light small">Composants graphiques, gestion d'événements</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-dark border-secondary text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-users fa-2x text-success mb-3"></i>
+                        <h5 class="text-success">Gestion Multi-joueurs</h5>
+                        <p class="text-light small">Synchronisation des actions et état partagé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Une Question sur ce Projet ?</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <p class="lead mb-4">Je suis disponible pour répondre à toutes vos interrogations</p>
+                    <a href="realisations-professionnelles.html#contact" class="btn btn-primary btn-lg text-light">
+                        <i class="fas fa-envelope me-2"></i>Me Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="realisations-professionnelles.html" class="text-decoration-none me-3">
+                    <i class="fas fa-arrow-left"></i> Retour aux RP
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

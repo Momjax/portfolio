@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SLAM</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/wii.css">
+</head>
+<body class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-code"></i> Portfolio
+            </a>
+            
+            <!-- Burger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="veille-technologiquenew.html">Veille Technologies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="realisations-professionnelles.html">Réalisations Professionnelles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Header Section -->
+    <header class="hero-section d-flex align-items-center justify-content-center" id="header">
+        <video autoplay muted loop playsinline id="background-video">
+        <source src="3141210-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="container text-center">
+            <div class="profile-section" id="profileSection">
+                <div class="profile-image mb-4">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user fa-5x"></i>
+                    </div>
+                </div>
+                <h1 class="display-4 fw-bold mb-3">Mohamed BOUKHATEM</h1>
+                <p class="lead mb-4">Développeur Full Stack en formation BTS SIO SLAM</p>
+            </div>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-lg me-3" id="reduceHeaderBtn">
+                    <i class="fas fa-eye"></i> Voir mon portfolio
+                </button>
+                <a href="files/Mohamed-Boukhatem-CV-Officiel.pdf" target="_blank" class="btn btn-outline-light">
+                    Telecharger mon CV <i class="fas fa-download ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent" style="display: none;">
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="section-title text-center mb-5">À propos de moi</h2>
+                        <div class="card bg-dark border-secondary">
+                            <div class="card-body">
+                                <p class="card-text text-center text-light">
+                                    Je suis un développeur web junior actuellement en formation en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers), 
+                                    passionné par le développement web et les technologies innovantes.
+                                    <br><a href="https://ecoleiris.fr/nice" target="_blank"><img src="/Capture_d_écran_26-2-2025_102427_mediaschool.me-removebg-preview.png" class="ecole" width="150px"></a><br>
+                                    Au cours de ma formation, j’ai acquis des compétences solides en conception et développement d’applications web, ainsi qu’une expérience concrète à travers divers projets personnels et scolaires.
+                                    De plus je voudrais également acquérir de l'expérience professionnelle en entreprise et pouvoir participer à des projets concrets.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BTS Section -->
+        <section id="bts" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">BTS SIO SLAM</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card bg-dark border-secondary">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Services Informatiques aux Organisations</h5>
+                                <h6 class="card-subtitle mb-3 text-muted">Option Solutions Logicielles et Applications Métiers</h6>
+                                <p class="card-text text-light">
+                                    Le BTS SIO option SLAM forme aux métiers du développement d'applications. 
+                                    Cette formation couvre la conception, le développement, la maintenance et l'évolution 
+                                    d'applications informatiques.
+                                </p>
+                                <ul class="list-unstyled text-light">
+                                    <li><i class="fas fa-check text-success me-2"></i>Développement d'applications web et mobiles</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Gestion de bases de données</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Conception et modélisation</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Gestion de projets informatiques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-dark-secondary">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Compétences Techniques</h2>
+
+        <div class="row g-4">
+            <!-- Carte Alternance / Formation -->
+            <div class="col-md-6">
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body text-light">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-user-graduate fa-3x text-info"></i>
+                            <h5 class="card-title mt-2 text-info">En Formation </h5>
+                        </div>
+
+                        <p><strong>- <u>Programmation en langages informatiques variés :</u></strong></p>
+
+                        <!-- Frontend -->
+                        <p class="fw-bold text-danger mt-3 mb-1">
+                            <i class="fab fa-html5 me-2"></i>Frontend :
+                        </p>
+                        <ul class="text-light">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>Bootstrap</li>
+                        </ul>
+
+                        <!-- Backend -->
+                        <p class="fw-bold text-success mt-3 mb-1">
+                            <i class="fas fa-server me-2"></i>Backend :
+                        </p>
+                        <ul class="text-light">
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                        </ul>
+
+                        <p><strong>- <u>Sécurisation des applications et gestion des accès</u></strong></p>
+
+                        <p><strong>- <u>Conception d’applications</u></strong></p>
+
+                        <p><strong>- <u>Compétences Méthodologiques</u></strong></p>
+
+                        <!-- Outils -->
+                        <p class="fw-bold mt-3 mb-1 text-info">
+                            <i class="fas fa-tools me-2"></i>Outils Utilisés :
+                        </p>
+                        <ul class="text-light">
+                            <li>Git / GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                            <li>MAMP</li>
+                            <li>Eclipse (IDE)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Entreprise avec "En cours..." géant et animé -->
+            <div class="col-md-6">
+                <div class="card bg-dark border-warning h-100 d-flex align-items-center justify-content-center text-center p-4">
+                    <div class="card-body text-light">
+                        <i class="fas fa-building fa-4x text-warning mb-4"></i>
+                        <h5 class="card-title text-warning mb-3">En entreprise</h5>
+                        <div class="spinner-border text-warning" style="height: 100px; width: 100px;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-dark-secondary">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Contact</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Sujet</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Envoyer le message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
