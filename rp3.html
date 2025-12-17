@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP3 - Jeu d'Arène | Mohamed BOUKHATEM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="realisations.html">Réalisations</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>RP3 - Jeu d'Arène</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                <div class="card-icon success" style="width: 60px; height: 60px; font-size: 1.75rem;">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h1>RP3 - <span class="text-gradient">Jeu d'Arène</span></h1>
+            </div>
+            <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+                Jeu multijoueur en Java avec architecture client-serveur
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <span class="status status-success"><i class="fas fa-check"></i> Terminé</span>
+                <span class="tag tag-warning">Java</span>
+                <span class="tag">Swing</span>
+                <span class="tag">Multithreading</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <!-- Colonne principale -->
+                <div>
+                    <!-- CONTEXTE -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-building"></i> 1. Contexte
+                        </h3>
+                        <h4>Situation</h4>
+                        <p>
+                            Ce projet a été réalisé dans le cadre du <strong>BTS SIO SLAM</strong> comme projet 
+                            de programmation Java avancée. L'objectif était de créer un jeu multijoueur 
+                            démontrant nos compétences en programmation réseau, interface graphique et 
+                            gestion de la concurrence.
+                        </p>
+                        <h4>Organisation</h4>
+                        <p>
+                            Projet individuel développé sur 6 semaines avec des points d'étape réguliers 
+                            pour valider l'avancement des différents modules.
+                        </p>
+                        <h4>Problématique</h4>
+                        <p>
+                            Comment concevoir un jeu multijoueur temps réel avec une synchronisation efficace 
+                            entre plusieurs clients et un serveur, tout en gérant les contraintes de performance 
+                            et de latence réseau ?
+                        </p>
+                    </div>
+
+                    <!-- BESOIN -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-bullseye"></i> 2. Besoin & Objectifs
+                        </h3>
+                        <h4>Objectifs fonctionnels</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Connexion simultanée de plusieurs joueurs</li>
+                            <li><i class="fas fa-check"></i> Déplacement des personnages dans une arène 2D</li>
+                            <li><i class="fas fa-check"></i> Génération aléatoire d'obstacles (murs)</li>
+                            <li><i class="fas fa-check"></i> Chat intégré pour communiquer entre joueurs</li>
+                            <li><i class="fas fa-check"></i> Synchronisation en temps réel des positions</li>
+                        </ul>
+                        <h4 style="margin-top: 1.5rem;">Contraintes techniques</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Architecture client-serveur obligatoire</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Java + Swing pour l'interface</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Gestion multi-thread côté serveur</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Fluidité d'affichage (minimum 30 FPS)</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-lightbulb"></i> 3. Solution Proposée
+                        </h3>
+                        <h4>Architecture globale</h4>
+                        <div class="code-block" style="margin-bottom: 1.5rem;">
+<pre style="color: var(--text-secondary); font-size: 0.85rem;">
+┌────────────────────────────────────────────────────────┐
+│                      SERVEUR                           │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │   Thread    │  │   Thread    │  │   Thread    │   │
+│  │  Client 1   │  │  Client 2   │  │  Client N   │   │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
+│         │                │                │           │
+│         └────────────────┼────────────────┘           │
+│                          ▼                            │
+│              ┌───────────────────┐                   │
+│              │   Game State      │                   │
+│              │  (synchronized)   │                   │
+│              └───────────────────┘                   │
+└────────────────────────────────────────────────────────┘
+                          ▲
+                          │ TCP Sockets
+        ┌─────────────────┼─────────────────┐
+        ▼                 ▼                 ▼
+   ┌─────────┐       ┌─────────┐       ┌─────────┐
+   │ Client 1│       │ Client 2│       │ Client N│
+   └─────────┘       └─────────┘       └─────────┘
+</pre>
+                        </div>
+                        
+                        <h4>Composants du jeu</h4>
+                        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--success);"><i class="fas fa-user"></i> Joueur</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Position, direction, couleur, pseudo</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--success);"><i class="fas fa-square"></i> Mur</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Position, dimensions, collision</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--success);"><i class="fas fa-circle"></i> Boule</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Projectile avec vélocité</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--success);"><i class="fas fa-comments"></i> Chat</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Messages temps réel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RÉALISATION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-code"></i> 4. Réalisation
+                        </h3>
+                        <h4>Ma contribution</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>Serveur multithreadé</strong> gérant les connexions clients</li>
+                            <li><i class="fas fa-check"></i> <strong>Protocole de communication</strong> pour les actions de jeu</li>
+                            <li><i class="fas fa-check"></i> <strong>Interface graphique Swing</strong> avec rendu de l'arène</li>
+                            <li><i class="fas fa-check"></i> <strong>Gestion des collisions</strong> (murs, joueurs)</li>
+                            <li><i class="fas fa-check"></i> <strong>Synchronisation</strong> des états entre clients</li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 1.5rem;">Extrait de code - Gestion des collisions</h4>
+                        <div class="code-block">
+<pre style="color: var(--text-secondary); font-size: 0.8rem;">
+<span style="color: var(--accent-primary);">public boolean</span> checkCollision(Player player, <span style="color: var(--accent-primary);">int</span> newX, <span style="color: var(--accent-primary);">int</span> newY) {
+    Rectangle playerBounds = <span style="color: var(--warning);">new</span> Rectangle(newX, newY, 
+                                            PLAYER_SIZE, PLAYER_SIZE);
+    
+    <span style="color: var(--accent-primary);">for</span> (Wall wall : walls) {
+        <span style="color: var(--accent-primary);">if</span> (playerBounds.intersects(wall.getBounds())) {
+            <span style="color: var(--accent-primary);">return true</span>; <span style="color: var(--text-muted);">// Collision détectée</span>
+        }
+    }
+    
+    <span style="color: var(--accent-primary);">for</span> (Player other : players) {
+        <span style="color: var(--accent-primary);">if</span> (other != player && 
+            playerBounds.intersects(other.getBounds())) {
+            <span style="color: var(--accent-primary);">return true</span>;
+        }
+    }
+    
+    <span style="color: var(--accent-primary);">return false</span>;
+}
+</pre>
+                        </div>
+                    </div>
+
+                    <!-- TESTS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-vial"></i> 5. Tests & Validation
+                        </h3>
+                        <div class="table-wrapper">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Test</th><th>Résultat attendu</th><th>Statut</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Connexion multi-clients</td><td>3+ joueurs simultanés</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Déplacement joueur</td><td>Fluidité et réactivité</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Collision murs</td><td>Blocage correct</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Synchronisation positions</td><td>Cohérence entre clients</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Chat temps réel</td><td>Messages instantanés</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Déconnexion propre</td><td>Retrait du jeu</td><td><span class="status status-success">✓</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- DIFFICULTÉS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-exclamation-circle"></i> 6. Difficultés & Solutions
+                        </h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 1 : Race conditions</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Accès concurrent aux données du jeu causant des incohérences.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Utilisation de <code>synchronized</code> et <code>ConcurrentHashMap</code> pour les structures partagées.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 2 : Latence réseau</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Décalage visible entre les mouvements locaux et distants.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Interpolation côté client et prédiction de mouvement pour fluidifier l'affichage.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 3 : Fuite mémoire</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Les threads clients non fermés proprement lors des déconnexions.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Implémentation d'un mécanisme de cleanup avec <code>try-finally</code> et fermeture explicite des sockets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMPÉTENCES -->
+                    <div class="card">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-graduation-cap"></i> 7. Compétences SLAM acquises
+                        </h3>
+                        <div class="grid grid-2" style="gap: 1rem;">
+                            <div class="competence-item"><i class="fas fa-check"></i> Concevoir une architecture logicielle</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Programmer en réseau (sockets)</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Gérer la concurrence (threads)</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Développer une interface graphique</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Optimiser les performances</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Tester et déboguer une application</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="info-box" style="position: sticky; top: 100px;">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--success);">
+                            <i class="fas fa-info-circle"></i> Informations
+                        </h4>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span class="info-label">Durée</span>
+                            <span class="info-value">6 semaines</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span class="info-label">Équipe</span>
+                            <span class="info-value">Individuel</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-school"></i>
+                            <span class="info-label">Contexte</span>
+                            <span class="info-value">Formation BTS</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="info-label">Statut</span>
+                            <span class="status status-success">Terminé</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Technologies</h4>
+                        <div class="tags">
+                            <span class="tag tag-warning">Java</span>
+                            <span class="tag">Swing</span>
+                            <span class="tag">Sockets TCP</span>
+                            <span class="tag">Multi-threading</span>
+                            <span class="tag">MVC</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Liens</h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <a href="#" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="docs/Cours_Projet_Java_partie2.pdf" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+                                <i class="fas fa-file-pdf"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="rp2.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> RP2 - NutriFit
+                </a>
+                <a href="realisations.html" class="btn btn-primary">
+                    Toutes les réalisations <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

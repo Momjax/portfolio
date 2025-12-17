@@ -1,98 +1,107 @@
-# Portfolio BTS SIO SLAM
+# Portfolio BTS SIO SLAM - Mohamed BOUKHATEM
 
-Un portfolio moderne et responsive pour étudiant en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers).
+Portfolio professionnel présentant mes réalisations dans le cadre du BTS SIO option SLAM (Solutions Logicielles et Applications Métiers).
 
-## Structure des fichiers
+## 📁 Structure du projet
 
 ```
-portfolio-bts-sio/
-├── index.html                 # Page d'accueil principale
-├── veille-technologique.html  # Page de veille technologique
+portfolio/
+├── index.html              # Page d'accueil
+├── realisations.html       # Liste des réalisations + tableau de synthèse
+├── rp1.html               # Fiche RP1 - Classcord
+├── rp2.html               # Fiche RP2 - NutriFit
+├── rp3.html               # Fiche RP3 - Jeu d'Arène
+├── veille.html            # Veille technologique
 ├── css/
-│   ├── wii.css               # Styles pour la page d'accueil
-│   └── style2.css            # Styles pour la page veille tech
+│   └── style.css          # Styles CSS personnalisés
 ├── js/
-│   ├── main.js               # JavaScript principal
-│   └── menu.js               # Gestion du menu burger
-└── README.md                 # Ce fichier
+│   └── main.js            # JavaScript
+├── files/
+│   ├── Mohamed-Boukhatem-CV-Officiel.pdf
+│   └── tableau.pdf        # Tableau de synthèse
+├── images/                # Images du portfolio
+└── docs/                  # Documentation des projets
 ```
 
-## Fonctionnalités
+## 🎯 Contenu conforme au barème E5
 
-### Page d'accueil (index.html)
-- **Header animé** : Grande section d'en-tête qui se réduit au clic
-- **Profil étudiant** : Présentation avec avatar et informations
-- **Sections détaillées** :
-  - À propos de moi
-  - Compétences techniques (Frontend, Backend, Outils)
-  - Présentation du BTS SIO SLAM
-  - Formulaire de contact
-- **Animations fluides** : Transitions CSS et JavaScript
+### ✅ Page de présentation
+- Identité complète
+- Formation BTS SIO SLAM
+- École IRIS Nice
+- Contexte (formation + recherche d'alternance)
 
-### Page de veille technologique (veille-technologique.html)
-- **Technologies présentées** :
-  - React.js
-  - Vue.js
-  - Angular
-  - Intelligence Artificielle
-- **Cartes interactives** avec effets de survol
-- **Navigation spécialisée** pour la veille tech
-- **Formulaire de contact** adapté aux technologies
+### ✅ Tableau de synthèse des réalisations
+- Nom du projet
+- Contexte (formation/stage/perso)
+- Technologies utilisées
+- Compétences SLAM associées
+- Statut
 
-### Fonctionnalités communes
-- **Menu burger responsive** pour mobile
-- **Thème sombre moderne** avec variables CSS
-- **Navigation fluide** avec scroll smooth
-- **Design Bootstrap 5** avec customisation
-- **Compatible mobile** et desktop
+### ✅ Fiches de réalisations (structure conforme)
+Chaque fiche contient :
+1. **Contexte** - Situation, organisation, problématique
+2. **Besoin & Objectifs** - Objectifs fonctionnels, contraintes
+3. **Solution proposée** - Architecture, schémas, technologies
+4. **Réalisation** - Ce que j'ai fait, extraits de code
+5. **Tests & Validation** - Scénarios testés, résultats
+6. **Difficultés & Solutions** - Problèmes rencontrés et résolutions
+7. **Compétences SLAM acquises**
 
-## Technologies utilisées
+### ✅ Veille technologique
+- Problématique claire
+- Sources variées et récentes
+- Tableau de veille avec dates
+- Conclusion personnelle
 
-- **HTML5** : Structure sémantique
-- **CSS3** : Animations et responsive design
-- **JavaScript** : Interactions et animations
-- **Bootstrap 5** : Framework CSS responsive
-- **Font Awesome** : Icônes
-- **Google Fonts** : Typographie (Poppins)
+## 🚀 Utilisation
 
-## Installation et utilisation
+1. Ouvrir `index.html` dans un navigateur
+2. Naviguer via le menu
+3. Les liens vers les PDF et GitHub fonctionnent
 
-1. **Téléchargez** tous les fichiers
-2. **Conservez** la structure des dossiers
-3. **Ouvrez** `index.html` dans votre navigateur
-4. **Naviguez** entre les pages via le menu
+## 🎨 Technologies utilisées
 
-## Personnalisation
+- HTML5 sémantique
+- CSS3 moderne (variables, flexbox, grid)
+- JavaScript vanilla (ES6+)
+- Font Awesome (icônes)
+- Google Fonts (DM Sans, Space Grotesk)
+
+## 📝 Personnalisation
 
 ### Modifier les couleurs
-Dans `css/wii.css` et `css/style2.css`, modifiez les variables CSS :
+Dans `css/style.css`, modifier les variables CSS :
 ```css
 :root {
-    --primary-bg: #121212;
-    --secondary-bg: #1e1e1e;
-    --accent-blue: #007bff;
-    /* ... autres couleurs */
+    --accent-primary: #00d4ff;
+    --accent-secondary: #7c3aed;
+    /* ... */
 }
 ```
 
-### Ajouter du contenu
-- **Textes** : Modifiez directement dans les fichiers HTML
-- **Images** : Ajoutez vos images et mettez à jour les liens
-- **CV** : Remplacez le lien `#` par votre fichier PDF
+### Ajouter une réalisation
+1. Dupliquer `rp3.html`
+2. Modifier le contenu
+3. Ajouter le lien dans `realisations.html`
+4. Mettre à jour le tableau de synthèse
 
-### Formulaires de contact
-Remplacez `YOUR_FORM_ID` par votre ID Formspree :
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
+### Formulaire de contact
+Remplacer `YOUR_FORM_ID` par votre ID Formspree dans les formulaires.
 
-## Compatibilité
+## 📱 Responsive
 
-- **Navigateurs modernes** (Chrome, Firefox, Safari, Edge)
-- **Responsive** : Mobile, tablette, desktop
-- **Performance optimisée** avec CSS et JS minifiés
-- **Accessibilité** respectée
+Le portfolio est entièrement responsive :
+- Desktop (> 992px)
+- Tablette (768px - 992px)
+- Mobile (< 768px)
 
-## Support
+## 👤 Auteur
 
-Ce portfolio est conçu pour être simple à utiliser et à personnaliser. Tous les fichiers sont commentés pour faciliter les modifications.
+**Mohamed BOUKHATEM**
+- GitHub: [@Momjax](https://github.com/Momjax)
+- Formation: BTS SIO SLAM - École IRIS Nice
+
+---
+
+© 2025 Mohamed BOUKHATEM - Tous droits réservés

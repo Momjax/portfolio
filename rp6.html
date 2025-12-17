@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP6 - ObsiLock | Mohamed BOUKHATEM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="realisations.html">Réalisations</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>RP6 - ObsiLock</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                <div class="card-icon primary" style="width: 60px; height: 60px; font-size: 1.75rem;">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h1>RP6 - <span class="text-gradient">ObsiLock</span></h1>
+            </div>
+            <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+                API REST de gestion de fichiers sécurisés - Coffre-fort numérique
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <span class="status status-success"><i class="fas fa-check"></i> Terminé</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Slim Framework</span>
+                <span class="tag">Medoo</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Docker</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <!-- Colonne principale -->
+                <div>
+                    <!-- CONTEXTE -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-building"></i> 1. Contexte
+                        </h3>
+                        <h4>Situation</h4>
+                        <p>
+                            Ce projet a été réalisé dans le cadre d'un <strong>TP sur les API REST et l'architecture MVC</strong> 
+                            en 2ème année de BTS SIO SLAM. L'objectif était de créer une API REST complète permettant 
+                            de gérer un coffre-fort numérique de fichiers avec upload, téléchargement, et gestion de quota.
+                        </p>
+                        <h4>Organisation</h4>
+                        <p>
+                            Projet individuel développé sur 4 semaines en suivant un cahier des charges précis. 
+                            Utilisation de Slim Framework (PHP) et Medoo (micro-ORM) pour une architecture MVC propre.
+                        </p>
+                        <h4>Problématique</h4>
+                        <p>
+                            Comment concevoir une API REST RESTful permettant de gérer des fichiers de manière sécurisée, 
+                            avec gestion de quotas, tout en respectant les bonnes pratiques d'architecture logicielle ?
+                        </p>
+                    </div>
+
+                    <!-- BESOIN -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-bullseye"></i> 2. Besoin & Objectifs
+                        </h3>
+                        <h4>Objectifs fonctionnels</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Upload de fichiers via API REST</li>
+                            <li><i class="fas fa-check"></i> Listage des fichiers stockés</li>
+                            <li><i class="fas fa-check"></i> Téléchargement de fichiers</li>
+                            <li><i class="fas fa-check"></i> Suppression de fichiers</li>
+                            <li><i class="fas fa-check"></i> Gestion de quota utilisateur</li>
+                            <li><i class="fas fa-check"></i> Statistiques d'utilisation</li>
+                        </ul>
+                        <h4 style="margin-top: 1.5rem;">Contraintes techniques</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Architecture MVC avec Slim Framework</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Micro-ORM Medoo pour la base de données</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> API REST avec réponses JSON</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Containerisation avec Docker</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-lightbulb"></i> 3. Solution Proposée
+                        </h3>
+                        <h4>Architecture API REST</h4>
+                        <div class="table-wrapper" style="margin-bottom: 1.5rem;">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Route</th><th>Méthode</th><th>Action</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>/files</td><td>GET</td><td>Lister tous les fichiers</td></tr>
+                                    <tr><td>/files/{id}</td><td>GET</td><td>Détails d'un fichier</td></tr>
+                                    <tr><td>/files</td><td>POST</td><td>Upload un fichier</td></tr>
+                                    <tr><td>/files/{id}</td><td>DELETE</td><td>Supprimer un fichier</td></tr>
+                                    <tr><td>/files/{id}/download</td><td>GET</td><td>Télécharger</td></tr>
+                                    <tr><td>/stats</td><td>GET</td><td>Statistiques</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h4>Architecture MVC</h4>
+                        <div class="code-block" style="margin-bottom: 1.5rem;">
+<pre style="color: var(--text-secondary); font-size: 0.85rem;">
+src/
+├── Controller/
+│   └── FileController.php  <span style="color: var(--text-muted);">// Gestion des routes</span>
+├── Model/
+│   └── FileRepository.php  <span style="color: var(--text-muted);">// Accès base de données</span>
+└── public/
+    └── index.php            <span style="color: var(--text-muted);">// Point d'entrée</span>
+</pre>
+                        </div>
+                        
+                        <h4>Stack technique</h4>
+                        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--accent-primary);"><i class="fab fa-php"></i> Slim Framework</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Micro-framework PHP pour API REST</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--accent-primary);"><i class="fas fa-database"></i> Medoo</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Micro-ORM simple et efficace</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--accent-primary);"><i class="fas fa-database"></i> MySQL</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Stockage des métadonnées</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--accent-primary);"><i class="fab fa-docker"></i> Docker</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Containerisation de l'application</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RÉALISATION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-code"></i> 4. Réalisation
+                        </h3>
+                        <h4>Ma contribution</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>Architecture MVC complète</strong> avec Slim</li>
+                            <li><i class="fas fa-check"></i> <strong>Repository Pattern</strong> avec Medoo</li>
+                            <li><i class="fas fa-check"></i> <strong>Gestion des fichiers</strong> upload/download</li>
+                            <li><i class="fas fa-check"></i> <strong>Système de quotas</strong> par utilisateur</li>
+                            <li><i class="fas fa-check"></i> <strong>Configuration Docker</strong> complète</li>
+                            <li><i class="fas fa-check"></i> <strong>Tests Postman</strong> de toutes les routes</li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 1.5rem;">Extrait de code - FileRepository</h4>
+                        <div class="code-block">
+<pre style="color: var(--text-secondary); font-size: 0.8rem;">
+<span style="color: var(--accent-primary);">class</span> FileRepository
+{
+    <span style="color: var(--accent-primary);">private</span> Medoo $db;
+
+    <span style="color: var(--accent-primary);">public function</span> __construct(Medoo $db)
+    {
+        $this->db = $db;
+    }
+
+    <span style="color: var(--accent-primary);">public function</span> listFiles(): array
+    {
+        <span style="color: var(--accent-primary);">return</span> $this->db->select(<span style="color: var(--success);">'files'</span>, <span style="color: var(--success);">'*'</span>);
+    }
+
+    <span style="color: var(--accent-primary);">public function</span> create(array $data): int
+    {
+        $this->db->insert(<span style="color: var(--success);">'files'</span>, $data);
+        <span style="color: var(--accent-primary);">return</span> (<span style="color: var(--accent-primary);">int</span>)$this->db->id();
+    }
+
+    <span style="color: var(--accent-primary);">public function</span> totalSize(): int
+    {
+        <span style="color: var(--accent-primary);">return</span> (<span style="color: var(--accent-primary);">int</span>)$this->db->sum(<span style="color: var(--success);">'files'</span>, <span style="color: var(--success);">'size'</span>) ?: <span style="color: var(--warning);">0</span>;
+    }
+}
+</pre>
+                        </div>
+                    </div>
+
+                    <!-- TESTS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-vial"></i> 5. Tests & Validation
+                        </h3>
+                        <h4>Tests avec Postman</h4>
+                        <div class="table-wrapper">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Endpoint</th><th>Test</th><th>Statut</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>GET /files</td><td>Lister les fichiers</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>POST /files</td><td>Upload fichier PDF</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>GET /files/{id}</td><td>Récupérer métadonnées</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>GET /files/{id}/download</td><td>Télécharger fichier</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>DELETE /files/{id}</td><td>Supprimer fichier</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>GET /stats</td><td>Statistiques quota</td><td><span class="status status-success">✓</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- DIFFICULTÉS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-exclamation-circle"></i> 6. Difficultés & Solutions
+                        </h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 1 : Routing Slim avec sous-dossier</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">L'API ne répondait pas correctement quand servie depuis un sous-dossier.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Utilisation de <code>setBasePath()</code> pour auto-détecter le chemin de base.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 2 : Gestion du quota</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Éviter le dépassement lors d'uploads simultanés.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Vérification du quota avant l'upload avec calcul de la taille totale.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMPÉTENCES -->
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-graduation-cap"></i> 7. Compétences SLAM acquises
+                        </h3>
+                        <div class="grid grid-2" style="gap: 1rem;">
+                            <div class="competence-item"><i class="fas fa-check"></i> Architecture MVC</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> API REST RESTful</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Utilisation d'un ORM</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Gestion de fichiers PHP</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Containerisation Docker</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Tests API (Postman)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="info-box" style="position: sticky; top: 100px;">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--accent-primary);">
+                            <i class="fas fa-info-circle"></i> Informations
+                        </h4>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span class="info-label">Durée</span>
+                            <span class="info-value">4 semaines</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span class="info-label">Équipe</span>
+                            <span class="info-value">Individuel</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-school"></i>
+                            <span class="info-label">Contexte</span>
+                            <span class="info-value">TP - 2ème année</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="info-label">Statut</span>
+                            <span class="status status-success">Terminé</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Technologies</h4>
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Slim</span>
+                            <span class="tag">Medoo</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Liens</h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <a href="https://github.com/Momjax/ObsiLock" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="rp5.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> RP5 - MediaStock
+                </a>
+                <a href="realisations.html" class="btn btn-primary">
+                    Toutes les réalisations <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

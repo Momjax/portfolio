@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP4 - E-Consulat | Mohamed BOUKHATEM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="realisations.html">Réalisations</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>RP4 - E-Consulat</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                <div class="card-icon" style="width: 60px; height: 60px; font-size: 1.75rem; background: rgba(59, 130, 246, 0.1); color: var(--info);">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h1>RP4 - <span class="text-gradient">E-Consulat</span></h1>
+            </div>
+            <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+                Plateforme web de gestion consulaire avec système de prise de rendez-vous
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <span class="status status-success"><i class="fas fa-check"></i> Terminé</span>
+                <span class="tag tag-danger">HTML5</span>
+                <span class="tag tag-primary">CSS3</span>
+                <span class="tag tag-warning">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <!-- Colonne principale -->
+                <div>
+                    <!-- CONTEXTE -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-building"></i> 1. Contexte
+                        </h3>
+                        <h4>Situation</h4>
+                        <p>
+                            Ce projet a été réalisé dans le cadre de ma <strong>2ème année de BTS SIO SLAM</strong>. 
+                            L'objectif était de créer une plateforme web complète pour faciliter les démarches administratives 
+                            des ressortissants algériens en France, en digitalisant les services consulaires.
+                        </p>
+                        <h4>Organisation</h4>
+                        <p>
+                            Projet développé en autonomie sur une période de 8 semaines, avec un cahier des charges 
+                            définissant les besoins fonctionnels et techniques.
+                        </p>
+                        <h4>Problématique</h4>
+                        <p>
+                            Comment concevoir une plateforme web sécurisée permettant aux usagers de prendre rendez-vous 
+                            en ligne pour différents services consulaires (passeports, visas, actes d'état civil, etc.) 
+                            tout en gérant efficacement les créneaux disponibles ?
+                        </p>
+                    </div>
+
+                    <!-- BESOIN -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-bullseye"></i> 2. Besoin & Objectifs
+                        </h3>
+                        <h4>Objectifs fonctionnels</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Système de prise de rendez-vous en ligne</li>
+                            <li><i class="fas fa-check"></i> Gestion des différents types de prestations consulaires</li>
+                            <li><i class="fas fa-check"></i> Affichage des documents requis pour chaque service</li>
+                            <li><i class="fas fa-check"></i> Système de créneaux horaires dynamiques</li>
+                            <li><i class="fas fa-check"></i> Formulaires de demande en ligne</li>
+                            <li><i class="fas fa-check"></i> Panneau d'administration pour gérer les rendez-vous</li>
+                        </ul>
+                        <h4 style="margin-top: 1.5rem;">Contraintes techniques</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Technologies web (HTML/CSS/JS/PHP)</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Base de données MySQL</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Interface responsive et accessible</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Validation des données côté client et serveur</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-lightbulb"></i> 3. Solution Proposée
+                        </h3>
+                        <h4>Architecture de la plateforme</h4>
+                        <p>Application web full-stack avec :</p>
+                        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Frontend :</strong> HTML5, CSS3, JavaScript (vanilla)</li>
+                            <li><strong>Backend :</strong> PHP pour la logique métier</li>
+                            <li><strong>Base de données :</strong> MySQL pour stocker les rendez-vous</li>
+                            <li><strong>Design :</strong> Interface moderne aux couleurs algériennes</li>
+                        </ul>
+                        
+                        <h4>Structure de la base de données</h4>
+                        <div class="code-block" style="margin-bottom: 1.5rem;">
+<pre style="color: var(--text-secondary); font-size: 0.85rem;">
+<span style="color: var(--accent-primary);">CREATE TABLE</span> files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255),
+    stored_name VARCHAR(255),
+    uploaded_at DATETIME
+);
+
+<span style="color: var(--accent-primary);">CREATE TABLE</span> settings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    value VARCHAR(255)
+);
+</pre>
+                        </div>
+                        
+                        <h4>Modules de la plateforme</h4>
+                        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--info);"><i class="fas fa-calendar"></i> Système RDV</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Gestion des créneaux et réservations</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--info);"><i class="fas fa-file-alt"></i> Prestations</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Liste des services consulaires</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--info);"><i class="fas fa-list-check"></i> Formulaires</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Demandes en ligne sécurisées</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+                                <strong style="color: var(--info);"><i class="fas fa-shield-alt"></i> Admin</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Panneau de gestion</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RÉALISATION -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-code"></i> 4. Réalisation
+                        </h3>
+                        <h4>Ma contribution</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>Interface utilisateur complète</strong> avec navigation intuitive</li>
+                            <li><i class="fas fa-check"></i> <strong>Système de réservation</strong> avec vérification des disponibilités</li>
+                            <li><i class="fas fa-check"></i> <strong>Base de données MySQL</strong> pour gérer les rendez-vous</li>
+                            <li><i class="fas fa-check"></i> <strong>Scripts PHP</strong> pour le traitement des formulaires</li>
+                            <li><i class="fas fa-check"></i> <strong>Design responsive</strong> adapté mobile et desktop</li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 1.5rem;">Extrait de code - Vérification des créneaux</h4>
+                        <div class="code-block">
+<pre style="color: var(--text-secondary); font-size: 0.8rem;">
+<span style="color: var(--accent-primary);">function</span> checkAvailability($date, $time) {
+    <span style="color: var(--accent-primary);">global</span> $pdo;
+    
+    $stmt = $pdo->prepare(
+        <span style="color: var(--success);">"SELECT COUNT(*) FROM appointments 
+         WHERE date = ? AND time = ?"</span>
+    );
+    $stmt->execute([$date, $time]);
+    
+    <span style="color: var(--accent-primary);">return</span> $stmt->fetchColumn() == <span style="color: var(--warning);">0</span>;
+}
+</pre>
+                        </div>
+                    </div>
+
+                    <!-- TESTS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-vial"></i> 5. Tests & Validation
+                        </h3>
+                        <div class="table-wrapper">
+                            <table class="table">
+                                <thead>
+                                    <tr><th>Test</th><th>Résultat attendu</th><th>Statut</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Navigation entre pages</td><td>Liens fonctionnels</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Formulaire RDV</td><td>Validation et envoi</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Vérification créneaux</td><td>Pas de double réservation</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Responsive design</td><td>Affichage mobile correct</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Base de données</td><td>Enregistrement correct</td><td><span class="status status-success">✓</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- DIFFICULTÉS -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-exclamation-circle"></i> 6. Difficultés & Solutions
+                        </h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 1 : Gestion des créneaux horaires</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Difficulté à éviter les réservations simultanées du même créneau.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Implémentation d'un système de vérification en temps réel avec requêtes SQL et verrouillage des créneaux.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--danger);">Problème 2 : Validation des formulaires</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Sécurisation des données entrées par les utilisateurs.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--success);">Solution :</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Double validation : JavaScript côté client + PHP avec requêtes préparées côté serveur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMPÉTENCES -->
+                    <div class="card">
+                        <h3 style="color: var(--info); margin-bottom: 1.5rem;">
+                            <i class="fas fa-graduation-cap"></i> 7. Compétences SLAM acquises
+                        </h3>
+                        <div class="grid grid-2" style="gap: 1rem;">
+                            <div class="competence-item"><i class="fas fa-check"></i> Développement web full-stack</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Gestion de base de données</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Architecture client-serveur</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Sécurisation des données</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Tests et validation</div>
+                            <div class="competence-item"><i class="fas fa-check"></i> Responsive design</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="info-box" style="position: sticky; top: 100px;">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--info);">
+                            <i class="fas fa-info-circle"></i> Informations
+                        </h4>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span class="info-label">Durée</span>
+                            <span class="info-value">8 semaines</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span class="info-label">Équipe</span>
+                            <span class="info-value">Individuel</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-school"></i>
+                            <span class="info-label">Contexte</span>
+                            <span class="info-value">Formation - 2ème année</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="info-label">Statut</span>
+                            <span class="status status-success">Terminé</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Technologies</h4>
+                        <div class="tags">
+                            <span class="tag tag-danger">HTML5</span>
+                            <span class="tag tag-primary">CSS3</span>
+                            <span class="tag tag-warning">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        
+                        <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
+                        
+                        <h4 style="margin-bottom: 1rem;">Liens</h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <a href="https://github.com/Momjax/consulat" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="rp3.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> RP3 - Jeu d'Arène
+                </a>
+                <a href="rp5.html" class="btn btn-primary">
+                    RP5 - MediaStock <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,263 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BTS SIO SLAM</title>
+    <title>Mohamed BOUKHATEM | Portfolio BTS SIO SLAM</title>
     
-    <!-- Bootstrap 5 CSS -->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="./bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/wii.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="index">
+<body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#home">
-                <i class="fas fa-code"></i> Portfolio
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                MB
             </a>
             
-            <!-- Burger Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
+            </ul>
             
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="veille-technologiquenew.html">Veille Technologies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="realisations-professionnelles.html">Réalisations Professionnelles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
-    
-    <!-- Header Section -->
-    <header class="hero-section d-flex align-items-center justify-content-center" id="header">
-        <video autoplay muted loop playsinline id="background-video">
-        <source src="3141210-uhd_3840_2160_25fps.mp4" type="video/mp4">
-        </video>
-        <div class="container text-center">
-            <div class="profile-section" id="profileSection">
-                <div class="profile-image mb-4">
-                    <div class="avatar-placeholder">
-                        <i class="fas fa-user fa-5x"></i>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        BTS SIO option SLAM
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Mohamed<br>
+                        <span class="text-gradient">BOUKHATEM</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Développeur Full Stack en formation, passionné par le développement web et les technologies innovantes. 
+                        Je crée des applications modernes et performantes.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="realisations.html" class="btn btn-primary">
+                            <i class="fas fa-folder-open"></i>
+                            Voir mes réalisations
+                        </a>
+                        <a href="files/Mohamed-Boukhatem-CV-Officiel.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            Télécharger mon CV
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2026</div>
+                            <div class="stat-label">Diplôme prévu</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Full Stack</div>
+                            <div class="stat-label">Spécialisation</div>
+                        </div>
                     </div>
                 </div>
-                <h1 class="display-4 fw-bold mb-3">Mohamed BOUKHATEM</h1>
-                <p class="lead mb-4">Développeur Full Stack en formation BTS SIO SLAM</p>
+                
+                <div class="hero-avatar">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-inner">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>À propos de <span class="text-gradient">moi</span></h2>
+                <p>Découvrez mon parcours et ma formation en développement informatique.</p>
             </div>
             
-            <div class="cta-buttons">
-                <button class="btn btn-primary btn-lg me-3" id="reduceHeaderBtn">
-                    <i class="fas fa-eye"></i> Voir mon portfolio
-                </button>
-                <a href="files/Mohamed-Boukhatem-CV-Officiel.pdf" target="_blank" class="btn btn-outline-light">
-                    Telecharger mon CV <i class="fas fa-download ms-2"></i>
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title">Mon Profil</h3>
+                            <span class="card-badge">Étudiant en alternance</span>
+                        </div>
+                    </div>
+                    <p>
+                        Je suis un développeur web junior actuellement en formation en <strong>BTS SIO option SLAM</strong> 
+                        (Solutions Logicielles et Applications Métiers) à l'<a href="https://ecoleiris.fr/nice" target="_blank">École IRIS Nice</a>.
+                    </p>
+                    <p>
+                        Passionné par le développement web et les technologies innovantes, j'ai acquis des compétences solides 
+                        en conception et développement d'applications web, ainsi qu'une expérience concrète à travers divers 
+                        projets personnels et scolaires.
+                    </p>
+                    <p>
+                        Je recherche activement une expérience professionnelle en entreprise pour mettre en pratique mes 
+                        compétences et participer à des projets concrets.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon success">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title">BTS SIO SLAM</h3>
+                            <span class="card-badge">Services Informatiques aux Organisations</span>
+                        </div>
+                    </div>
+                    <p>
+                        Le <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et Applications Métiers) 
+                        forme aux métiers du développement d'applications. Cette formation couvre la conception, 
+                        le développement, la maintenance et l'évolution d'applications informatiques.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Développement d'applications web et mobiles</li>
+                        <li><i class="fas fa-check"></i> Gestion de bases de données</li>
+                        <li><i class="fas fa-check"></i> Conception et modélisation (UML, MCD)</li>
+                        <li><i class="fas fa-check"></i> Gestion de projets informatiques</li>
+                        <li><i class="fas fa-check"></i> Sécurisation des applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes <span class="text-gradient">Compétences</span></h2>
+                <p>Technologies et outils maîtrisés au cours de ma formation.</p>
+            </div>
+            
+            <div class="grid grid-2" style="gap: 2rem;">
+                <!-- Compétences techniques -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="card-title">Compétences Techniques</h3>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-laptop-code"></i> Langages de programmation
+                        </h4>
+                        <div class="tags">
+                            <span class="tag tag-primary">HTML</span>
+                            <span class="tag tag-primary">CSS</span>
+                            <span class="tag tag-primary">JavaScript</span>
+                            <span class="tag tag-success">PHP</span>
+                            <span class="tag" style="background: rgba(55, 118, 171, 0.2); color: #3776ab;">Python</span>
+                            <span class="tag" style="background: rgba(248, 152, 32, 0.2); color: #f89820;">Java</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-database"></i> Bases de données
+                        </h4>
+                        <div class="tags">
+                            <span class="tag tag-info">SQL</span>
+                            <span class="tag tag-info">MySQL</span>
+                            <span class="tag tag-info">PostgreSQL</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-tools"></i> Outils de développement
+                        </h4>
+                        <div class="tags">
+                            <span class="tag tag-warning">VS Code</span>
+                            <span class="tag tag-warning">Git / GitHub</span>
+                            <span class="tag tag-warning">Docker</span>
+                            <span class="tag tag-warning">Eclipse</span>
+                            <span class="tag tag-warning">Figma</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-project-diagram"></i> Modélisation
+                        </h4>
+                        <div class="tags">
+                            <span class="tag">UML</span>
+                            <span class="tag">Merise</span>
+                            <span class="tag">MCD/MLD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compétences métier -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon success">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="card-title">Compétences Métier SLAM</h3>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Analyse des besoins</strong> et rédaction de cahiers des charges
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Conception</strong> et développement d'applications web et logicielles
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Maintenance corrective</strong> et évolutive des applications
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Gestion et exploitation</strong> de bases de données
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Participation à un projet</strong> informatique en équipe (Agile/Scrum)
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Documentation technique</strong> et veille technologique
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Tests et validation</strong> d'applications
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <strong>Déploiement</strong> et mise en production
+                        </li>
+                    </ul>
+                    
+                    <div style="background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: var(--radius-md); padding: 1rem; margin-top: 1.5rem;">
+                        <p style="margin: 0; font-size: 0.9rem;">
+                            <i class="fas fa-laptop"></i> <strong>Environnements :</strong> Windows, Linux
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu des réalisations -->
+    <section class="section section-alt" id="projects-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes <span class="text-gradient">Réalisations</span></h2>
+                <p>Découvrez les projets réalisés dans le cadre de ma formation BTS SIO SLAM.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- RP1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <h4 class="card-title">Classcord</h4>
+                            <span class="card-badge">Java / Swing</span>
+                        </div>
+                    </div>
+                    <p>Application de messagerie instantanée en Java avec communication réseau TCP et interface graphique Swing.</p>
+                    <a href="rp1.html" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-right"></i> Voir le projet
+                    </a>
+                </div>
+                
+                <!-- RP2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon warning">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="card-title">NutriFit</h4>
+                            <span class="card-badge">Web / JavaScript</span>
+                        </div>
+                    </div>
+                    <p>Application web de suivi nutritionnel avec calcul BMR, recherche d'aliments et génération de profils personnalisés.</p>
+                    <a href="rp2.html" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-right"></i> Voir le projet
+                    </a>
+                </div>
+                
+                <!-- RP3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon success">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div>
+                            <h4 class="card-title">Jeu d'Arène</h4>
+                            <span class="card-badge">Java / Réseau</span>
+                        </div>
+                    </div>
+                    <p>Jeu multijoueur en Java avec architecture client-serveur, interface graphique et synchronisation temps réel.</p>
+                    <a href="rp3.html" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-right"></i> Voir le projet
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="realisations.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-folder-open"></i>
+                    Voir toutes les réalisations
                 </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content" id="mainContent" style="display: none;">
-        <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="section-title text-center mb-5">À propos de moi</h2>
-                        <div class="card bg-dark border-secondary">
-                            <div class="card-body">
-                                <p class="card-text text-center text-light">
-                                    Je suis un développeur web junior actuellement en formation en BTS SIO option SLAM (Solutions Logicielles et Applications Métiers), 
-                                    passionné par le développement web et les technologies innovantes.
-                                    <br><a href="https://ecoleiris.fr/nice" target="_blank"><img src="/Image/LOGO.png" class="ecole" width="150px"></a><br>
-                                    Au cours de ma formation, j’ai acquis des compétences solides en conception et développement d’applications web, ainsi qu’une expérience concrète à travers divers projets personnels et scolaires.
-                                    De plus je voudrais également acquérir de l'expérience professionnelle en entreprise et pouvoir participer à des projets concrets.
-
-                                </p>
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Me <span class="text-gradient">Contacter</span></h2>
+                <p>N'hésitez pas à me contacter pour toute question ou opportunité professionnelle.</p>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="card">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nom</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="votre@email.com" required>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BTS Section -->
-        <section id="bts" class="py-5">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">BTS SIO SLAM</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card bg-dark border-secondary">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Services Informatiques aux Organisations</h5>
-                                <h6 class="card-subtitle mb-3 text-muted">Option Solutions Logicielles et Applications Métiers</h6>
-                                <p class="card-text text-light">
-                                    Le BTS SIO option SLAM forme aux métiers du développement d'applications. 
-                                    Cette formation couvre la conception, le développement, la maintenance et l'évolution 
-                                    d'applications informatiques.
-                                </p>
-                                <ul class="list-unstyled text-light">
-                                    <li><i class="fas fa-check text-success me-2"></i>Développement d'applications web et mobiles</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Gestion de bases de données</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Conception et modélisation</li>
-                                    <li><i class="fas fa-check text-success me-2"></i>Gestion de projets informatiques</li>
-                                </ul>
-                            </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Sujet</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet de votre message" required>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-<!-- Skills Section -->
-<section id="skills" class="py-5 bg-dark-secondary">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">Compétences Techniques</h2>
-
-        <div class="row g-4">
-            <!-- Carte Alternance / Formation -->
-            <div class="col-md-6">
-                <div class="card bg-dark border-info h-100">
-                    <div class="card-body text-light">
-                        <div class="text-center mb-3">
-                            <i class="fas fa-user-graduate fa-3x text-info"></i>
-                            <h5 class="card-title mt-2 text-info">En Formation </h5>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Votre message..." required></textarea>
                         </div>
-
-                        <p><strong>- <u>Programmation en langages informatiques variés :</u></strong></p>
-
-                        <!-- Frontend -->
-                        <p class="fw-bold text-danger mt-3 mb-1">
-                            <i class="fab fa-html5 me-2"></i>Frontend :
-                        </p>
-                        <ul class="text-light">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Java</li>
-                            <li>Bootstrap</li>
-                        </ul>
-
-                        <!-- Backend -->
-                        <p class="fw-bold text-success mt-3 mb-1">
-                            <i class="fas fa-server me-2"></i>Backend :
-                        </p>
-                        <ul class="text-light">
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>SQL</li>
-                        </ul>
-
-                        <p><strong>- <u>Sécurisation des applications et gestion des accès</u></strong></p>
-
-                        <p><strong>- <u>Conception d’applications</u></strong></p>
-
-                        <p><strong>- <u>Compétences Méthodologiques</u></strong></p>
-
-                        <!-- Outils -->
-                        <p class="fw-bold mt-3 mb-1 text-info">
-                            <i class="fas fa-tools me-2"></i>Outils Utilisés :
-                        </p>
-                        <ul class="text-light">
-                            <li>Git / GitHub</li>
-                            <li>VS Code</li>
-                            <li>Docker</li>
-                            <li>MAMP</li>
-                            <li>Eclipse (IDE)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte Entreprise avec "En cours..." géant et animé -->
-            <div class="col-md-6">
-                <div class="card bg-dark border-warning h-100 d-flex align-items-center justify-content-center text-center p-4">
-                    <div class="card-body text-light">
-                        <i class="fas fa-building fa-4x text-warning mb-4"></i>
-                        <h5 class="card-title text-warning mb-3">En entreprise</h5>
-                        <div class="spinner-border text-warning" style="height: 100px; width: 100px;" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-5 bg-dark-secondary">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Contact</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label">Nom</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="subject" class="form-label">Sujet</label>
-                                    <input type="text" class="form-control" id="subject" name="subject" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg">
-                                        <i class="fas fa-paper-plane me-2"></i>Envoyer le message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer py-4 bg-dark">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2025 Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#89eae6e7fde8eafdc9ecf1e8e4f9e5eca7eae6e4" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS -->
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-    
-    <!-- Custom JavaScript -->
-    <script src="js/menu.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <!-- JavaScript -->
+    <script
