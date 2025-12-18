@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST THEME SWITCH</title>
+    <style>
+        /* Mode sombre par défaut */
+        body {
+            background: #0d1117;
+            color: #e6edf3;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            transition: all 0.3s;
+        }
+        
+        /* Mode clair */
+        body.light-mode {
+            background: #ffffff;
+            color: #24292f;
+        }
+        
+        .switch-container {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+        
+        /* Le switch */
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 30px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0,255,0,0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 TEST DU THEME SWITCH</h1>
+    
+    <div class="switch-container">
+        <h2>Switch de thème :</h2>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <p>☝️ Clique sur le switch</p>
+        
+        <div class="status">
+            <strong>Status :</strong> <span id="status">Mode sombre</span><br>
+            <strong>LocalStorage :</strong> <span id="storage">-</span>
+        </div>
+    </div>
+    
+    <script>
+        console.log('🚀 Script chargé !');
+        
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const statusText = document.getElementById('status');
+        const storageText = document.getElementById('storage');
+        
+        // Fonction pour mettre à jour le status
+        function updateStatus() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            statusText.textContent = theme === 'light' ? 'Mode clair ☀️' : 'Mode sombre 🌙';
+            storageText.textContent = theme;
+            console.log('📊 Thème actuel:', theme);
+        }
+        
+        // Charger le thème au démarrage
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        console.log('💾 Thème sauvegardé:', savedTheme);
+        
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            toggle.checked = true;
+        }
+        
+        updateStatus();
+        
+        // Écouter les changements
+        toggle.addEventListener('change', function() {
+            console.log('🔄 Switch cliqué! Checked:', this.checked);
+            
+            if (this.checked) {
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+                console.log('✅ Mode clair activé');
+            } else {
+                body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+                console.log('✅ Mode sombre activé');
+            }
+            
+            updateStatus();
+        });
+        
+        console.log('✅ Tout est prêt !');
+    </script>
+</body>
+</html>

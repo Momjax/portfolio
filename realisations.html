@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisations Professionnelles | Mohamed BOUKHATEM</title>
     
+    <script>
+        // Appliquer le thème instantanément pour éviter le flash
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +40,16 @@
                 <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
                 <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
             </ul>
             
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
@@ -186,7 +206,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong style="color: var(--warning);">RP4 - MediaStock</strong>
+                                <strong style="color: var(--warning);">RP5 - MediaStock</strong>
                                 <br><small class="text-muted">Application web de pret de materiel</small>
                             </td>
                             <td>
@@ -245,7 +265,7 @@
             
             <!-- Lien vers le tableau PDF -->
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="files/tableau.pdf" target="_blank" class="btn btn-secondary">
+                <a href="files/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024 (1).pdf" target="_blank" class="btn btn-secondary">
                     <i class="fas fa-file-pdf"></i>
                     Télécharger le tableau de synthèse (PDF)
                 </a>
@@ -466,7 +486,7 @@
                     <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:contact@example.com" aria-label="Email">
+                    <a href="/cdn-cgi/l/email-protection#65060a0b1104061125001d04081509004b060a08" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -475,6 +495,4 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <script d

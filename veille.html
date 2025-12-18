@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veille Technologique | Mohamed BOUKHATEM</title>
     
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -51,9 +60,7 @@
             </div>
             <h1>Veille <span class="text-gradient">Technologique</span></h1>
             <p class="text-secondary" style="max-width: 800px; margin: 1rem auto 0;">
-                <strong>Problématique :</strong> Comment REST et GraphQL évoluent-ils en 2024-2025 
-                pour répondre aux besoins croissants de sécurité, de performance et de flexibilité 
-                dans le développement d'APIs modernes ?
+                <strong>Problématique :</strong> Comment sécuriser efficacement une API REST en 2024-2025 pour protéger les données et prévenir les attaques malveillantes ?
             </p>
         </div>
     </section>
@@ -67,290 +74,308 @@
                 </h3>
                 <p>
                     Dans le cadre de ma formation <strong>BTS SIO SLAM</strong>, j'ai mené une veille technologique 
-                    sur les <strong>APIs REST et GraphQL</strong>. Ces technologies sont essentielles pour 
-                    permettre la communication entre applications, services web et bases de données.
+                    sur la <strong>sécurité des APIs REST</strong>. Les APIs REST sont devenues essentielles dans 
+                    le développement web moderne pour permettre la communication entre applications.
                 </p>
                 <p>
-                    Ma veille porte sur l'évolution récente de ces deux approches : <strong>REST</strong>, 
-                    l'architecture traditionnelle et éprouvée, et <strong>GraphQL</strong>, l'alternative moderne 
-                    qui gagne en popularité. J'analyse également les enjeux de <strong>sécurité</strong> avec 
-                    JWT et OAuth 2.0, qui sont devenus incontournables en 2024-2025.
+                    Ma veille porte sur les <strong>bonnes pratiques de sécurisation</strong> des APIs REST 
+                    et les menaces actuelles en 2024-2025. Avec l'explosion du trafic bot malveillant (51% du trafic web) 
+                    et les attaques de plus en plus sophistiquées, sécuriser les APIs est devenu un enjeu critique.
                 </p>
                 <div class="tags" style="margin-top: 1rem;">
                     <span class="tag tag-primary">REST API</span>
-                    <span class="tag tag-success">GraphQL</span>
+                    <span class="tag tag-danger">Sécurité</span>
                     <span class="tag tag-warning">JWT</span>
-                    <span class="tag tag-danger">OAuth 2.0</span>
-                    <span class="tag tag-info">Sécurité API</span>
+                    <span class="tag tag-success">HTTPS</span>
+                    <span class="tag tag-info">OAuth 2.0</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REST API -->
+    <!-- Qu'est-ce que REST API -->
     <section class="section section-alt" id="rest">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-cloud" style="color: var(--accent-primary);"></i> REST API</h2>
-                <p>L'architecture standard pour les APIs web</p>
+                <h2><i class="fas fa-cloud" style="color: var(--accent-primary);"></i> Qu'est-ce qu'une API REST ?</h2>
+                <p>Comprendre les bases</p>
             </div>
             
             <div class="grid grid-2" style="gap: 2rem;">
                 <div class="card">
-                    <h4 style="color: var(--accent-primary);">Qu'est-ce que REST ?</h4>
+                    <h4 style="color: var(--accent-primary);">Définition</h4>
                     <p>
                         <strong>REST</strong> (Representational State Transfer) est un style d'architecture 
-                        pour concevoir des APIs. Il utilise les <strong>méthodes HTTP standards</strong> 
-                        (GET, POST, PUT, DELETE) et des <strong>URLs</strong> pour accéder aux ressources.
+                        pour concevoir des APIs web. Une API REST permet à différentes applications de 
+                        communiquer entre elles via le protocole HTTP.
                     </p>
                     <p>
-                        REST fonctionne avec des <strong>endpoints multiples</strong> : chaque ressource 
-                        (utilisateur, produit, commande) possède sa propre URL. Par exemple :
+                        Elle utilise les <strong>méthodes HTTP</strong> standards pour effectuer des opérations :
                     </p>
-                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.9rem; margin-top: 1rem;">
-                        GET /api/users/123<br>
-                        GET /api/users/123/orders<br>
-                        POST /api/orders
-                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-arrow-right"></i> <strong>GET</strong> : Récupérer des données</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>POST</strong> : Créer de nouvelles données</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>PUT</strong> : Modifier des données existantes</li>
+                        <li><i class="fas fa-arrow-right"></i> <strong>DELETE</strong> : Supprimer des données</li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <h4 style="color: var(--accent-primary);">Forces et limites en 2025</h4>
-                    <p><strong style="color: var(--success);">✓ Points forts :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Simple à comprendre et implémenter</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Caching HTTP très efficace</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Outils et écosystème matures (Postman, Swagger)</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> 83% des APIs web utilisent REST en 2024</li>
-                    </ul>
-                    <p style="margin-top: 1rem;"><strong style="color: var(--danger);">✗ Limites :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-times" style="color: var(--danger);"></i> Over-fetching : récupère trop de données</li>
-                        <li><i class="fas fa-times" style="color: var(--danger);"></i> Under-fetching : nécessite plusieurs requêtes</li>
-                        <li><i class="fas fa-times" style="color: var(--danger);"></i> Versionnement complexe (v1, v2...)</li>
-                    </ul>
+                    <h4 style="color: var(--accent-primary);">Exemple concret</h4>
+                    <p>Prenons l'exemple d'une API pour gérer des utilisateurs :</p>
+                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.9rem; margin-top: 1rem;">
+                        GET /api/users → Liste tous les utilisateurs<br>
+                        GET /api/users/123 → Récupère l'utilisateur 123<br>
+                        POST /api/users → Crée un nouvel utilisateur<br>
+                        PUT /api/users/123 → Modifie l'utilisateur 123<br>
+                        DELETE /api/users/123 → Supprime l'utilisateur 123
+                    </div>
+                    <p style="margin-top: 1rem;">
+                        <strong>Caractéristique clé :</strong> REST est <strong>stateless</strong>, 
+                        c'est-à-dire que chaque requête est indépendante et contient toutes les informations 
+                        nécessaires pour être traitée.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GraphQL -->
-    <section class="section" id="graphql">
+    <!-- Menaces et risques -->
+    <section class="section" id="threats">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-project-diagram" style="color: #e535ab;"></i> GraphQL</h2>
-                <p>La nouvelle génération d'APIs</p>
+                <h2><i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> Menaces et Risques en 2024-2025</h2>
+                <p>Les dangers qui pèsent sur les APIs REST</p>
             </div>
             
-            <div class="grid grid-2" style="gap: 2rem;">
-                <div class="card">
-                    <h4 style="color: #e535ab;">Qu'est-ce que GraphQL ?</h4>
-                    <p>
-                        <strong>GraphQL</strong> est un langage de requête pour APIs développé par 
-                        <strong>Facebook en 2012</strong> et rendu open-source en 2015. Contrairement à REST, 
-                        GraphQL utilise un <strong>seul endpoint</strong> et permet au client de demander 
-                        exactement les données dont il a besoin.
-                    </p>
-                    <p>Exemple de requête GraphQL :</p>
-                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.9rem; margin-top: 1rem;">
-                        query {<br>
-                        &nbsp;&nbsp;user(id: "123") {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;name<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;email<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;orders {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;}<br>
-                        }
-                    </div>
-                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
-                        Une seule requête récupère toutes les données liées !
-                    </p>
-                </div>
-                
-                <div class="card">
-                    <h4 style="color: #e535ab;">Adoption massive en 2024-2025</h4>
-                    <p><strong style="color: var(--success);">✓ Avantages :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Flexibilité totale : le client choisit les données</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Une seule requête au lieu de plusieurs</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Typage fort avec schéma auto-documenté</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Support temps réel (Subscriptions)</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Adoption +340% chez Fortune 500</li>
-                    </ul>
-                    <p style="margin-top: 1rem;"><strong style="color: var(--warning);">⚠ Défis :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Courbe d'apprentissage plus élevée</li>
-                        <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Caching plus complexe</li>
-                        <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Requêtes très complexes possibles</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="card" style="margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <h4 style="color: #e535ab; margin-bottom: 1rem;"><i class="fas fa-chart-line"></i> Tendances 2024-2025</h4>
+            <div class="card" style="max-width: 900px; margin: 0 auto 2rem;">
+                <h4 style="color: var(--danger); margin-bottom: 1rem;"><i class="fas fa-chart-line"></i> Chiffres clés</h4>
                 <div class="grid grid-2" style="gap: 1.5rem;">
-                    <div>
-                        <p><strong>61% des entreprises</strong> utilisent GraphQL en production (Hygraph 2024)</p>
-                        <p><strong>10%</strong> ont complètement remplacé REST par GraphQL</p>
+                    <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+                        <strong style="font-size: 2rem; color: var(--danger);">51%</strong>
+                        <p style="margin: 0.5rem 0 0;">du trafic web est généré par des bots (dont 37% malveillants)</p>
                     </div>
-                    <div>
-                        <p><strong>89%</strong> des équipes qui adoptent GraphQL le choisiraient à nouveau (Apollo Survey 2024)</p>
-                        <p>Utilisé par : <strong>Facebook, GitHub, Shopify, Airbnb</strong></p>
+                    <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+                        <strong style="font-size: 2rem; color: var(--danger);">25%</strong>
+                        <p style="margin: 0.5rem 0 0;">des endpoints API ne sont pas documentés (APIs fantômes)</p>
+                    </div>
+                    <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+                        <strong style="font-size: 2rem; color: var(--danger);">186 Mds $</strong>
+                        <p style="margin: 0.5rem 0 0;">de pertes annuelles dues à l'insécurité des APIs</p>
+                    </div>
+                    <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+                        <strong style="font-size: 2rem; color: var(--danger);">44%</strong>
+                        <p style="margin: 0.5rem 0 0;">du trafic bot avancé cible spécifiquement les APIs</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparaison REST vs GraphQL -->
-    <section class="section section-alt" id="comparison">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-balance-scale text-gradient"></i> REST vs GraphQL : Lequel choisir ?</h2>
-                <p>Analyse comparative pour 2025</p>
-            </div>
-            
-            <div class="table-wrapper">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Critère</th>
-                            <th><i class="fas fa-cloud"></i> REST</th>
-                            <th><i class="fas fa-project-diagram"></i> GraphQL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Endpoints</strong></td>
-                            <td>Multiples (un par ressource)</td>
-                            <td>Un seul endpoint</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Requêtes de données</strong></td>
-                            <td>Fixes (over/under fetching)</td>
-                            <td>Exactement ce qui est demandé</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Performance</strong></td>
-                            <td>Excellente pour CRUD simple</td>
-                            <td>Meilleure pour données complexes</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Caching</strong></td>
-                            <td><span style="color: var(--success);">✓</span> Très simple (HTTP)</td>
-                            <td><span style="color: var(--warning);">⚠</span> Plus complexe</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Documentation</strong></td>
-                            <td>Manuelle (Swagger)</td>
-                            <td>Auto-générée (schéma)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Courbe apprentissage</strong></td>
-                            <td><span style="color: var(--success);">✓</span> Facile</td>
-                            <td><span style="color: var(--warning);">⚠</span> Plus technique</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cas d'usage idéal</strong></td>
-                            <td>APIs publiques, CRUD simple</td>
-                            <td>Apps mobiles, données complexes</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="card" style="margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.2);">
-                <p style="margin: 0; font-size: 1.05rem;">
-                    <i class="fas fa-lightbulb" style="color: var(--accent-primary);"></i>
-                    <strong>Conclusion :</strong> REST et GraphQL coexistent en 2025. 
-                    Le choix dépend du contexte : REST pour sa simplicité et GraphQL pour sa flexibilité.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sécurité des APIs -->
-    <section class="section" id="security">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-shield-alt" style="color: var(--danger);"></i> Sécurité des APIs</h2>
-                <p>JWT et OAuth 2.0 : Les standards 2024-2025</p>
             </div>
             
             <div class="grid grid-2" style="gap: 2rem;">
-                <!-- JWT -->
                 <div class="card">
-                    <h4 style="color: var(--warning);"><i class="fas fa-key"></i> JWT (JSON Web Token)</h4>
-                    <p>
-                        Le <strong>JWT</strong> est un standard (RFC 7519) pour transmettre des informations 
-                        d'authentification de manière sécurisée. Un JWT est composé de 3 parties :
-                    </p>
+                    <h4 style="color: var(--danger);">Top 5 des attaques</h4>
                     <ul class="feature-list">
-                        <li><i class="fas fa-cog"></i> <strong>Header</strong> : Type et algorithme (HMAC-SHA256, RSA)</li>
-                        <li><i class="fas fa-box"></i> <strong>Payload</strong> : Données utilisateur (ID, rôle, expiration)</li>
-                        <li><i class="fas fa-signature"></i> <strong>Signature</strong> : Garantit l'intégrité du token</li>
-                    </ul>
-                    <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
-                        <p style="margin: 0; font-size: 0.85rem; font-family: var(--font-mono); word-break: break-all; color: var(--text-secondary);">
-                            eyJhbGci.eyJzdWIi.SflKxwRJ
-                        </p>
-                    </div>
-                    <p style="margin-top: 1rem;"><strong>Avantages :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Stateless (pas de stockage serveur)</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Compact et rapide</li>
-                        <li><i class="fas fa-check" style="color: var(--success);"></i> Multi-plateforme</li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--danger);"></i>
+                            <strong>Injection SQL</strong> : Insertion de code malveillant dans les requêtes
+                        </li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--danger);"></i>
+                            <strong>Authentification cassée</strong> : Tokens volés ou sessions compromises
+                        </li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--danger);"></i>
+                            <strong>CORS mal configuré</strong> : Accès non autorisé depuis d'autres domaines
+                        </li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--danger);"></i>
+                            <strong>Rate limiting absent</strong> : Attaques DDoS et brute force
+                        </li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--danger);"></i>
+                            <strong>Exposition de données sensibles</strong> : Fuites d'informations confidentielles
+                        </li>
                     </ul>
                 </div>
                 
-                <!-- OAuth 2.0 -->
                 <div class="card">
-                    <h4 style="color: var(--danger);"><i class="fas fa-lock"></i> OAuth 2.0</h4>
-                    <p>
-                        <strong>OAuth 2.0</strong> est un framework d'autorisation qui permet à une application 
-                        d'accéder à des ressources protégées <strong>au nom d'un utilisateur</strong>, sans 
-                        partager ses identifiants.
-                    </p>
-                    <p>
-                        OAuth 2.0 est utilisé par Google, Facebook, GitHub pour la connexion tierce 
-                        ("Se connecter avec Google").
-                    </p>
-                    <p style="margin-top: 1rem;"><strong>Fonctionnement :</strong></p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-arrow-right"></i> L'utilisateur se connecte au fournisseur (Google)</li>
-                        <li><i class="fas fa-arrow-right"></i> Le serveur d'autorisation génère un <strong>access_token</strong></li>
-                        <li><i class="fas fa-arrow-right"></i> L'app utilise ce token pour accéder aux ressources</li>
-                        <li><i class="fas fa-arrow-right"></i> Le token expire après un certain temps (sécurité)</li>
-                    </ul>
-                    <p style="margin-top: 1rem;"><strong>Souvent combiné avec JWT</strong> pour transporter les tokens d'accès.</p>
+                    <h4 style="color: var(--danger);">OWASP API Security Top 10</h4>
+                    <p>L'OWASP (Open Web Application Security Project) liste les 10 risques principaux :</p>
+                    <ol style="padding-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>Broken Object Level Authorization</strong></li>
+                        <li><strong>Broken Authentication</strong></li>
+                        <li><strong>Broken Object Property Level Authorization</strong></li>
+                        <li><strong>Unrestricted Resource Consumption</strong></li>
+                        <li><strong>Broken Function Level Authorization</strong></li>
+                        <li><strong>Unrestricted Access to Sensitive Business Flows</strong></li>
+                        <li><strong>Server Side Request Forgery</strong></li>
+                        <li><strong>Security Misconfiguration</strong></li>
+                        <li><strong>Improper Inventory Management</strong></li>
+                        <li><strong>Unsafe Consumption of APIs</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonnes pratiques de sécurité -->
+    <section class="section section-alt" id="security">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-shield-alt text-gradient"></i> Bonnes Pratiques de Sécurité</h2>
+                <p>Comment protéger efficacement une API REST</p>
+            </div>
+            
+            <!-- HTTPS -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <div class="card-icon success">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="card-title">1. Toujours utiliser HTTPS</h3>
+                </div>
+                <p>
+                    <strong>HTTPS</strong> (HTTP Secure) chiffre toutes les communications entre le client et le serveur 
+                    grâce aux protocoles TLS/SSL. C'est la première ligne de défense.
+                </p>
+                <p><strong>Pourquoi ?</strong> Sans HTTPS, les données (mots de passe, tokens, informations personnelles) 
+                transitent en clair et peuvent être interceptées par des attaquants.</p>
+                <div style="background: rgba(63, 185, 80, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--success); margin-top: 1rem;">
+                    <strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Obligatoire</strong>
+                    <p style="margin: 0.5rem 0 0;">HTTPS doit être activé sur toutes les APIs, même en développement.</p>
                 </div>
             </div>
             
-            <!-- Bonnes pratiques sécurité -->
-            <div class="card" style="margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <h4 style="color: var(--danger); margin-bottom: 1rem;">
-                    <i class="fas fa-exclamation-triangle"></i> Bonnes pratiques de sécurité 2025
+            <!-- Authentification JWT -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <div class="card-icon warning">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="card-title">2. Authentification avec JWT</h3>
+                </div>
+                <p>
+                    <strong>JWT</strong> (JSON Web Token) est un standard pour créer des tokens d'accès sécurisés. 
+                    Un JWT contient 3 parties : header, payload et signature.
+                </p>
+                <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin: 1rem 0; font-family: var(--font-mono); font-size: 0.85rem;">
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.SflKxwRJSMeKKF2QT
+                </div>
+                <p><strong>Fonctionnement :</strong></p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-arrow-right"></i> L'utilisateur s'authentifie avec login/password</li>
+                    <li><i class="fas fa-arrow-right"></i> Le serveur génère un JWT signé avec une clé secrète</li>
+                    <li><i class="fas fa-arrow-right"></i> Le client envoie ce JWT dans chaque requête (header Authorization)</li>
+                    <li><i class="fas fa-arrow-right"></i> Le serveur vérifie la signature du JWT avant de traiter la requête</li>
+                </ul>
+                <div style="background: rgba(210, 153, 34, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--warning); margin-top: 1rem;">
+                    <strong style="color: var(--warning);"><i class="fas fa-exclamation-triangle"></i> Important</strong>
+                    <p style="margin: 0.5rem 0 0;">Toujours définir une date d'expiration (exp) courte et ne JAMAIS stocker le JWT dans localStorage (risque XSS). Préférer les cookies HttpOnly.</p>
+                </div>
+            </div>
+            
+            <!-- OAuth 2.0 -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <div class="card-icon primary">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="card-title">3. OAuth 2.0 pour l'autorisation</h3>
+                </div>
+                <p>
+                    <strong>OAuth 2.0</strong> est un framework qui permet à une application d'accéder à des ressources 
+                    au nom d'un utilisateur sans exposer ses identifiants. C'est le standard pour les connexions tierces.
+                </p>
+                <p>
+                    <strong>Cas d'usage :</strong> "Se connecter avec Google/Facebook" utilise OAuth 2.0. 
+                    L'application obtient un <strong>access_token</strong> pour accéder aux données autorisées par l'utilisateur.
+                </p>
+                <p><strong>Types de flows OAuth 2.0 :</strong></p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> <strong>Authorization Code</strong> : Pour les apps web avec backend sécurisé</li>
+                    <li><i class="fas fa-check"></i> <strong>Client Credentials</strong> : Pour les communications serveur à serveur</li>
+                    <li><i class="fas fa-check"></i> <strong>Refresh Token</strong> : Pour renouveler l'access token sans redemander les identifiants</li>
+                </ul>
+            </div>
+            
+            <!-- Rate Limiting -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon danger">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="card-title">4. Rate Limiting & Throttling</h3>
+                </div>
+                <p>
+                    Le <strong>rate limiting</strong> limite le nombre de requêtes qu'un client peut faire dans un temps donné. 
+                    Cela protège contre les attaques DDoS, le brute force et l'abus de l'API.
+                </p>
+                <p><strong>Exemple :</strong> Limiter à 100 requêtes par minute par adresse IP ou par utilisateur.</p>
+                <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
+                    <p style="margin: 0; font-size: 0.9rem;">
+                        <strong>Réponse HTTP 429 :</strong> "Too Many Requests" est renvoyée quand la limite est dépassée
+                    </p>
+                </div>
+                <p style="margin-top: 1rem;"><strong>Bonnes pratiques :</strong></p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Implémenter des limites différentes selon le type d'endpoint</li>
+                    <li><i class="fas fa-check"></i> Informer l'utilisateur du nombre de requêtes restantes (headers X-RateLimit)</li>
+                    <li><i class="fas fa-check"></i> Utiliser des solutions comme Redis pour tracker les requêtes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist de sécurité -->
+    <section class="section" id="checklist">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-tasks text-gradient"></i> Checklist de Sécurité</h2>
+                <p>Les essentiels à vérifier</p>
+            </div>
+            
+            <div class="card" style="max-width: 900px; margin: 0 auto;">
+                <h4 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                    <i class="fas fa-check-double"></i> À implémenter impérativement
                 </h4>
                 <div class="grid grid-2" style="gap: 1.5rem;">
                     <div>
-                        <p><strong><i class="fas fa-check-circle" style="color: var(--success);"></i> À faire :</strong></p>
+                        <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Authentification & Autorisation</strong></p>
                         <ul class="feature-list">
-                            <li><i class="fas fa-shield-alt"></i> Toujours utiliser HTTPS (TLS)</li>
-                            <li><i class="fas fa-clock"></i> Limiter la durée de vie des tokens (TTL)</li>
-                            <li><i class="fas fa-key"></i> Utiliser des clés complexes et aléatoires</li>
-                            <li><i class="fas fa-signature"></i> Vérifier la signature JWT</li>
-                            <li><i class="fas fa-ban"></i> Implémenter un système de bannissement</li>
+                            <li><i class="fas fa-check"></i> HTTPS activé partout</li>
+                            <li><i class="fas fa-check"></i> JWT avec signature vérifiée</li>
+                            <li><i class="fas fa-check"></i> OAuth 2.0 pour les accès tiers</li>
+                            <li><i class="fas fa-check"></i> Tokens avec expiration (TTL courte)</li>
+                            <li><i class="fas fa-check"></i> Refresh tokens sécurisés</li>
                         </ul>
                     </div>
                     <div>
-                        <p><strong><i class="fas fa-times-circle" style="color: var(--danger);"></i> À éviter :</strong></p>
+                        <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Protection des données</strong></p>
                         <ul class="feature-list">
-                            <li><i class="fas fa-times"></i> Stocker JWT dans localStorage (XSS)</li>
-                            <li><i class="fas fa-times"></i> Tokens trop longs (>1h sans refresh)</li>
-                            <li><i class="fas fa-times"></i> Algorithme "none" dans JWT</li>
-                            <li><i class="fas fa-times"></i> Secrets dans le code source</li>
-                            <li><i class="fas fa-times"></i> Négliger la validation des entrées</li>
+                            <li><i class="fas fa-check"></i> Validation des entrées (sanitization)</li>
+                            <li><i class="fas fa-check"></i> Chiffrement des données sensibles</li>
+                            <li><i class="fas fa-check"></i> Pas de secrets dans le code source</li>
+                            <li><i class="fas fa-check"></i> Headers de sécurité (CORS, CSP, X-Frame-Options)</li>
+                            <li><i class="fas fa-check"></i> Protection contre les injections SQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Surveillance & Contrôle</strong></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Rate limiting (limite de requêtes)</li>
+                            <li><i class="fas fa-check"></i> Logging des événements critiques</li>
+                            <li><i class="fas fa-check"></i> Monitoring du trafic API en temps réel</li>
+                            <li><i class="fas fa-check"></i> Alertes en cas d'anomalie</li>
+                            <li><i class="fas fa-check"></i> Détection des bots malveillants</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Documentation & Tests</strong></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Documentation à jour (OpenAPI/Swagger)</li>
+                            <li><i class="fas fa-check"></i> Tests de sécurité réguliers (pentests)</li>
+                            <li><i class="fas fa-check"></i> Inventaire complet des APIs</li>
+                            <li><i class="fas fa-check"></i> Audit de sécurité périodique</li>
+                            <li><i class="fas fa-check"></i> Versionnement des APIs</li>
                         </ul>
                     </div>
                 </div>
@@ -379,60 +404,60 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>REST vs GraphQL 2025</strong></td>
+                            <td><strong>Sécurité API 2024-2025</strong></td>
                             <td><span class="tag">Article</span></td>
-                            <td><a href="https://jsonconsole.com/blog/rest-api-vs-graphql-statistics-trends-performance-comparison-2025" target="_blank">jsonconsole.com</a></td>
-                            <td>08/08/2025</td>
-                            <td>REST, GraphQL, Performance, Statistiques</td>
+                            <td><a href="https://www.orsys.fr/orsys-lemag/comment-securiser-les-api-les-bonnes-pratiques/" target="_blank">orsys.fr</a></td>
+                            <td>30/06/2025</td>
+                            <td>Sécurité, Bots, Bonnes pratiques, Statistiques 2024</td>
                         </tr>
                         <tr>
-                            <td><strong>GraphQL vs REST 2025</strong></td>
-                            <td><span class="tag">Article</span></td>
-                            <td><a href="https://medium.com/@danieltaylor2120/graphql-vs-rest-which-will-be-dominant-for-backend-development-in-2025-377ea18231a0" target="_blank">medium.com</a></td>
-                            <td>19/12/2024</td>
-                            <td>Backend, API, Real-time</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tendances API 2025</strong></td>
-                            <td><span class="tag">Tribune</span></td>
-                            <td><a href="https://www.lemagit.fr/tribune/API-ces-quatre-grandes-tendances-qui-faconneront-2025-et-au-dela" target="_blank">lemagit.fr</a></td>
-                            <td>03/12/2024</td>
-                            <td>Tendances, Sécurité, AsyncAPI</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Comparaison REST/GraphQL</strong></td>
-                            <td><span class="tag">Article tech</span></td>
-                            <td><a href="https://www.digitalcorner-wavestone.com/2024/10/comparaison-entre-les-api-rest-et-graphql/" target="_blank">digitalcorner-wavestone.com</a></td>
-                            <td>23/10/2024</td>
-                            <td>Architecture, Endpoints, Versionnement</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sécurité API JWT</strong></td>
+                            <td><strong>API REST bonnes pratiques</strong></td>
                             <td><span class="tag">Guide</span></td>
-                            <td><a href="https://blog.stephane-robert.info/docs/developper/programmation/python/connexion-4/" target="_blank">blog.stephane-robert.info</a></td>
-                            <td>19/12/2024</td>
-                            <td>JWT, Authentification, Sécurité</td>
+                            <td><a href="https://www.akamai.com/fr/blog/security/rest-api-security-best-practices" target="_blank">akamai.com</a></td>
+                            <td>16/11/2023</td>
+                            <td>REST, Sécurité, Architecture, DDoS</td>
                         </tr>
                         <tr>
-                            <td><strong>OAuth 2.0 et JWT</strong></td>
-                            <td><span class="tag">Article</span></td>
-                            <td><a href="https://www.hostragons.com/fr/blog/securite-des-api-avec-oauth-2-0-et-jwt/" target="_blank">hostragons.com</a></td>
-                            <td>17/03/2025</td>
-                            <td>OAuth, JWT, Autorisation</td>
+                            <td><strong>Optimisation APIs RESTful</strong></td>
+                            <td><span class="tag">Guide technique</span></td>
+                            <td><a href="https://www.puce-et-media.com/optimisation-des-apis-restful-urls-bonnes-pratiques/" target="_blank">puce-et-media.com</a></td>
+                            <td>12/10/2025</td>
+                            <td>URLs, JWT, HTTPS, Authentification</td>
                         </tr>
                         <tr>
-                            <td><strong>Protocoles auth 2025</strong></td>
-                            <td><span class="tag">Comparatif</span></td>
-                            <td><a href="https://www.aduneo.com/acces/comparatif-protocoles-authentification-saml-oauth-oidc" target="_blank">aduneo.com</a></td>
-                            <td>10/09/2025</td>
-                            <td>SAML, OAuth, OpenID Connect</td>
+                            <td><strong>Sécurité des API</strong></td>
+                            <td><span class="tag">Documentation</span></td>
+                            <td><a href="https://fr.barracuda.com/support/glossary/api-security" target="_blank">barracuda.com</a></td>
+                            <td>20/11/2024</td>
+                            <td>Sécurité, Gateway, Protection, REST</td>
                         </tr>
                         <tr>
-                            <td><strong>Sécurisation API REST</strong></td>
-                            <td><span class="tag">Guide CLUSIF</span></td>
+                            <td><strong>Sécurisation API CLUSIF</strong></td>
+                            <td><span class="tag">PDF Officiel</span></td>
                             <td><a href="https://clusif.fr/wp-content/uploads/2024/10/20240304-Securisation-des-API.pdf" target="_blank">clusif.fr</a></td>
                             <td>Mars 2024</td>
-                            <td>Sécurité, Recommandations, Standards</td>
+                            <td>OAuth, JWT, OWASP Top 10, Standards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API Security</strong></td>
+                            <td><span class="tag">Glossaire</span></td>
+                            <td><a href="https://www.fortinet.com/fr/resources/cyberglossary/api-security" target="_blank">fortinet.com</a></td>
+                            <td>2024</td>
+                            <td>TLS, SSL, Tokens, Protection, Chiffrement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API REST conception</strong></td>
+                            <td><span class="tag">Article</span></td>
+                            <td><a href="https://www.itefficience.com/article/api-rest-les-bonnes-pratiques" target="_blank">itefficience.com</a></td>
+                            <td>15/08/2023</td>
+                            <td>REST, Architecture, Stateless, Performance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Formation REST API Sécurité</strong></td>
+                            <td><span class="tag">Formation</span></td>
+                            <td><a href="https://www.plb.fr/formation/developpement/formation-api-rest,13-700608.php" target="_blank">plb.fr</a></td>
+                            <td>2024</td>
+                            <td>Formation, JWT, OWASP, Swagger, Postman</td>
                         </tr>
                     </tbody>
                 </table>
@@ -449,36 +474,40 @@
             
             <div class="card" style="max-width: 900px; margin: 0 auto;">
                 <p style="font-size: 1.1rem; color: var(--text-primary);">
-                    Ma veille montre que <strong>REST et GraphQL ne sont pas des concurrents</strong>, 
-                    mais des solutions complémentaires qui coexistent en 2025.
+                    Ma veille montre que la <strong>sécurité des APIs REST</strong> est un enjeu majeur en 2024-2025. 
+                    Avec l'explosion du trafic bot malveillant (51% du trafic web) et les attaques de plus en plus 
+                    sophistiquées, sécuriser les APIs n'est plus une option mais une nécessité absolue.
                 </p>
                 
                 <p>
-                    <strong>REST</strong> reste le standard pour les APIs publiques, les opérations CRUD 
-                    simples et les architectures microservices. Avec 83% de parts de marché, REST n'est 
-                    pas prêt de disparaître grâce à sa simplicité et son écosystème mature.
+                    Les <strong>bonnes pratiques fondamentales</strong> incluent l'utilisation systématique de HTTPS, 
+                    l'authentification JWT avec tokens expirables, OAuth 2.0 pour les autorisations tierces, et le 
+                    rate limiting pour prévenir les abus. Ces mesures doivent être implémentées dès la conception 
+                    de l'API, pas après coup.
                 </p>
                 
                 <p>
-                    <strong>GraphQL</strong> s'impose dans les applications complexes, notamment mobiles, 
-                    où la flexibilité et la réduction des requêtes sont cruciales. Son adoption a bondi de 
-                    340% chez les grandes entreprises, et 61% des organisations l'utilisent maintenant en production.
+                    Le <strong>CLUSIF</strong> et l'<strong>OWASP</strong> fournissent des recommandations officielles 
+                    détaillées que tout développeur doit connaître. L'OWASP API Security Top 10 recense les 
+                    vulnérabilités les plus critiques : authentification cassée, autorisation défaillante, 
+                    exposition de données sensibles, et mauvaise configuration de sécurité.
                 </p>
                 
                 <p>
-                    Concernant la <strong>sécurité</strong>, JWT et OAuth 2.0 sont devenus incontournables 
-                    pour protéger les APIs. Les bonnes pratiques 2025 incluent HTTPS obligatoire, tokens 
-                    à durée de vie limitée, et protection contre les attaques XSS et CSRF.
+                    Les chiffres sont alarmants : 25% des endpoints API ne sont même pas documentés (APIs fantômes), 
+                    et 44% du trafic bot avancé cible spécifiquement les APIs. Ces "shadow APIs" représentent 
+                    des failles de sécurité majeures car elles échappent à la supervision des équipes.
                 </p>
                 
                 <div style="background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1.5rem;">
                     <strong style="color: var(--accent-primary);"><i class="fas fa-graduation-cap"></i> Ce que cette veille m'a apporté :</strong>
                     <p style="margin: 0.5rem 0 0;">
-                        J'ai compris que le choix d'une architecture API dépend du contexte projet : 
-                        complexité des données, type de client (web/mobile), et besoins de performance. 
-                        J'ai également appris l'importance de la sécurité dès la conception, avec JWT et OAuth 2.0 
-                        comme standards modernes. Ces connaissances me seront essentielles pour mes futurs 
-                        projets en tant que développeur.
+                        J'ai compris l'importance critique de la sécurité dans le développement d'APIs REST. 
+                        Les connaissances acquises sur JWT, OAuth 2.0, HTTPS et le rate limiting me permettront 
+                        de développer des APIs sécurisées dans mes futurs projets professionnels. J'ai également 
+                        pris conscience que la sécurité ne doit jamais être une réflexion après coup, mais doit 
+                        être intégrée dès la phase de conception. La veille technologique est indispensable pour 
+                        rester à jour sur les nouvelles vulnérabilités et les solutions émergentes.
                     </p>
                 </div>
             </div>
@@ -505,7 +534,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>

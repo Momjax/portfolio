@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RP5 - MediaStock | Mohamed BOUKHATEM</title>
+    <title>RP4 - MediaStock | Mohamed BOUKHATEM</title>
+    
+    <script>
+        // Appliquer le thème instantanément pour éviter le flash
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -270,10 +280,150 @@
                         </div>
                     </div>
 
+                    <!-- CAPTURES D'ÉCRAN -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-images"></i> 7. Captures d'écran
+                        </h3>
+                        
+                        <div class="grid grid-2" style="gap: 1.5rem;">
+                            <!-- Page de connexion -->
+                            <div>
+                                <h4><i class="fas fa-sign-in-alt"></i> Page de connexion</h4>
+                                <img src="images/rp5-login.jpg" alt="Interface de connexion MediaStock" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-top: 1rem; border: 2px solid var(--border-color);">
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                    <i class="fas fa-info-circle"></i> Interface d'authentification avec formulaire sécurisé et matériel disponible
+                                </p>
+                            </div>
+                            
+                            <!-- Dashboard principal -->
+                            <div>
+                                <h4><i class="fas fa-th-large"></i> Dashboard principal</h4>
+                                <img src="images/rp5-dashboard.png" alt="Dashboard MediaStock" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-top: 1rem; border: 2px solid var(--border-color);">
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                    <i class="fas fa-info-circle"></i> Interface de gestion du patrimoine avec création de prêt/restitution et gestion des équipements
+                                </p>
+                            </div>
+                            
+                            <!-- MCD -->
+                            <div>
+                                <h4><i class="fas fa-database"></i> Modèle Conceptuel de Données</h4>
+                                <img src="images/rp5-mcd.jpg" alt="MCD de la base de données" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-top: 1rem; border: 2px solid var(--border-color);">
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                    <i class="fas fa-info-circle"></i> Architecture BDD : ADMIN, ITEM, PRÊT, EMPRUNTEUR, CATEGORIE avec relations
+                                </p>
+                            </div>
+                            
+                            <!-- Kanban -->
+                            <div>
+                                <h4><i class="fas fa-columns"></i> Tableau Kanban (Notion)</h4>
+                                <img src="images/rp5-kanban.jpg" alt="Tableau Kanban du projet" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-top: 1rem; border: 2px solid var(--border-color);">
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                    <i class="fas fa-info-circle"></i> Gestion des tâches avec statuts, priorités (Must/Should) et durées estimées
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Gantt -->
+                        <div style="margin-top: 2rem;">
+                            <h4><i class="fas fa-chart-bar"></i> Diagramme de Gantt - Planning du projet</h4>
+                            <img src="images/rp5-gantt.jpg" alt="Diagramme de Gantt" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-top: 1rem; border: 2px solid var(--border-color);">
+                            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                                <i class="fas fa-info-circle"></i> Planning sur 5 jours (16-20/06/2025) avec 8 tâches : Gouvernance, Architecture, Communication réseau, Interfaces UI, Authentification, Liste utilisateurs, Gestion statuts, Livraison
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- GESTION DE PROJET -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--success); margin-bottom: 1.5rem;">
+                            <i class="fas fa-tasks"></i> 8. Gestion de Projet
+                        </h3>
+                        
+                        <p>Pour ce projet, nous avons utilisé une approche <strong>Agile</strong> combinant Scrum, MoSCoW et Kanban :</p>
+                        
+                        <!-- SCRUM -->
+                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md); margin: 1.5rem 0;">
+                            <h5 style="color: var(--primary); margin-bottom: 1rem;">
+                                <i class="fas fa-sync-alt"></i> Méthodologie Scrum
+                            </h5>
+                            <p>Organisation en <strong>sprints de 1 semaine</strong> pour un développement itératif rapide :</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> <strong>Sprint Planning</strong> : Définition des tâches chaque lundi</li>
+                                <li><i class="fas fa-check"></i> <strong>Daily Standup</strong> : Point quotidien de 15 minutes</li>
+                                <li><i class="fas fa-check"></i> <strong>Sprint Review</strong> : Démonstration des fonctionnalités</li>
+                                <li><i class="fas fa-check"></i> <strong>Sprint Retrospective</strong> : Analyse d'amélioration</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- MoSCoW -->
+                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md); margin: 1.5rem 0;">
+                            <h5 style="color: var(--success); margin-bottom: 1rem;">
+                                <i class="fas fa-list-ol"></i> Priorisation MoSCoW
+                            </h5>
+                            <div class="grid grid-2" style="gap: 1rem;">
+                                <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+                                    <strong style="color: var(--success);"><i class="fas fa-star"></i> Must Have</strong>
+                                    <ul style="margin: 0.5rem 0 0; font-size: 0.85rem; padding-left: 1.2rem;">
+                                        <li>Authentification admin</li>
+                                        <li>Gestion patrimoine</li>
+                                        <li>Création de prêts</li>
+                                        <li>Restitution équipements</li>
+                                    </ul>
+                                </div>
+                                <div style="padding: 1rem; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--info); border-radius: var(--radius-sm);">
+                                    <strong style="color: var(--info);"><i class="fas fa-thumbs-up"></i> Should Have</strong>
+                                    <ul style="margin: 0.5rem 0 0; font-size: 0.85rem; padding-left: 1.2rem;">
+                                        <li>Filtres de recherche</li>
+                                        <li>Historique des prêts</li>
+                                        <li>Gestion catégories</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- KANBAN -->
+                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md); margin: 1.5rem 0;">
+                            <h5 style="color: var(--warning); margin-bottom: 1rem;">
+                                <i class="fas fa-columns"></i> Tableau Kanban (Notion)
+                            </h5>
+                            <p>Gestion visuelle avec tableau Kanban sur <strong>Notion</strong> (voir capture d'écran ci-dessus)</p>
+                            <div class="grid grid-3" style="gap: 1rem; margin-top: 1rem;">
+                                <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border: 2px solid var(--danger); border-radius: var(--radius-md); text-align: center;">
+                                    <h6 style="color: var(--danger);"><i class="fas fa-clipboard-list"></i> À Faire</h6>
+                                </div>
+                                <div style="padding: 1rem; background: rgba(234, 179, 8, 0.1); border: 2px solid var(--warning); border-radius: var(--radius-md); text-align: center;">
+                                    <h6 style="color: var(--warning);"><i class="fas fa-spinner"></i> En Cours</h6>
+                                </div>
+                                <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border: 2px solid var(--success); border-radius: var(--radius-md); text-align: center;">
+                                    <h6 style="color: var(--success);"><i class="fas fa-check-circle"></i> Terminé</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GANTT -->
+                        <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
+                            <h5 style="color: var(--primary); margin-bottom: 1rem;">
+                                <i class="fas fa-chart-bar"></i> Diagramme de Gantt
+                            </h5>
+                            <p>Planning sur <strong>5 jours</strong> (16-20 juin 2025) avec 8 tâches principales (voir diagramme complet ci-dessus) :</p>
+                            <ol style="padding-left: 1.2rem; line-height: 1.8; font-size: 0.9rem;">
+                                <li>Gouvernance & Initialisation</li>
+                                <li>Architecture & Modélisation (MCD)</li>
+                                <li>Communication Réseau</li>
+                                <li>Interfaces Utilisateurs (UI)</li>
+                                <li>Authentification</li>
+                                <li>Liste utilisateurs & Messages</li>
+                                <li>Gestion statuts & Finalisation</li>
+                                <li>Livraison finale</li>
+                            </ol>
+                        </div>
+                    </div>
+
                     <!-- COMPÉTENCES -->
                     <div class="card">
                         <h3 style="color: var(--warning); margin-bottom: 1.5rem;">
-                            <i class="fas fa-graduation-cap"></i> 7. Compétences SLAM acquises
+                            <i class="fas fa-graduation-cap"></i> 9. Compétences SLAM acquises
                         </h3>
                         <div class="grid grid-2" style="gap: 1rem;">
                             <div class="competence-item"><i class="fas fa-check"></i> Développement d'application web</div>
@@ -359,12 +509,10 @@
                 <div class="footer-links">
                     <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="/cdn-cgi/l/email-protection#6f0c00011b0e0c1b2f0a170e021f030a410c0002"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <script
