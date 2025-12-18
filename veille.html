@@ -198,21 +198,26 @@
                 </div>
                 
                 <div class="card">
-                    <h4 style="color: var(--danger);">OWASP API Security Top 10</h4>
-                    <p>L'OWASP (Open Web Application Security Project) liste les 10 risques principaux :</p>
-                    <ol style="padding-left: 1.5rem; line-height: 1.8;">
-                        <li><strong>Broken Object Level Authorization</strong></li>
-                        <li><strong>Broken Authentication</strong></li>
-                        <li><strong>Broken Object Property Level Authorization</strong></li>
-                        <li><strong>Unrestricted Resource Consumption</strong></li>
-                        <li><strong>Broken Function Level Authorization</strong></li>
-                        <li><strong>Unrestricted Access to Sensitive Business Flows</strong></li>
-                        <li><strong>Server Side Request Forgery</strong></li>
-                        <li><strong>Security Misconfiguration</strong></li>
-                        <li><strong>Improper Inventory Management</strong></li>
-                        <li><strong>Unsafe Consumption of APIs</strong></li>
-                    </ol>
-                </div>
+    <h4 style="color: var(--danger);">OWASP API Security Top 10</h4>
+    <p>
+        L’OWASP (Open Web Application Security Project) identifie les principales 
+        vulnérabilités de sécurité affectant les APIs REST. Ces risques sont 
+        aujourd’hui les plus exploités par les attaquants.
+    </p>
+    <ol style="padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Broken Object Level Authorization</strong> : accès aux données d’un autre utilisateur via un identifiant.</li>
+        <li><strong>Broken Authentication</strong> : failles dans la gestion des connexions et des tokens.</li>
+        <li><strong>Broken Object Property Level Authorization</strong> : exposition ou modification de champs sensibles.</li>
+        <li><strong>Unrestricted Resource Consumption</strong> : absence de limite de requêtes entraînant des surcharges.</li>
+        <li><strong>Broken Function Level Authorization</strong> : accès à des fonctionnalités non autorisées.</li>
+        <li><strong>Unrestricted Access to Sensitive Business Flows</strong> : automatisation d’actions critiques par des bots.</li>
+        <li><strong>Server Side Request Forgery (SSRF)</strong> : requêtes internes déclenchées via des entrées utilisateur.</li>
+        <li><strong>Security Misconfiguration</strong> : paramètres de sécurité mal configurés.</li>
+        <li><strong>Improper Inventory Management</strong> : APIs obsolètes ou non documentées exposées.</li>
+        <li><strong>Unsafe Consumption of APIs</strong> : utilisation d’APIs externes sans validation des données.</li>
+    </ol>
+</div>
+
             </div>
         </div>
     </section>
