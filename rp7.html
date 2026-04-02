@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="fr">
 
@@ -342,71 +342,63 @@ tests/                   <span style="color: var(--text-muted);">// Tests PHPUni
 
                     </div>
 
-                    <!-- RÉALISATION -->
-
+                    
+                    
+                    <!-- APERÇU VISUEL -->
                     <div class="card" style="margin-bottom: 2rem;">
-
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
-
-                            <i class="fas fa-code"></i> 4. Réalisation
-
+                            <i class="fas fa-image"></i> Aperçu visuel (Dashboard & Réservation)
                         </h3>
-
-                        <h4>Ma contribution</h4>
-
-                        <ul class="feature-list">
-
-                            <li><i class="fas fa-check"></i> <strong>Entités Doctrine</strong> : User, Room, Booking avec relations ManyToOne</li>
-
-                            <li><i class="fas fa-check"></i> <strong>Authentification Symfony Security</strong> : login, logout, rôles ROLE_USER / ROLE_ADMIN</li>
-
-                            <li><i class="fas fa-check"></i> <strong>Migrations Doctrine</strong> et fixtures de données initiales</li>
-
-                            <li><i class="fas fa-check"></i> <strong>Formulaires Symfony</strong> avec validation des données</li>
-
-                            <li><i class="fas fa-check"></i> <strong>Tests unitaires PHPUnit</strong> sur les fonctionnalités clés</li>
-
-                            <li><i class="fas fa-check"></i> <strong>Déploiement complet</strong> sur VM Linux de l'école</li>
-
-                        </ul>
-
-                        <h4 style="margin-top: 1.5rem;">Extrait de code — Entité Booking</h4>
-
-                        <div class="code-block">
-
-<pre style="color: var(--text-secondary); font-size: 0.8rem;">
-
-<span style="color: var(--accent-primary);">#[ORM\Entity(repositoryClass:</span> BookingRepository::class<span style="color: var(--accent-primary);">)]</span>
-
-<span style="color: var(--accent-primary);">class</span> Booking
-
-{
-
-    <span style="color: var(--accent-primary);">#[ORM\Id, ORM\GeneratedValue, ORM\Column]</span>
-
-    <span style="color: var(--accent-primary);">private</span> ?int $id = <span style="color: var(--warning);">null</span>;
-
-    <span style="color: var(--accent-primary);">#[ORM\ManyToOne(targetEntity:</span> Room::class<span style="color: var(--accent-primary);">)]</span>
-
-    <span style="color: var(--accent-primary);">private</span> ?Room $room = <span style="color: var(--warning);">null</span>;
-
-    <span style="color: var(--accent-primary);">#[ORM\ManyToOne(targetEntity:</span> User::class<span style="color: var(--accent-primary);">)]</span>
-
-    <span style="color: var(--accent-primary);">private</span> ?User $user = <span style="color: var(--warning);">null</span>;
-
-    <span style="color: var(--accent-primary);">#[ORM\Column(type:</span> <span style="color: var(--success);">'datetime'</span><span style="color: var(--accent-primary);">)]</span>
-
-    <span style="color: var(--accent-primary);">private</span> ?\DateTimeInterface $startAt = <span style="color: var(--warning);">null</span>;
-
-}
-
-</pre>
-
+                        <div class="grid grid-2" style="gap: 1rem;">
+                            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+                                <img src="images/rp7.png" alt="Dashboard Admin" style="width: 100%; display: block;">
+                                <p style="padding: 0.5rem; font-size: 0.82rem; text-align: center; background: var(--bg-secondary);">Panneau d'administration (Symfony)</p>
+                            </div>
+                            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+                                <img src="images/rp7_rooms.png" alt="Liste Salles" style="width: 100%; display: block;">
+                                <p style="padding: 0.5rem; font-size: 0.82rem; text-align: center; background: var(--bg-secondary);">Interface de sélection des salles</p>
+                            </div>
+                            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); grid-column: span 2;">
+                                <img src="images/rp7_detail.png" alt="Détails réservation" style="width: 100%; display: block;">
+                                <p style="padding: 0.5rem; font-size: 0.82rem; text-align: center; background: var(--bg-secondary);">Planning hebdomadaire & Réservation par créneau</p>
+                            </div>
                         </div>
-
                     </div>
 
-                    <!-- TESTS -->
+
+                    
+                    <!-- GESTION DE PROJET (GANTT) -->
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            <i class="fas fa-tasks"></i> Gestion du projet (Diagramme de Gantt)
+                        </h3>
+                        <div style="background: rgba(88, 166, 255, 0.03); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div class="gantt-container" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: grid; grid-template-columns: 180px 1fr; align-items: center;">
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Analyse & Conception</span>
+                                    <div style="height: 10px; background: var(--accent-primary); width: 25%; border-radius: 5px; box-shadow: 0 0 10px var(--accent-glow);"></div>
+                                </div>
+                                <div style="display: grid; grid-template-columns: 180px 1fr; align-items: center;">
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Développement Core</span>
+                                    <div style="height: 10px; background: var(--accent-gradient); width: 50%; margin-left: 25%; border-radius: 5px;"></div>
+                                </div>
+                                <div style="display: grid; grid-template-columns: 180px 1fr; align-items: center;">
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Tests & QA</span>
+                                    <div style="height: 10px; background: var(--success); width: 15%; margin-left: 75%; border-radius: 5px;"></div>
+                                </div>
+                                <div style="display: grid; grid-template-columns: 180px 1fr; align-items: center;">
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Documentation / Recette</span>
+                                    <div style="height: 10px; background: var(--warning); width: 10%; margin-left: 90%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted); border-top: 1px dashed var(--border-color); padding-top: 0.75rem;">
+                                <span><i class="fas fa-calendar-day"></i> Début : 01/03/2026</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">Cycle : Agile (Scrum)</span>
+                                <span><i class="fas fa-flag-checkered"></i> Fin : 30/03/2026</span>
+                            </div>
+                        </div>
+                    </div>
+<!-- TESTS -->
 
                     <div class="card" style="margin-bottom: 2rem;">
 
