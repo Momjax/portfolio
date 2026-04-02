@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RP1 - Classcord | Mohamed BOUKHATEM</title>
     
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,6 +33,16 @@
                 <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
                 <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
             </ul>
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -225,15 +244,21 @@
                     <!-- COMPÉTENCES -->
                     <div class="card">
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
-                            <i class="fas fa-graduation-cap"></i> 7. Compétences SLAM acquises
+                            <i class="fas fa-graduation-cap"></i> 7. Compétences du Bloc 1 couvertes
                         </h3>
-                        <div class="grid grid-2" style="gap: 1rem;">
-                            <div class="competence-item"><i class="fas fa-check"></i> Concevoir une solution applicative</div>
-                            <div class="competence-item"><i class="fas fa-check"></i> Développer des composants d'accès aux données</div>
-                            <div class="competence-item"><i class="fas fa-check"></i> Développer la partie front-end</div>
-                            <div class="competence-item"><i class="fas fa-check"></i> Développer la partie back-end</div>
-                            <div class="competence-item"><i class="fas fa-check"></i> Tester et valider une solution</div>
-                            <div class="competence-item"><i class="fas fa-check"></i> Documenter une solution</div>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--accent-primary);">B1.4 — Travailler en mode projet</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Organisation en binôme, répartition des tâches (client/serveur), protocole défini en équipe, points d'avancement réguliers.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--accent-primary);">B1.5 — Mettre à disposition un service informatique</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Déploiement de l'application serveur Java accessible par plusieurs clients en réseau local.</p>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+                                <strong style="color: var(--accent-primary);">B1.6 — Organiser son développement professionnel</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Apprentissage de la programmation réseau Java (Sockets, JSON, multi-threading), documentation du code source.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

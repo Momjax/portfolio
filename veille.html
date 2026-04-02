@@ -93,6 +93,8 @@
         </div>
     </section>
 
+    <!-- (Section Méthode de Veille déplacée en bas) -->
+
     <!-- Qu'est-ce que REST API -->
     <section class="section section-alt" id="rest">
         <div class="container">
@@ -388,19 +390,149 @@
         </div>
     </section>
 
+    <!-- Méthode de veille : Feedly & Articles Extraits -->
+    <section class="section section-alt" id="methode">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-rss" style="color: var(--accent-primary);"></i> Ma Méthode de Veille</h2>
+                <p>Outil utilisé, suivi régulier et articles à la une</p>
+            </div>
+
+            <div class="grid grid-2" style="gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <!-- Outil : Feedly -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-rss"></i>
+                        </div>
+                        <h3 class="card-title">Feedly — Agrégateur RSS</h3>
+                    </div>
+                    <p>
+                        J'utilise <strong>Feedly</strong> comme outil principal de veille. Cette plateforme me permet 
+                        de centraliser plusieurs sources spécialisées dans un seul tableau de bord et de recevoir 
+                        les nouveaux articles en temps réel.
+                    </p>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        <i class="fas fa-satellite-dish"></i> <strong>4 flux suivis</strong> dans le dossier <em>Veille API Security</em> :
+                        API Security News, OWASP, PortSwigger Research, Krebs on Security
+                    </p>
+                </div>
+
+                <!-- Flux suivis -->
+                <div class="card">
+                    <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">
+                        <i class="fas fa-satellite-dish"></i> Flux RSS suivis
+                    </h4>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-shield-alt" style="color: var(--danger);"></i>
+                            <strong>API Security News</strong> <span class="text-muted" style="font-size:0.85rem;">— apisecurity.io</span>
+                            <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Actualités hebdomadaires sur les vulnérabilités d'API</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-lock" style="color: var(--warning);"></i>
+                            <strong>OWASP</strong> <span class="text-muted" style="font-size:0.85rem;">— owasp.org</span>
+                            <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Référence mondiale pour la sécurité des applications web</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-bug" style="color: var(--accent-primary);"></i>
+                            <strong>PortSwigger Research</strong> <span class="text-muted" style="font-size:0.85rem;">— portswigger.net</span>
+                            <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Recherches avancées en sécurité web (équipe Burp Suite)</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-newspaper" style="color: var(--success);"></i>
+                            <strong>Krebs on Security</strong> <span class="text-muted" style="font-size:0.85rem;">— krebsonsecurity.com</span>
+                            <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Investigations sur les cyberattaques et botnets</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Articles mis en avant avec encarts de lecture -->
+            <div style="max-width: 900px; margin: 3rem auto 2rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">
+                    <i class="fas fa-book-reader" style="color: var(--accent-primary);"></i> Découvertes Clés (Extraits)
+                </h3>
+                
+                <div class="grid grid-2" style="gap: 1.5rem;">
+                    <!-- Actu 1 -->
+                    <div class="card" style="border-top: 4px solid var(--danger);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="tag tag-danger"><i class="fas fa-bolt"></i> Vulnérabilité</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> API Security News (Mar 2026)</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">SolarWinds RCE &amp; Supply-Chain API</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+                            Analyse d'une faille critique où des paramètres d'API non filtrés ont permis des injections SQL et RCE dans l'ère des agents IA. Cela nous rappelle l'importance vitale de la sanitization.
+                        </p>
+                        <a href="https://apisecurity.io" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                            Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+
+                    <!-- Actu 2 -->
+                    <div class="card" style="border-top: 4px solid var(--primary);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="tag tag-primary"><i class="fas fa-medal"></i> Tendance</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Fév 2026)</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Top 10 Web Hacking Techniques 2025</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+                            Bilan annuel des chercheurs de Burp Suite listant les nouvelles techniques et variations d'attaques découvertes l'an passé ciblant les applications web.
+                        </p>
+                        <a href="https://portswigger.net/research/top-10-web-hacking-techniques-of-2025" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                            Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Actu 3 -->
+                    <div class="card" style="border-top: 4px solid var(--warning);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="tag tag-warning"><i class="fas fa-key"></i> Authentification</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Guide)</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Attacking JWT Authentication</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+                            Ce guide explique comment des erreurs d'implémentation (ex: algorithme 'None' ou absence de vérification de signature) compromettent l'intégrité des tokens JSON Web.
+                        </p>
+                        <a href="https://portswigger.net/web-security/jwt" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                            Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+
+                    <!-- Actu 4 -->
+                    <div class="card" style="border-top: 4px solid var(--info);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <span class="tag tag-info"><i class="fas fa-shield-alt"></i> Protocole</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Jan 2025)</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">OAuth 2.0 Vulnerabilities &amp; RFC 9700</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+                            L'évolution de la sécurisation OAuth. Avec la RFC 9700, l'Implicit Grant est déconseillé, au profit du flux Authorization Code avec PKCE (Proof Key for Code Exchange) pour éviter les vols de session.
+                        </p>
+                        <a href="https://portswigger.net/web-security/oauth" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                            Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Tableau de veille -->
     <section class="section section-alt" id="sources">
         <div class="container">
             <div class="section-header">
                 <h2><i class="fas fa-table text-gradient"></i> Tableau de Veille</h2>
-                <p>Sources consultées pour ma veille technologique</p>
+                <p>Sources consultées — incluant les articles Feedly et les ressources documentaires</p>
             </div>
             
             <div class="table-wrapper">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Sujet</th>
+                            <th>Sujet / Article</th>
+                            <th>Outil</th>
                             <th>Type</th>
                             <th>Source</th>
                             <th>Date</th>
@@ -409,60 +541,76 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><strong>SolarWinds RCE, Supply-Chain API &amp; SQL Injection (Agentic AI)</strong></td>
+                            <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+                            <td><span class="tag tag-danger">Actualité</span></td>
+                            <td><a href="https://apisecurity.io" target="_blank">apisecurity.io</a></td>
+                            <td>Mar 2026</td>
+                            <td>Injection SQL, Supply-Chain, RCE, Agentic AI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Top 10 web hacking techniques of 2025</strong></td>
+                            <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+                            <td><span class="tag tag-primary">Recherche</span></td>
+                            <td><a href="https://portswigger.net/research/top-10-web-hacking-techniques-of-2025" target="_blank">portswigger.net</a></td>
+                            <td>Fév 2026</td>
+                            <td>Hacking, Techniques, Web Security, 2025</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attacking JWT — Failles &amp; exploits courants</strong></td>
+                            <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+                            <td><span class="tag tag-warning">Guide technique</span></td>
+                            <td><a href="https://portswigger.net/web-security/jwt" target="_blank">portswigger.net</a></td>
+                            <td>2024</td>
+                            <td>JWT, Tokens, Signature, Authentification</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OAuth 2.0 Vulnerabilities &amp; RFC 9700 (nouvelles recommandations)</strong></td>
+                            <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+                            <td><span class="tag tag-primary">Recherche</span></td>
+                            <td><a href="https://portswigger.net/web-security/oauth" target="_blank">portswigger.net</a></td>
+                            <td>Jan 2025</td>
+                            <td>OAuth 2.0, PKCE, Bearer Tokens, RFC 9700</td>
+                        </tr>
+                        <tr>
                             <td><strong>Sécurité API 2024-2025</strong></td>
+                            <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
                             <td><span class="tag">Article</span></td>
                             <td><a href="https://www.orsys.fr/orsys-lemag/comment-securiser-les-api-les-bonnes-pratiques/" target="_blank">orsys.fr</a></td>
                             <td>30/06/2025</td>
-                            <td>Sécurité, Bots, Bonnes pratiques, Statistiques 2024</td>
+                            <td>Sécurité, Bots, Bonnes pratiques, Statistiques</td>
                         </tr>
                         <tr>
-                            <td><strong>API REST bonnes pratiques</strong></td>
+                            <td><strong>API REST — Bonnes pratiques sécurité</strong></td>
+                            <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
                             <td><span class="tag">Guide</span></td>
                             <td><a href="https://www.akamai.com/fr/blog/security/rest-api-security-best-practices" target="_blank">akamai.com</a></td>
                             <td>16/11/2023</td>
-                            <td>REST, Sécurité, Architecture, DDoS</td>
+                            <td>REST, Architecture, DDoS, Authentication</td>
                         </tr>
                         <tr>
-                            <td><strong>Optimisation APIs RESTful</strong></td>
-                            <td><span class="tag">Guide technique</span></td>
-                            <td><a href="https://www.puce-et-media.com/optimisation-des-apis-restful-urls-bonnes-pratiques/" target="_blank">puce-et-media.com</a></td>
-                            <td>12/10/2025</td>
-                            <td>URLs, JWT, HTTPS, Authentification</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sécurité des API</strong></td>
-                            <td><span class="tag">Documentation</span></td>
-                            <td><a href="https://fr.barracuda.com/support/glossary/api-security" target="_blank">barracuda.com</a></td>
-                            <td>20/11/2024</td>
-                            <td>Sécurité, Gateway, Protection, REST</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sécurisation API CLUSIF</strong></td>
+                            <td><strong>Sécurisation des API — Rapport CLUSIF</strong></td>
+                            <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
                             <td><span class="tag">PDF Officiel</span></td>
                             <td><a href="https://clusif.fr/wp-content/uploads/2024/10/20240304-Securisation-des-API.pdf" target="_blank">clusif.fr</a></td>
                             <td>Mars 2024</td>
                             <td>OAuth, JWT, OWASP Top 10, Standards</td>
                         </tr>
                         <tr>
-                            <td><strong>API Security</strong></td>
+                            <td><strong>OWASP API Security Top 10</strong></td>
+                            <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+                            <td><span class="tag">Documentation</span></td>
+                            <td><a href="https://owasp.org/API-Security/" target="_blank">owasp.org</a></td>
+                            <td>2024</td>
+                            <td>OWASP, Top 10, Vulnérabilités API, Standards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API Security — Glossaire</strong></td>
+                            <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
                             <td><span class="tag">Glossaire</span></td>
                             <td><a href="https://www.fortinet.com/fr/resources/cyberglossary/api-security" target="_blank">fortinet.com</a></td>
                             <td>2024</td>
                             <td>TLS, SSL, Tokens, Protection, Chiffrement</td>
-                        </tr>
-                        <tr>
-                            <td><strong>API REST conception</strong></td>
-                            <td><span class="tag">Article</span></td>
-                            <td><a href="https://www.itefficience.com/article/api-rest-les-bonnes-pratiques" target="_blank">itefficience.com</a></td>
-                            <td>15/08/2023</td>
-                            <td>REST, Architecture, Stateless, Performance</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Formation REST API Sécurité</strong></td>
-                            <td><span class="tag">Formation</span></td>
-                            <td><a href="https://www.plb.fr/formation/developpement/formation-api-rest,13-700608.php" target="_blank">plb.fr</a></td>
-                            <td>2024</td>
-                            <td>Formation, JWT, OWASP, Swagger, Postman</td>
                         </tr>
                     </tbody>
                 </table>

@@ -3,7 +3,7 @@ console.log('🚀 main.js chargé!');
 // THEME SWITCH ULTRA SIMPLE
 function initTheme() {
     const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    const root = document.documentElement;
     
     console.log('🎨 initTheme - Toggle trouvé:', toggle !== null);
     
@@ -12,7 +12,7 @@ function initTheme() {
     console.log('💾 Thème sauvegardé:', theme);
     
     if (theme === 'light') {
-        body.classList.add('light-mode');
+        root.classList.add('light-mode');
         if (toggle) toggle.checked = true;
     }
     
@@ -21,11 +21,11 @@ function initTheme() {
         toggle.addEventListener('change', function() {
             console.log('🔄 Switch cliqué!');
             if (this.checked) {
-                body.classList.add('light-mode');
+                root.classList.add('light-mode');
                 localStorage.setItem('theme', 'light');
                 console.log('✅ Mode clair activé');
             } else {
-                body.classList.remove('light-mode');
+                root.classList.remove('light-mode');
                 localStorage.setItem('theme', 'dark');
                 console.log('✅ Mode sombre activé');
             }

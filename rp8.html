@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RP3 - Jeu d'Arène | Mohamed BOUKHATEM</title>
-    
+    <title>RP8 - Andalounice V2 | Mohamed BOUKHATEM</title>
+
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
@@ -58,22 +58,25 @@
                 <i class="fas fa-chevron-right"></i>
                 <a href="realisations.html">Réalisations</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>RP3 - Jeu d'Arène</span>
+                <span>RP8 - Andalounice V2</span>
             </div>
             <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
                 <div class="card-icon success" style="width: 60px; height: 60px; font-size: 1.75rem;">
-                    <i class="fas fa-gamepad"></i>
+                    <i class="fas fa-music"></i>
                 </div>
-                <h1>RP3 - <span class="text-gradient">Jeu d'Arène</span></h1>
+                <h1>RP8 - <span class="text-gradient">Andalounice V2</span></h1>
             </div>
             <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
-                Jeu multijoueur en Java avec architecture client-serveur
+                Refonte complète du site web de l'association « Andalounice » — Architecture MVC PHP, panier, paiement PayPal/Stripe, déploiement O2Switch
             </p>
             <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
                 <span class="status status-success"><i class="fas fa-check"></i> Terminé</span>
-                <span class="tag tag-warning">Java</span>
-                <span class="tag">Swing</span>
-                <span class="tag">Multithreading</span>
+                <span class="tag tag-success">PHP (MVC)</span>
+                <span class="tag">MySQL</span>
+                <span class="tag tag-warning">PayPal</span>
+                <span class="tag">Stripe</span>
+                <span class="tag">PHPMailer</span>
+                <span class="tag tag-danger">HTML5</span>
             </div>
         </div>
     </section>
@@ -91,21 +94,20 @@
                         </h3>
                         <h4>Situation</h4>
                         <p>
-                            Ce projet a été réalisé dans le cadre du <strong>BTS SIO SLAM</strong> comme projet 
-                            de programmation Java avancée. L'objectif était de créer un jeu multijoueur 
-                            démontrant nos compétences en programmation réseau, interface graphique et 
-                            gestion de la concurrence.
+                            Ce projet a été réalisé dans le cadre d'un <strong>stage / projet professionnel</strong> pour
+                            l'association culturelle <strong>Andalounice</strong>, spécialisée dans la promotion de la musique andalouse à Nice.
+                            L'objectif était de refondre intégralement le site web existant (V1) pour le moderniser, corriger les informations
+                            (coordonnées, adresse, horaires) et améliorer l'expérience utilisateur.
                         </p>
                         <h4>Organisation</h4>
                         <p>
-                            Projet individuel développé sur 6 semaines avec des points d'étape réguliers 
-                            pour valider l'avancement des différents modules.
+                            Projet développé individuellement avec un interlocuteur côté association. Analyse des besoins,
+                            correction du contenu existant, développement de la nouvelle version et mise en ligne.
                         </p>
                         <h4>Problématique</h4>
                         <p>
-                            Comment concevoir un jeu multijoueur temps réel avec une synchronisation efficace 
-                            entre plusieurs clients et un serveur, tout en gérant les contraintes de performance 
-                            et de latence réseau ?
+                            Comment refondre un site web associatif existant pour le rendre plus moderne, plus accessible,
+                            avec des informations à jour (contact, localisation, formations) et une meilleure présence en ligne ?
                         </p>
                     </div>
 
@@ -116,18 +118,20 @@
                         </h3>
                         <h4>Objectifs fonctionnels</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> Connexion simultanée de plusieurs joueurs</li>
-                            <li><i class="fas fa-check"></i> Déplacement des personnages dans une arène 2D</li>
-                            <li><i class="fas fa-check"></i> Génération aléatoire d'obstacles (murs)</li>
-                            <li><i class="fas fa-check"></i> Chat intégré pour communiquer entre joueurs</li>
-                            <li><i class="fas fa-check"></i> Synchronisation en temps réel des positions</li>
+                            <li><i class="fas fa-check"></i> Refonte graphique complète du site (charte, typographie, couleurs)</li>
+                            <li><i class="fas fa-check"></i> Page Formations avec liste dynamique depuis la BDD</li>
+                            <li><i class="fas fa-check"></i> Page Événements et Page Galerie</li>
+                            <li><i class="fas fa-check"></i> Système d'inscription avec <strong>panier d'achats</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>Paiement en ligne</strong> : PayPal (sandbox) + Stripe (mode test)</li>
+                            <li><i class="fas fa-check"></i> Formulaire de contact avec <strong>envoi d'email via PHPMailer</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>Mise en production</strong> sur O2Switch avec guide de déploiement</li>
                         </ul>
                         <h4 style="margin-top: 1.5rem;">Contraintes techniques</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Architecture client-serveur obligatoire</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Java + Swing pour l'interface</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Gestion multi-thread côté serveur</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Fluidité d'affichage (minimum 30 FPS)</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Architecture <strong>MVC PHP</strong> structurée</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Base de données MySQL avec PDO (protection injections SQL)</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Sécurisation : validation, .htaccess, mots de passe hashés</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Composer pour la gestion des dépendances (Stripe, PayPal, PHPMailer)</li>
                         </ul>
                     </div>
 
@@ -136,50 +140,42 @@
                         <h3 style="color: var(--success); margin-bottom: 1.5rem;">
                             <i class="fas fa-lightbulb"></i> 3. Solution Proposée
                         </h3>
-                        <h4>Architecture globale</h4>
+                        <h4>Architecture MVC</h4>
                         <div class="code-block" style="margin-bottom: 1.5rem;">
 <pre style="color: var(--text-secondary); font-size: 0.85rem;">
-┌────────────────────────────────────────────────────────┐
-│                      SERVEUR                           │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
-│  │   Thread    │  │   Thread    │  │   Thread    │   │
-│  │  Client 1   │  │  Client 2   │  │  Client N   │   │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
-│         │                │                │           │
-│         └────────────────┼────────────────┘           │
-│                          ▼                            │
-│              ┌───────────────────┐                   │
-│              │   Game State      │                   │
-│              │  (synchronized)   │                   │
-│              └───────────────────┘                   │
-└────────────────────────────────────────────────────────┘
-                          ▲
-                          │ TCP Sockets
-        ┌─────────────────┼─────────────────┐
-        ▼                 ▼                 ▼
-   ┌─────────┐       ┌─────────┐       ┌─────────┐
-   │ Client 1│       │ Client 2│       │ Client N│
-   └─────────┘       └─────────┘       └─────────┘
+andalounice/
+├── app/
+│   ├── controllers/     <span style="color: var(--text-muted);">// Logique métier</span>
+│   ├── models/          <span style="color: var(--text-muted);">// Accès base de données (PDO)</span>
+│   ├── views/           <span style="color: var(--text-muted);">// Templates HTML/PHP</span>
+│   └── core/            <span style="color: var(--text-muted);">// Classes de base (Controller, Database)</span>
+├── config/
+│   ├── config.php       <span style="color: var(--text-muted);">// Config locale</span>
+│   └── config.PRODUCTION.php <span style="color: var(--text-muted);">// Config O2Switch</span>
+├── database/schema.sql  <span style="color: var(--text-muted);">// Structure BDD</span>
+├── public/            <span style="color: var(--text-muted);">// CSS, JS, images, uploads</span>
+├── vendor/            <span style="color: var(--text-muted);">// PayPal SDK, PHPMailer, Stripe</span>
+└── index.php          <span style="color: var(--text-muted);">// Point d'entrée</span>
 </pre>
                         </div>
-                        
-                        <h4>Composants du jeu</h4>
+
+                        <h4>Fonctionnalités clés développées</h4>
                         <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
-                                <strong style="color: var(--success);"><i class="fas fa-user"></i> Joueur</strong>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Position, direction, couleur, pseudo</p>
+                                <strong style="color: var(--success);"><i class="fas fa-credit-card"></i> Paiement en ligne</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">PayPal (sandbox) + Stripe (mode test)</p>
                             </div>
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
-                                <strong style="color: var(--success);"><i class="fas fa-square"></i> Mur</strong>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Position, dimensions, collision</p>
+                                <strong style="color: var(--success);"><i class="fas fa-envelope"></i> Emails automatiques</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">PHPMailer → andalounice@gmail.com</p>
                             </div>
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
-                                <strong style="color: var(--success);"><i class="fas fa-circle"></i> Boule</strong>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Projectile avec vélocité</p>
+                                <strong style="color: var(--success);"><i class="fas fa-shopping-cart"></i> Panier d'inscription</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Sélection et inscription aux formations</p>
                             </div>
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
-                                <strong style="color: var(--success);"><i class="fas fa-comments"></i> Chat</strong>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Messages temps réel</p>
+                                <strong style="color: var(--success);"><i class="fas fa-shield-alt"></i> Sécurité</strong>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">PDO, .htaccess, sessions, mots de passe hashés</p>
                             </div>
                         </div>
                     </div>
@@ -191,34 +187,27 @@
                         </h3>
                         <h4>Ma contribution</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> <strong>Serveur multithreadé</strong> gérant les connexions clients</li>
-                            <li><i class="fas fa-check"></i> <strong>Protocole de communication</strong> pour les actions de jeu</li>
-                            <li><i class="fas fa-check"></i> <strong>Interface graphique Swing</strong> avec rendu de l'arène</li>
-                            <li><i class="fas fa-check"></i> <strong>Gestion des collisions</strong> (murs, joueurs)</li>
-                            <li><i class="fas fa-check"></i> <strong>Synchronisation</strong> des états entre clients</li>
+                            <li><i class="fas fa-check"></i> <strong>Architecture MVC complète</strong> : séparation Controller / Model / View / Core</li>
+                            <li><i class="fas fa-check"></i> <strong>Système d'inscription + panier</strong> pour les formations de l'association</li>
+                            <li><i class="fas fa-check"></i> <strong>Intégration PayPal SDK</strong> (transactions de test en sandbox)</li>
+                            <li><i class="fas fa-check"></i> <strong>Intégration Stripe SDK</strong> (mode test avec Composer)</li>
+                            <li><i class="fas fa-check"></i> <strong>PHPMailer</strong> : formulaire de contact envoyant vers andalounice@gmail.com</li>
+                            <li><i class="fas fa-check"></i> <strong>Sécurisation</strong> : PDO, .htaccess, sessions PHP, mots de passe hashés</li>
+                            <li><i class="fas fa-check"></i> <strong>Déploiement O2Switch</strong> avec guide de mise en production documenté</li>
                         </ul>
-                        
-                        <h4 style="margin-top: 1.5rem;">Extrait de code - Gestion des collisions</h4>
+                        <h4 style="margin-top: 1.5rem;">Extrait — Architecture MVC (core/Controller.php)</h4>
                         <div class="code-block">
 <pre style="color: var(--text-secondary); font-size: 0.8rem;">
-<span style="color: var(--accent-primary);">public boolean</span> checkCollision(Player player, <span style="color: var(--accent-primary);">int</span> newX, <span style="color: var(--accent-primary);">int</span> newY) {
-    Rectangle playerBounds = <span style="color: var(--warning);">new</span> Rectangle(newX, newY, 
-                                            PLAYER_SIZE, PLAYER_SIZE);
-    
-    <span style="color: var(--accent-primary);">for</span> (Wall wall : walls) {
-        <span style="color: var(--accent-primary);">if</span> (playerBounds.intersects(wall.getBounds())) {
-            <span style="color: var(--accent-primary);">return true</span>; <span style="color: var(--text-muted);">// Collision détectée</span>
-        }
+<span style="color: var(--text-muted);">// app/core/Controller.php</span>
+<span style="color: var(--accent-primary);">abstract class</span> Controller {
+    <span style="color: var(--accent-primary);">protected function</span> model(<span style="color: var(--success);">$model</span>) {
+        require_once <span style="color: var(--success);">"../app/models/{$model}.php"</span>;
+        <span style="color: var(--accent-primary);">return new</span> $model();
     }
-    
-    <span style="color: var(--accent-primary);">for</span> (Player other : players) {
-        <span style="color: var(--accent-primary);">if</span> (other != player && 
-            playerBounds.intersects(other.getBounds())) {
-            <span style="color: var(--accent-primary);">return true</span>;
-        }
+    <span style="color: var(--accent-primary);">protected function</span> view(<span style="color: var(--success);">$view</span>, <span style="color: var(--warning);">$data</span> = []) {
+        extract(<span style="color: var(--warning);">$data</span>);
+        require_once <span style="color: var(--success);">"../app/views/{$view}.php"</span>;
     }
-    
-    <span style="color: var(--accent-primary);">return false</span>;
 }
 </pre>
                         </div>
@@ -235,12 +224,12 @@
                                     <tr><th>Test</th><th>Résultat attendu</th><th>Statut</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>Connexion multi-clients</td><td>3+ joueurs simultanés</td><td><span class="status status-success">✓</span></td></tr>
-                                    <tr><td>Déplacement joueur</td><td>Fluidité et réactivité</td><td><span class="status status-success">✓</span></td></tr>
-                                    <tr><td>Collision murs</td><td>Blocage correct</td><td><span class="status status-success">✓</span></td></tr>
-                                    <tr><td>Synchronisation positions</td><td>Cohérence entre clients</td><td><span class="status status-success">✓</span></td></tr>
-                                    <tr><td>Chat temps réel</td><td>Messages instantanés</td><td><span class="status status-success">✓</span></td></tr>
-                                    <tr><td>Déconnexion propre</td><td>Retrait du jeu</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Affichage page d'accueil</td><td>Rendu correct sur tous les écrans</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Formulaire de contact + PHPMailer</td><td>Email reçu sur andalounice@gmail.com</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Paiement PayPal sandbox</td><td>Transaction de test validée</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Paiement Stripe mode test</td><td>Paiement de test validé</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Inscription + panier</td><td>Formation ajoutée au panier et validée</td><td><span class="status status-success">✓</span></td></tr>
+                                    <tr><td>Déploiement O2Switch</td><td>Site accessible en ligne</td><td><span class="status status-success">✓</span></td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -253,49 +242,41 @@
                         </h3>
                         <div style="display: grid; gap: 1rem;">
                             <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--danger);">Problème 1 : Race conditions</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Accès concurrent aux données du jeu causant des incohérences.</p>
+                                <strong style="color: var(--danger);">Problème 1 : Informations incorrectes dans la V1</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">L'ancienne version contenait des erreurs partout : mauvais numéro, mauvaise adresse, fautes de frappe.</p>
                             </div>
                             <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
                                 <strong style="color: var(--success);">Solution :</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Utilisation de <code>synchronized</code> et <code>ConcurrentHashMap</code> pour les structures partagées.</p>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Audit complet du site, création d'un fichier <code>config.php</code> centralisé pour éviter les incohérences futures.</p>
                             </div>
                             <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--danger);">Problème 2 : Latence réseau</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Décalage visible entre les mouvements locaux et distants.</p>
+                                <strong style="color: var(--danger);">Problème 2 : Intégration Google Maps</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">L'embed Maps de la V1 ne pointait pas vers la bonne adresse.</p>
                             </div>
                             <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
                                 <strong style="color: var(--success);">Solution :</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Interpolation côté client et prédiction de mouvement pour fluidifier l'affichage.</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--danger);">Problème 3 : Fuite mémoire</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Les threads clients non fermés proprement lors des déconnexions.</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--success);">Solution :</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Implémentation d'un mécanisme de cleanup avec <code>try-finally</code> et fermeture explicite des sockets.</p>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Génération d'un nouvel embed iframe Google Maps avec les coordonnées GPS exactes de l'association.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- COMPÉTENCES -->
+                    <!-- COMPÉTENCES BLOC 1 -->
                     <div class="card">
                         <h3 style="color: var(--success); margin-bottom: 1.5rem;">
                             <i class="fas fa-graduation-cap"></i> 7. Compétences du Bloc 1 couvertes
                         </h3>
                         <div style="display: grid; gap: 1rem;">
                             <div style="padding: 1rem; background: rgba(63, 185, 80, 0.08); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--success);">B1.4 — Travailler en mode projet</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Gestion individuelle du projet sur 6 semaines avec points d'étape réguliers, découpage en modules (serveur, client, interface, réseau).</p>
+                                <strong style="color: var(--success);">B1.3 — Développer la présence en ligne de l'organisation</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Refonte complète du site web de l'association, mise à jour du contenu, amélioration du référencement et de l'accessibilité.</p>
                             </div>
                             <div style="padding: 1rem; background: rgba(63, 185, 80, 0.08); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
                                 <strong style="color: var(--success);">B1.5 — Mettre à disposition un service informatique</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Mise en place d'un serveur de jeu multijoueur accessible par plusieurs clients simultanés en réseau local.</p>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Mise en production du site sur l'hébergeur de l'association, vérification de l'accessibilité et du bon fonctionnement.</p>
                             </div>
                             <div style="padding: 1rem; background: rgba(63, 185, 80, 0.08); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
-                                <strong style="color: var(--success);">B1.6 — Organiser son développement professionnel</strong>
-                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Maîtrise du multithreading Java, gestion des race conditions, optimisation des performances réseau en autonomie.</p>
+                                <strong style="color: var(--success);">B1.1 — Gérer le patrimoine informatique</strong>
+                                <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Audit du site existant, identification des anomalies, mise à jour et documentation pour faciliter la maintenance future.</p>
                             </div>
                         </div>
                     </div>
@@ -310,7 +291,7 @@
                         <div class="info-item">
                             <i class="fas fa-calendar"></i>
                             <span class="info-label">Durée</span>
-                            <span class="info-value">6 semaines</span>
+                            <span class="info-value">4 semaines</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-user"></i>
@@ -318,36 +299,38 @@
                             <span class="info-value">Individuel</span>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-school"></i>
+                            <i class="fas fa-briefcase"></i>
                             <span class="info-label">Contexte</span>
-                            <span class="info-value">Formation BTS</span>
+                            <span class="info-value">Client réel — Association</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-check-circle"></i>
                             <span class="info-label">Statut</span>
                             <span class="status status-success">Terminé</span>
                         </div>
-                        
+
                         <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
-                        
+
                         <h4 style="margin-bottom: 1rem;">Technologies</h4>
                         <div class="tags">
-                            <span class="tag tag-warning">Java</span>
-                            <span class="tag">Swing</span>
-                            <span class="tag">Sockets TCP</span>
-                            <span class="tag">Multi-threading</span>
-                            <span class="tag">MVC</span>
+                            <span class="tag tag-success">PHP 8</span>
+                            <span class="tag">MySQL / PDO</span>
+                            <span class="tag tag-danger">HTML5</span>
+                            <span class="tag tag-primary">CSS3</span>
+                            <span class="tag tag-warning">JavaScript</span>
+                            <span class="tag">PayPal SDK</span>
+                            <span class="tag">Stripe SDK</span>
+                            <span class="tag">PHPMailer</span>
+                            <span class="tag">Composer</span>
+                            <span class="tag">O2Switch</span>
                         </div>
-                        
+
                         <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
-                        
+
                         <h4 style="margin-bottom: 1rem;">Liens</h4>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <a href="#" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+                            <a href="https://github.com/Momjax/andalouniceV2" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
                                 <i class="fab fa-github"></i> Code source
-                            </a>
-                            <a href="docs/Cours_Projet_Java_partie2.pdf" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
-                                <i class="fas fa-file-pdf"></i> Documentation
                             </a>
                         </div>
                     </div>
@@ -356,15 +339,15 @@
         </div>
     </section>
 
-    <!-- Navigation -->
+    <!-- Navigation entre RP -->
     <section class="section section-alt">
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <a href="rp2.html" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> RP2 - NutriFit
+                <a href="rp7.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> RP7 - RoomBooking
                 </a>
-                <a href="rp4.html" class="btn btn-primary">
-                    RP4 - E-Consulat <i class="fas fa-arrow-right"></i>
+                <a href="realisations.html" class="btn btn-primary">
+                    Toutes les réalisations <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -377,7 +360,7 @@
                 <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM</p>
                 <div class="footer-links">
                     <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>

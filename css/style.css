@@ -62,21 +62,21 @@
 }
 
 /* === MODE CLAIR === */
-body.light-mode {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f6f8fa;
+:root.light-mode, body.light-mode {
+    --bg-primary: #f0f7ff;
+    --bg-secondary: #e0f0ff;
     --bg-card: #ffffff;
-    --bg-card-hover: #f6f8fa;
+    --bg-card-hover: #f8fafc;
     
-    --text-primary: #24292f;
-    --text-secondary: #57606a;
-    --text-muted: #8b949e;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
     
-    --border-color: rgba(208, 215, 222, 0.8);
-    --border-hover: rgba(88, 166, 255, 0.5);
-    --shadow-sm: 0 2px 8px rgba(149, 157, 165, 0.2);
-    --shadow-md: 0 8px 30px rgba(149, 157, 165, 0.25);
-    --shadow-lg: 0 20px 50px rgba(149, 157, 165, 0.3);
+    --border-color: rgba(148, 163, 184, 0.4);
+    --border-hover: rgba(56, 139, 253, 0.6);
+    --shadow-sm: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.05);
 }
 
 /* === RESET & BASE === */
@@ -266,7 +266,7 @@ code {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .navbar.scrolled {
+:root.light-mode .navbar.scrolled, body.light-mode .navbar.scrolled {
     background: rgba(255, 255, 255, 0.95);
 }
 
