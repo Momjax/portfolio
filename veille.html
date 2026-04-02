@@ -1,692 +1,1308 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Veille Technologique | Mohamed BOUKHATEM</title>
-    
+
     <script>
+
         (function() {
+
             const theme = localStorage.getItem('theme') || 'dark';
+
             if (theme === 'light') {
+
                 document.documentElement.classList.add('light-mode');
+
             }
+
         })();
+
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
+
     <!-- Navigation -->
+
     <nav class="navbar" id="navbar">
+
         <div class="container navbar-inner">
+
             <a href="index.html" class="navbar-brand">
+
                 <span class="logo-icon"><i class="fas fa-code"></i></span>
+
                 MB
+
             </a>
+
             <ul class="navbar-nav" id="navbarNav">
+
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
+
                 <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+
                 <li><a href="veille.html" class="nav-link active">Veille Technologique</a></li>
+
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+
                 <li>
+
                     <div class="theme-switch-wrapper">
+
                         <i class="fas fa-moon theme-icon"></i>
+
                         <label class="theme-switch">
+
                             <input type="checkbox" id="theme-toggle">
+
                             <span class="slider"></span>
+
                         </label>
+
                         <i class="fas fa-sun theme-icon"></i>
+
                     </div>
+
                 </li>
+
             </ul>
+
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+
                 <span></span><span></span><span></span>
+
             </button>
+
         </div>
+
     </nav>
 
     <!-- Page Hero -->
+
     <section class="page-hero">
+
         <div class="container">
+
             <div class="breadcrumb">
+
                 <a href="index.html"><i class="fas fa-home"></i></a>
+
                 <i class="fas fa-chevron-right"></i>
+
                 <span>Veille Technologique</span>
+
             </div>
+
             <h1>Veille <span class="text-gradient">Technologique</span></h1>
+
             <p class="text-secondary" style="max-width: 800px; margin: 1rem auto 0;">
+
                 <strong>Problématique :</strong> Comment sécuriser efficacement une API REST pour protéger les données et prévenir les attaques malveillantes ?
+
             </p>
+
         </div>
+
     </section>
 
     <!-- Introduction -->
+
     <section class="section">
+
         <div class="container">
+
             <div class="card" style="max-width: 900px; margin: 0 auto;">
+
                 <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">
+
                     <i class="fas fa-info-circle"></i> Introduction
+
                 </h3>
+
                 <p>
+
                     Dans le cadre de ma formation <strong>BTS SIO SLAM</strong>, j'ai mené une veille technologique 
+
                     sur la <strong>sécurité des APIs REST</strong>. Les APIs REST sont devenues essentielles dans 
+
                     le développement web moderne pour permettre la communication entre applications.
+
                 </p>
+
                 <p>
+
                     Ma veille porte sur les <strong>bonnes pratiques de sécurisation</strong> des APIs REST 
+
                     et les menaces actuelles en 2025. Avec l'explosion du trafic bot malveillant (51% du trafic web) 
+
                     et les attaques de plus en plus sophistiquées, sécuriser les APIs est devenu un enjeu critique.
+
                 </p>
+
                 <div class="tags" style="margin-top: 1rem;">
+
                     <span class="tag tag-primary">REST API</span>
+
                     <span class="tag tag-danger">Sécurité</span>
+
                     <span class="tag tag-warning">JWT</span>
+
                     <span class="tag tag-success">HTTPS</span>
+
                     <span class="tag tag-info">OAuth 2.0</span>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- (Section Méthode de Veille déplacée en bas) -->
 
     <!-- Qu'est-ce que REST API -->
+
     <section class="section section-alt" id="rest">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-cloud" style="color: var(--accent-primary);"></i> Qu'est-ce qu'une API REST ?</h2>
+
                 <p>Comprendre les bases</p>
+
             </div>
-            
+
             <div class="grid grid-2" style="gap: 2rem;">
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary);">Définition</h4>
+
                     <p>
+
                         <strong>REST</strong> (Representational State Transfer) est un style d'architecture 
+
                         pour concevoir des APIs web. Une API REST permet à différentes applications de 
+
                         communiquer entre elles via le protocole HTTP.
+
                     </p>
+
                     <p>
+
                         Elle utilise les <strong>méthodes HTTP</strong> standards pour effectuer des opérations :
+
                     </p>
+
                     <ul class="feature-list">
+
                         <li><i class="fas fa-arrow-right"></i> <strong>GET</strong> : Récupérer des données</li>
+
                         <li><i class="fas fa-arrow-right"></i> <strong>POST</strong> : Créer de nouvelles données</li>
+
                         <li><i class="fas fa-arrow-right"></i> <strong>PUT</strong> : Modifier des données existantes</li>
+
                         <li><i class="fas fa-arrow-right"></i> <strong>DELETE</strong> : Supprimer des données</li>
+
                     </ul>
+
                 </div>
-                
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary);">Exemple concret</h4>
+
                     <p>Prenons l'exemple d'une API pour gérer des utilisateurs :</p>
+
                     <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.9rem; margin-top: 1rem;">
+
                         GET /api/users → Liste tous les utilisateurs<br>
+
                         GET /api/users/123 → Récupère l'utilisateur 123<br>
+
                         POST /api/users → Crée un nouvel utilisateur<br>
+
                         PUT /api/users/123 → Modifie l'utilisateur 123<br>
+
                         DELETE /api/users/123 → Supprime l'utilisateur 123
+
                     </div>
+
                     <p style="margin-top: 1rem;">
+
                         <strong>Caractéristique clé :</strong> REST est <strong>stateless</strong>, 
+
                         c'est-à-dire que chaque requête est indépendante et contient toutes les informations 
+
                         nécessaires pour être traitée.
+
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Menaces et risques -->
+
     <section class="section" id="threats">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> Menaces et Risques en 2024-2025</h2>
+
                 <p>Les dangers qui pèsent sur les APIs REST</p>
+
             </div>
-            
+
             <div class="card" style="max-width: 900px; margin: 0 auto 2rem;">
+
                 <h4 style="color: var(--danger); margin-bottom: 1rem;"><i class="fas fa-chart-line"></i> Chiffres clés</h4>
+
                 <div class="grid grid-2" style="gap: 1.5rem;">
+
                     <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+
                         <strong style="font-size: 2rem; color: var(--danger);">51%</strong>
+
                         <p style="margin: 0.5rem 0 0;">du trafic web est généré par des bots (dont 37% malveillants)</p>
+
                     </div>
+
                     <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+
                         <strong style="font-size: 2rem; color: var(--danger);">25%</strong>
+
                         <p style="margin: 0.5rem 0 0;">des endpoints API ne sont pas documentés (APIs fantômes)</p>
+
                     </div>
+
                     <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+
                         <strong style="font-size: 2rem; color: var(--danger);">186 Mds $</strong>
+
                         <p style="margin: 0.5rem 0 0;">de pertes annuelles dues à l'insécurité des APIs</p>
+
                     </div>
+
                     <div style="background: rgba(248, 81, 73, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
+
                         <strong style="font-size: 2rem; color: var(--danger);">44%</strong>
+
                         <p style="margin: 0.5rem 0 0;">du trafic bot avancé cible spécifiquement les APIs</p>
+
                     </div>
+
                 </div>
+
             </div>
-            
+
             <div class="grid grid-2" style="gap: 2rem;">
+
                 <div class="card">
+
                     <h4 style="color: var(--danger);">Top 5 des attaques</h4>
+
                     <ul class="feature-list">
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--danger);"></i>
+
                             <strong>Injection SQL</strong> : Insertion de code malveillant dans les requêtes
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--danger);"></i>
+
                             <strong>Authentification cassée</strong> : Tokens volés ou sessions compromises
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--danger);"></i>
+
                             <strong>CORS mal configuré</strong> : Accès non autorisé depuis d'autres domaines
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--danger);"></i>
+
                             <strong>Rate limiting absent</strong> : Attaques DDoS et brute force
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--danger);"></i>
+
                             <strong>Exposition de données sensibles</strong> : Fuites d'informations confidentielles
+
                         </li>
+
                     </ul>
+
                 </div>
-                
+
                 <div class="card">
+
     <h4 style="color: var(--danger);">OWASP API Security Top 10</h4>
+
     <p>
+
         L’OWASP (Open Web Application Security Project) identifie les principales 
+
         vulnérabilités de sécurité affectant les APIs REST. Ces risques sont 
+
         aujourd’hui les plus exploités par les attaquants.
+
     </p>
+
     <ol style="padding-left: 1.5rem; line-height: 1.8;">
+
         <li><strong>Broken Object Level Authorization</strong> : accès aux données d’un autre utilisateur via un identifiant.</li>
+
         <li><strong>Broken Authentication</strong> : failles dans la gestion des connexions et des tokens.</li>
+
         <li><strong>Broken Object Property Level Authorization</strong> : exposition ou modification de champs sensibles.</li>
+
         <li><strong>Unrestricted Resource Consumption</strong> : absence de limite de requêtes entraînant des surcharges.</li>
+
         <li><strong>Broken Function Level Authorization</strong> : accès à des fonctionnalités non autorisées.</li>
+
         <li><strong>Unrestricted Access to Sensitive Business Flows</strong> : automatisation d’actions critiques par des bots.</li>
+
         <li><strong>Server Side Request Forgery (SSRF)</strong> : requêtes internes déclenchées via des entrées utilisateur.</li>
+
         <li><strong>Security Misconfiguration</strong> : paramètres de sécurité mal configurés.</li>
+
         <li><strong>Improper Inventory Management</strong> : APIs obsolètes ou non documentées exposées.</li>
+
         <li><strong>Unsafe Consumption of APIs</strong> : utilisation d’APIs externes sans validation des données.</li>
+
     </ol>
+
 </div>
 
             </div>
+
         </div>
+
     </section>
 
     <!-- Bonnes pratiques de sécurité -->
+
     <section class="section section-alt" id="security">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-shield-alt text-gradient"></i> Bonnes Pratiques de Sécurité</h2>
+
                 <p>Comment protéger efficacement une API REST</p>
+
             </div>
-            
+
             <!-- HTTPS -->
+
             <div class="card" style="margin-bottom: 2rem;">
+
                 <div class="card-header">
+
                     <div class="card-icon success">
+
                         <i class="fas fa-lock"></i>
+
                     </div>
+
                     <h3 class="card-title">1. Toujours utiliser HTTPS</h3>
+
                 </div>
+
                 <p>
+
                     <strong>HTTPS</strong> (HTTP Secure) chiffre toutes les communications entre le client et le serveur 
+
                     grâce aux protocoles TLS/SSL. C'est la première ligne de défense.
+
                 </p>
+
                 <p><strong>Pourquoi ?</strong> Sans HTTPS, les données (mots de passe, tokens, informations personnelles) 
+
                 transitent en clair et peuvent être interceptées par des attaquants.</p>
+
                 <div style="background: rgba(63, 185, 80, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--success); margin-top: 1rem;">
+
                     <strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Obligatoire</strong>
+
                     <p style="margin: 0.5rem 0 0;">HTTPS doit être activé sur toutes les APIs, même en développement.</p>
+
                 </div>
+
             </div>
-            
+
             <!-- Authentification JWT -->
+
             <div class="card" style="margin-bottom: 2rem;">
+
                 <div class="card-header">
+
                     <div class="card-icon warning">
+
                         <i class="fas fa-key"></i>
+
                     </div>
+
                     <h3 class="card-title">2. Authentification avec JWT</h3>
+
                 </div>
+
                 <p>
+
                     <strong>JWT</strong> (JSON Web Token) est un standard pour créer des tokens d'accès sécurisés. 
+
                     Un JWT contient 3 parties : header, payload et signature.
+
                 </p>
+
                 <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin: 1rem 0; font-family: var(--font-mono); font-size: 0.85rem;">
+
                     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.SflKxwRJSMeKKF2QT
+
                 </div>
+
                 <p><strong>Fonctionnement :</strong></p>
+
                 <ul class="feature-list">
+
                     <li><i class="fas fa-arrow-right"></i> L'utilisateur s'authentifie avec login/password</li>
+
                     <li><i class="fas fa-arrow-right"></i> Le serveur génère un JWT signé avec une clé secrète</li>
+
                     <li><i class="fas fa-arrow-right"></i> Le client envoie ce JWT dans chaque requête (header Authorization)</li>
+
                     <li><i class="fas fa-arrow-right"></i> Le serveur vérifie la signature du JWT avant de traiter la requête</li>
+
                 </ul>
+
                 <div style="background: rgba(210, 153, 34, 0.1); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid var(--warning); margin-top: 1rem;">
+
                     <strong style="color: var(--warning);"><i class="fas fa-exclamation-triangle"></i> Important</strong>
+
                     <p style="margin: 0.5rem 0 0;">Toujours définir une date d'expiration (exp) courte et ne JAMAIS stocker le JWT dans localStorage (risque XSS). Préférer les cookies HttpOnly.</p>
+
                 </div>
+
             </div>
-            
+
             <!-- OAuth 2.0 -->
+
             <div class="card" style="margin-bottom: 2rem;">
+
                 <div class="card-header">
+
                     <div class="card-icon primary">
+
                         <i class="fas fa-user-shield"></i>
+
                     </div>
+
                     <h3 class="card-title">3. OAuth 2.0 pour l'autorisation</h3>
+
                 </div>
+
                 <p>
+
                     <strong>OAuth 2.0</strong> est un framework qui permet à une application d'accéder à des ressources 
+
                     au nom d'un utilisateur sans exposer ses identifiants. C'est le standard pour les connexions tierces.
+
                 </p>
+
                 <p>
+
                     <strong>Cas d'usage :</strong> "Se connecter avec Google/Facebook" utilise OAuth 2.0. 
+
                     L'application obtient un <strong>access_token</strong> pour accéder aux données autorisées par l'utilisateur.
+
                 </p>
+
                 <p><strong>Types de flows OAuth 2.0 :</strong></p>
+
                 <ul class="feature-list">
+
                     <li><i class="fas fa-check"></i> <strong>Authorization Code</strong> : Pour les apps web avec backend sécurisé</li>
+
                     <li><i class="fas fa-check"></i> <strong>Client Credentials</strong> : Pour les communications serveur à serveur</li>
+
                     <li><i class="fas fa-check"></i> <strong>Refresh Token</strong> : Pour renouveler l'access token sans redemander les identifiants</li>
+
                 </ul>
+
             </div>
-            
+
             <!-- Rate Limiting -->
+
             <div class="card">
+
                 <div class="card-header">
+
                     <div class="card-icon danger">
+
                         <i class="fas fa-tachometer-alt"></i>
+
                     </div>
+
                     <h3 class="card-title">4. Rate Limiting & Throttling</h3>
+
                 </div>
+
                 <p>
+
                     Le <strong>rate limiting</strong> limite le nombre de requêtes qu'un client peut faire dans un temps donné. 
+
                     Cela protège contre les attaques DDoS, le brute force et l'abus de l'API.
+
                 </p>
+
                 <p><strong>Exemple :</strong> Limiter à 100 requêtes par minute par adresse IP ou par utilisateur.</p>
+
                 <div style="background: var(--bg-secondary); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
+
                     <p style="margin: 0; font-size: 0.9rem;">
+
                         <strong>Réponse HTTP 429 :</strong> "Too Many Requests" est renvoyée quand la limite est dépassée
+
                     </p>
+
                 </div>
+
                 <p style="margin-top: 1rem;"><strong>Bonnes pratiques :</strong></p>
+
                 <ul class="feature-list">
+
                     <li><i class="fas fa-check"></i> Implémenter des limites différentes selon le type d'endpoint</li>
+
                     <li><i class="fas fa-check"></i> Informer l'utilisateur du nombre de requêtes restantes (headers X-RateLimit)</li>
+
                     <li><i class="fas fa-check"></i> Utiliser des solutions comme Redis pour tracker les requêtes</li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Checklist de sécurité -->
+
     <section class="section" id="checklist">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-tasks text-gradient"></i> Checklist de Sécurité</h2>
+
                 <p>Les essentiels à vérifier</p>
+
             </div>
-            
+
             <div class="card" style="max-width: 900px; margin: 0 auto;">
+
                 <h4 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                     <i class="fas fa-check-double"></i> À implémenter impérativement
+
                 </h4>
+
                 <div class="grid grid-2" style="gap: 1.5rem;">
+
                     <div>
+
                         <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Authentification & Autorisation</strong></p>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> HTTPS activé partout</li>
+
                             <li><i class="fas fa-check"></i> JWT avec signature vérifiée</li>
+
                             <li><i class="fas fa-check"></i> OAuth 2.0 pour les accès tiers</li>
+
                             <li><i class="fas fa-check"></i> Tokens avec expiration (TTL courte)</li>
+
                             <li><i class="fas fa-check"></i> Refresh tokens sécurisés</li>
+
                         </ul>
+
                     </div>
+
                     <div>
+
                         <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Protection des données</strong></p>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> Validation des entrées (sanitization)</li>
+
                             <li><i class="fas fa-check"></i> Chiffrement des données sensibles</li>
+
                             <li><i class="fas fa-check"></i> Pas de secrets dans le code source</li>
+
                             <li><i class="fas fa-check"></i> Headers de sécurité (CORS, CSP, X-Frame-Options)</li>
+
                             <li><i class="fas fa-check"></i> Protection contre les injections SQL</li>
+
                         </ul>
+
                     </div>
+
                     <div>
+
                         <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Surveillance & Contrôle</strong></p>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> Rate limiting (limite de requêtes)</li>
+
                             <li><i class="fas fa-check"></i> Logging des événements critiques</li>
+
                             <li><i class="fas fa-check"></i> Monitoring du trafic API en temps réel</li>
+
                             <li><i class="fas fa-check"></i> Alertes en cas d'anomalie</li>
+
                             <li><i class="fas fa-check"></i> Détection des bots malveillants</li>
+
                         </ul>
+
                     </div>
+
                     <div>
+
                         <p><strong style="color: var(--success);"><i class="fas fa-check-circle"></i> Documentation & Tests</strong></p>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> Documentation à jour (OpenAPI/Swagger)</li>
+
                             <li><i class="fas fa-check"></i> Tests de sécurité réguliers (pentests)</li>
+
                             <li><i class="fas fa-check"></i> Inventaire complet des APIs</li>
+
                             <li><i class="fas fa-check"></i> Audit de sécurité périodique</li>
+
                             <li><i class="fas fa-check"></i> Versionnement des APIs</li>
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Méthode de veille : Feedly & Articles Extraits -->
+
     <section class="section section-alt" id="methode">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-rss" style="color: var(--accent-primary);"></i> Ma Méthode de Veille</h2>
+
                 <p>Outil utilisé, suivi régulier et articles à la une</p>
+
             </div>
 
             <div class="grid grid-2" style="gap: 2rem; max-width: 900px; margin: 0 auto;">
+
                 <!-- Outil : Feedly -->
+
                 <div class="card">
+
                     <div class="card-header">
+
                         <div class="card-icon primary">
+
                             <i class="fas fa-rss"></i>
+
                         </div>
+
                         <h3 class="card-title">Feedly — Agrégateur RSS</h3>
+
                     </div>
+
                     <p>
+
                         J'utilise <strong>Feedly</strong> comme outil principal de veille. Cette plateforme me permet 
+
                         de centraliser plusieurs sources spécialisées dans un seul tableau de bord et de recevoir 
+
                         les nouveaux articles en temps réel.
+
                     </p>
+
                     <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+
                         <i class="fas fa-satellite-dish"></i> <strong>4 flux suivis</strong> dans le dossier <em>Veille API Security</em> :
+
                         API Security News, OWASP, PortSwigger Research, Krebs on Security
+
                     </p>
+
                 </div>
 
                 <!-- Flux suivis -->
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">
+
                         <i class="fas fa-satellite-dish"></i> Flux RSS suivis
+
                     </h4>
+
                     <ul class="feature-list">
+
                         <li>
+
                             <i class="fas fa-shield-alt" style="color: var(--danger);"></i>
+
                             <strong>API Security News</strong> <span class="text-muted" style="font-size:0.85rem;">— apisecurity.io</span>
+
                             <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Actualités hebdomadaires sur les vulnérabilités d'API</p>
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-lock" style="color: var(--warning);"></i>
+
                             <strong>OWASP</strong> <span class="text-muted" style="font-size:0.85rem;">— owasp.org</span>
+
                             <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Référence mondiale pour la sécurité des applications web</p>
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-bug" style="color: var(--accent-primary);"></i>
+
                             <strong>PortSwigger Research</strong> <span class="text-muted" style="font-size:0.85rem;">— portswigger.net</span>
+
                             <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Recherches avancées en sécurité web (équipe Burp Suite)</p>
+
                         </li>
+
                         <li>
+
                             <i class="fas fa-newspaper" style="color: var(--success);"></i>
+
                             <strong>Krebs on Security</strong> <span class="text-muted" style="font-size:0.85rem;">— krebsonsecurity.com</span>
+
                             <p style="font-size:0.85rem; margin: 0.2rem 0 0; color: var(--text-secondary);">Investigations sur les cyberattaques et botnets</p>
+
                         </li>
+
                     </ul>
+
                 </div>
+
             </div>
 
             <!-- Articles mis en avant avec encarts de lecture -->
+
             <div style="max-width: 900px; margin: 3rem auto 2rem;">
+
                 <h3 style="margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">
+
                     <i class="fas fa-book-reader" style="color: var(--accent-primary);"></i> Découvertes Clés (Extraits)
+
                 </h3>
-                
+
                 <div class="grid grid-2" style="gap: 1.5rem;">
+
                     <!-- Actu 1 -->
+
                     <div class="card" style="border-top: 4px solid var(--danger);">
+
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+
                             <span class="tag tag-danger"><i class="fas fa-bolt"></i> Vulnérabilité</span>
+
                             <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> API Security News (Mar 2026)</span>
+
                         </div>
+
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">SolarWinds RCE &amp; Supply-Chain API</h4>
+
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+
                             Analyse d'une faille critique où des paramètres d'API non filtrés ont permis des injections SQL et RCE dans l'ère des agents IA. Cela nous rappelle l'importance vitale de la sanitization.
+
                         </p>
+
                         <a href="https://apisecurity.io" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+
                             Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+
                         </a>
+
                     </div>
 
                     <!-- Actu 2 -->
+
                     <div class="card" style="border-top: 4px solid var(--primary);">
+
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+
                             <span class="tag tag-primary"><i class="fas fa-medal"></i> Tendance</span>
+
                             <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Fév 2026)</span>
+
                         </div>
+
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Top 10 Web Hacking Techniques 2025</h4>
+
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+
                             Bilan annuel des chercheurs de Burp Suite listant les nouvelles techniques et variations d'attaques découvertes l'an passé ciblant les applications web.
+
                         </p>
+
                         <a href="https://portswigger.net/research/top-10-web-hacking-techniques-of-2025" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+
                             Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+
                         </a>
+
                     </div>
-                    
+
                     <!-- Actu 3 -->
+
                     <div class="card" style="border-top: 4px solid var(--warning);">
+
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+
                             <span class="tag tag-warning"><i class="fas fa-key"></i> Authentification</span>
+
                             <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Guide)</span>
+
                         </div>
+
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Attacking JWT Authentication</h4>
+
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+
                             Ce guide explique comment des erreurs d'implémentation (ex: algorithme 'None' ou absence de vérification de signature) compromettent l'intégrité des tokens JSON Web.
+
                         </p>
+
                         <a href="https://portswigger.net/web-security/jwt" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+
                             Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+
                         </a>
+
                     </div>
 
                     <!-- Actu 4 -->
+
                     <div class="card" style="border-top: 4px solid var(--info);">
+
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+
                             <span class="tag tag-info"><i class="fas fa-shield-alt"></i> Protocole</span>
+
                             <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-rss"></i> PortSwigger (Jan 2025)</span>
+
                         </div>
+
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">OAuth 2.0 Vulnerabilities &amp; RFC 9700</h4>
+
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; flex-grow: 1;">
+
                             L'évolution de la sécurisation OAuth. Avec la RFC 9700, l'Implicit Grant est déconseillé, au profit du flux Authorization Code avec PKCE (Proof Key for Code Exchange) pour éviter les vols de session.
+
                         </p>
+
                         <a href="https://portswigger.net/web-security/oauth" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+
                             Lire l'article <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Tableau de veille -->
+
     <section class="section section-alt" id="sources">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-table text-gradient"></i> Tableau de Veille</h2>
+
                 <p>Sources consultées — incluant les articles Feedly et les ressources documentaires</p>
+
             </div>
-            
+
             <div class="table-wrapper">
+
                 <table class="table">
+
                     <thead>
+
                         <tr>
+
                             <th>Sujet / Article</th>
+
                             <th>Outil</th>
+
                             <th>Type</th>
+
                             <th>Source</th>
+
                             <th>Date</th>
+
                             <th>Mots-clés</th>
+
                         </tr>
+
                     </thead>
+
                     <tbody>
+
                         <tr>
+
                             <td><strong>SolarWinds RCE, Supply-Chain API &amp; SQL Injection (Agentic AI)</strong></td>
+
                             <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+
                             <td><span class="tag tag-danger">Actualité</span></td>
+
                             <td><a href="https://apisecurity.io" target="_blank">apisecurity.io</a></td>
+
                             <td>Mar 2026</td>
+
                             <td>Injection SQL, Supply-Chain, RCE, Agentic AI</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>Top 10 web hacking techniques of 2025</strong></td>
+
                             <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+
                             <td><span class="tag tag-primary">Recherche</span></td>
+
                             <td><a href="https://portswigger.net/research/top-10-web-hacking-techniques-of-2025" target="_blank">portswigger.net</a></td>
+
                             <td>Fév 2026</td>
+
                             <td>Hacking, Techniques, Web Security, 2025</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>Attacking JWT — Failles &amp; exploits courants</strong></td>
+
                             <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+
                             <td><span class="tag tag-warning">Guide technique</span></td>
+
                             <td><a href="https://portswigger.net/web-security/jwt" target="_blank">portswigger.net</a></td>
+
                             <td>2024</td>
+
                             <td>JWT, Tokens, Signature, Authentification</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>OAuth 2.0 Vulnerabilities &amp; RFC 9700 (nouvelles recommandations)</strong></td>
+
                             <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+
                             <td><span class="tag tag-primary">Recherche</span></td>
+
                             <td><a href="https://portswigger.net/web-security/oauth" target="_blank">portswigger.net</a></td>
+
                             <td>Jan 2025</td>
+
                             <td>OAuth 2.0, PKCE, Bearer Tokens, RFC 9700</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>Sécurité API 2024-2025</strong></td>
+
                             <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
+
                             <td><span class="tag">Article</span></td>
+
                             <td><a href="https://www.orsys.fr/orsys-lemag/comment-securiser-les-api-les-bonnes-pratiques/" target="_blank">orsys.fr</a></td>
+
                             <td>30/06/2025</td>
+
                             <td>Sécurité, Bots, Bonnes pratiques, Statistiques</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>API REST — Bonnes pratiques sécurité</strong></td>
+
                             <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
+
                             <td><span class="tag">Guide</span></td>
+
                             <td><a href="https://www.akamai.com/fr/blog/security/rest-api-security-best-practices" target="_blank">akamai.com</a></td>
+
                             <td>16/11/2023</td>
+
                             <td>REST, Architecture, DDoS, Authentication</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>Sécurisation des API — Rapport CLUSIF</strong></td>
+
                             <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
+
                             <td><span class="tag">PDF Officiel</span></td>
+
                             <td><a href="https://clusif.fr/wp-content/uploads/2024/10/20240304-Securisation-des-API.pdf" target="_blank">clusif.fr</a></td>
+
                             <td>Mars 2024</td>
+
                             <td>OAuth, JWT, OWASP Top 10, Standards</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>OWASP API Security Top 10</strong></td>
+
                             <td><span class="tag tag-primary"><i class="fas fa-rss"></i> Feedly</span></td>
+
                             <td><span class="tag">Documentation</span></td>
+
                             <td><a href="https://owasp.org/API-Security/" target="_blank">owasp.org</a></td>
+
                             <td>2024</td>
+
                             <td>OWASP, Top 10, Vulnérabilités API, Standards</td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong>API Security — Glossaire</strong></td>
+
                             <td><span class="tag"><i class="fas fa-search"></i> Recherche</span></td>
+
                             <td><span class="tag">Glossaire</span></td>
+
                             <td><a href="https://www.fortinet.com/fr/resources/cyberglossary/api-security" target="_blank">fortinet.com</a></td>
+
                             <td>2024</td>
+
                             <td>TLS, SSL, Tokens, Protection, Chiffrement</td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Conclusion -->
+
     <section class="section" id="conclusion">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-lightbulb text-gradient"></i> Conclusion</h2>
+
             </div>
-            
+
             <div class="card" style="max-width: 900px; margin: 0 auto;">
+
                 <p style="font-size: 1.1rem; color: var(--text-primary);">
+
                     Ma veille montre que la <strong>sécurité des APIs REST</strong> est un enjeu majeur en 2024-2025. 
+
                     Avec l'explosion du trafic bot malveillant (51% du trafic web) et les attaques de plus en plus 
+
                     sophistiquées, sécuriser les APIs n'est plus une option mais une nécessité absolue.
+
                 </p>
-                
+
                 <p>
+
                     Les <strong>bonnes pratiques fondamentales</strong> incluent l'utilisation systématique de HTTPS, 
+
                     l'authentification JWT avec tokens expirables, OAuth 2.0 pour les autorisations tierces, et le 
+
                     rate limiting pour prévenir les abus. Ces mesures doivent être implémentées dès la conception 
+
                     de l'API, pas après coup.
+
                 </p>
-                
+
                 <p>
+
                     Le <strong>CLUSIF</strong> et l'<strong>OWASP</strong> fournissent des recommandations officielles 
+
                     détaillées que tout développeur doit connaître. L'OWASP API Security Top 10 recense les 
+
                     vulnérabilités les plus critiques : authentification cassée, autorisation défaillante, 
+
                     exposition de données sensibles, et mauvaise configuration de sécurité.
+
                 </p>
-                
+
                 <p>
+
                     Les chiffres sont alarmants : 25% des endpoints API ne sont même pas documentés (APIs fantômes), 
+
                     et 44% du trafic bot avancé cible spécifiquement les APIs. Ces "shadow APIs" représentent 
+
                     des failles de sécurité majeures car elles échappent à la supervision des équipes.
+
                 </p>
-                
+
                 <div style="background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1.5rem;">
+
                     <strong style="color: var(--accent-primary);"><i class="fas fa-graduation-cap"></i> Ce que cette veille m'a apporté :</strong>
+
                     <p style="margin: 0.5rem 0 0;">
+
                         J'ai compris l'importance critique de la sécurité dans le développement d'APIs REST. 
+
                         Les connaissances acquises sur JWT, OAuth 2.0, HTTPS et le rate limiting me permettront 
+
                         de développer des APIs sécurisées dans mes futurs projets professionnels. J'ai également 
+
                         pris conscience que la sécurité ne doit jamais être une réflexion après coup, mais doit 
+
                         être intégrée dès la phase de conception. La veille technologique est indispensable pour 
+
                         rester à jour sur les nouvelles vulnérabilités et les solutions émergentes.
+
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Footer -->
+
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-content">
+
                 <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+
                 <div class="footer-links">
+
                     <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub">
+
                         <i class="fab fa-github"></i>
+
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+
+                    <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank" aria-label="LinkedIn">
+
                         <i class="fab fa-linkedin"></i>
+
                     </a>
+
                     <a href="mailto:mohamed.boukhatem@example.com" aria-label="Email">
+
                         <i class="fas fa-envelope"></i>
+
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
     <script src="js/main.js"></script>
+
 </body>
+
 </html>
+

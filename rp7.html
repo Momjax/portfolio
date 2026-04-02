@@ -1,372 +1,698 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RP7 - RoomBooking | Mohamed BOUKHATEM</title>
 
     <script>
+
         (function() {
+
             const theme = localStorage.getItem('theme') || 'dark';
+
             if (theme === 'light') {
+
                 document.documentElement.classList.add('light-mode');
+
             }
+
         })();
+
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
+
     <!-- Navigation -->
+
     <nav class="navbar" id="navbar">
+
         <div class="container navbar-inner">
+
             <a href="index.html" class="navbar-brand">
+
                 <span class="logo-icon"><i class="fas fa-code"></i></span>
+
                 MB
+
             </a>
+
             <ul class="navbar-nav" id="navbarNav">
+
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
+
                 <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+
                 <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+
                 <li>
+
                     <div class="theme-switch-wrapper">
+
                         <i class="fas fa-moon theme-icon"></i>
+
                         <label class="theme-switch">
+
                             <input type="checkbox" id="theme-toggle">
+
                             <span class="slider"></span>
+
                         </label>
+
                         <i class="fas fa-sun theme-icon"></i>
+
                     </div>
+
                 </li>
+
             </ul>
+
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+
                 <span></span><span></span><span></span>
+
             </button>
+
         </div>
+
     </nav>
 
     <!-- Page Hero -->
+
     <section class="page-hero">
+
         <div class="container">
+
             <div class="breadcrumb">
+
                 <a href="index.html"><i class="fas fa-home"></i></a>
+
                 <i class="fas fa-chevron-right"></i>
+
                 <a href="realisations.html">Réalisations</a>
+
                 <i class="fas fa-chevron-right"></i>
+
                 <span>RP7 - RoomBooking</span>
+
             </div>
+
             <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+
                 <div class="card-icon primary" style="width: 60px; height: 60px; font-size: 1.75rem;">
+
                     <i class="fas fa-calendar-check"></i>
+
                 </div>
+
                 <h1>RP7 - <span class="text-gradient">RoomBooking</span></h1>
+
             </div>
+
             <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+
                 Application web de réservation de salles — Symfony 7, Doctrine ORM, Docker, déploiement en production
+
             </p>
+
             <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+
                 <span class="status status-success"><i class="fas fa-check"></i> Terminé</span>
+
                 <span class="tag tag-primary">Symfony 7</span>
+
                 <span class="tag">Twig</span>
+
                 <span class="tag">Doctrine</span>
+
                 <span class="tag">Docker</span>
+
                 <span class="tag">MySQL</span>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Contenu -->
+
     <section class="section">
+
         <div class="container">
+
             <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+
                 <!-- Colonne principale -->
+
                 <div>
+
                     <!-- CONTEXTE -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-building"></i> 1. Contexte
+
                         </h3>
+
                         <h4>Situation</h4>
+
                         <p>
+
                             Ce projet a été réalisé dans le cadre de ma <strong>2ème année de BTS SIO SLAM</strong> à l'<strong>École IRIS Nice (MediaSchool)</strong>.
+
                             L'objectif était de développer une application web complète de gestion de réservation de salles, en suivant un cahier des charges découpé en <strong>20 jalons</strong>.
+
                         </p>
+
                         <h4>Organisation</h4>
+
                         <p>
+
                             Projet développé individuellement sur plusieurs semaines, avec une rigueur de gestion de projet : conventions de commits Git, guide de déploiement, tests unitaires avec PHPUnit.
+
                         </p>
+
                         <h4>Problématique</h4>
+
                         <p>
+
                             Comment concevoir une application web robuste permettant aux utilisateurs de réserver des salles de cours/réunion, avec gestion des rôles (administrateur / utilisateur), déploiement sur une VM Linux de l'école et sécurisation de l'accès ?
+
                         </p>
+
                     </div>
 
                     <!-- BESOIN -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-bullseye"></i> 2. Besoin & Objectifs
+
                         </h3>
+
                         <h4>Objectifs fonctionnels</h4>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> Authentification sécurisée (login / logout)</li>
+
                             <li><i class="fas fa-check"></i> Gestion des rôles : Administrateur et Utilisateur</li>
+
                             <li><i class="fas fa-check"></i> Réservation de salles avec créneaux horaires</li>
+
                             <li><i class="fas fa-check"></i> Panneau d'administration pour gérer salles et utilisateurs</li>
+
                             <li><i class="fas fa-check"></i> Tests unitaires automatisés (PHPUnit)</li>
+
                             <li><i class="fas fa-check"></i> Déploiement en production sur VM Linux de l'école</li>
+
                         </ul>
+
                         <h4 style="margin-top: 1.5rem;">Contraintes techniques</h4>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Framework Symfony 7 obligatoire</li>
+
                             <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> ORM Doctrine pour la base de données</li>
+
                             <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Containerisation avec Docker</li>
+
                             <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Déploiement SSH sur VM Linux (Apache / MariaDB)</li>
+
                             <li><i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> Conventions de commits à respecter</li>
+
                         </ul>
+
                     </div>
 
                     <!-- SOLUTION -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-lightbulb"></i> 3. Solution Proposée
+
                         </h3>
+
                         <h4>Stack technique</h4>
+
                         <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+
                                 <strong style="color: var(--accent-primary);"><i class="fab fa-php"></i> Symfony 7</strong>
+
                                 <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Framework PHP MVC complet</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+
                                 <strong style="color: var(--accent-primary);"><i class="fas fa-database"></i> Doctrine ORM</strong>
+
                                 <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Entités, migrations, repositories</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+
                                 <strong style="color: var(--accent-primary);"><i class="fas fa-paint-brush"></i> Twig</strong>
+
                                 <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Moteur de templates Symfony</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
+
                                 <strong style="color: var(--accent-primary);"><i class="fab fa-docker"></i> Docker</strong>
+
                                 <p style="font-size: 0.9rem; margin: 0.5rem 0 0;">Environnements dev et prod isolés</p>
+
                             </div>
+
                         </div>
 
                         <h4 style="margin-top: 1.5rem;">Architecture Symfony MVC</h4>
+
                         <div class="code-block" style="margin-bottom: 1.5rem;">
+
 <pre style="color: var(--text-secondary); font-size: 0.85rem;">
+
 src/
+
 ├── Controller/          <span style="color: var(--text-muted);">// Logique métier (routes)</span>
+
 ├── Entity/              <span style="color: var(--text-muted);">// Modèles Doctrine (User, Room, Booking)</span>
+
 ├── Repository/          <span style="color: var(--text-muted);">// Accès aux données</span>
+
 ├── Form/                <span style="color: var(--text-muted);">// Formulaires Symfony</span>
+
 templates/               <span style="color: var(--text-muted);">// Vues Twig</span>
+
 migrations/              <span style="color: var(--text-muted);">// Migrations Doctrine</span>
+
 tests/                   <span style="color: var(--text-muted);">// Tests PHPUnit</span>
+
 </pre>
+
                         </div>
 
                         <h4>Déploiement sur VM Linux (jalons 18-20)</h4>
+
                         <ul style="padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+
                             <li>Connexion SSH à la VM de l'école</li>
+
                             <li>Clone du dépôt Git, configuration <code>.env.local</code></li>
+
                             <li>Installation des dépendances <code>composer install --no-dev</code></li>
+
                             <li>Migration de la base de données + fixtures</li>
+
                             <li>Configuration VirtualHost Apache + HTTPS (Certbot)</li>
+
                         </ul>
+
                     </div>
 
                     <!-- RÉALISATION -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-code"></i> 4. Réalisation
+
                         </h3>
+
                         <h4>Ma contribution</h4>
+
                         <ul class="feature-list">
+
                             <li><i class="fas fa-check"></i> <strong>Entités Doctrine</strong> : User, Room, Booking avec relations ManyToOne</li>
+
                             <li><i class="fas fa-check"></i> <strong>Authentification Symfony Security</strong> : login, logout, rôles ROLE_USER / ROLE_ADMIN</li>
+
                             <li><i class="fas fa-check"></i> <strong>Migrations Doctrine</strong> et fixtures de données initiales</li>
+
                             <li><i class="fas fa-check"></i> <strong>Formulaires Symfony</strong> avec validation des données</li>
+
                             <li><i class="fas fa-check"></i> <strong>Tests unitaires PHPUnit</strong> sur les fonctionnalités clés</li>
+
                             <li><i class="fas fa-check"></i> <strong>Déploiement complet</strong> sur VM Linux de l'école</li>
+
                         </ul>
+
                         <h4 style="margin-top: 1.5rem;">Extrait de code — Entité Booking</h4>
+
                         <div class="code-block">
+
 <pre style="color: var(--text-secondary); font-size: 0.8rem;">
+
 <span style="color: var(--accent-primary);">#[ORM\Entity(repositoryClass:</span> BookingRepository::class<span style="color: var(--accent-primary);">)]</span>
+
 <span style="color: var(--accent-primary);">class</span> Booking
+
 {
+
     <span style="color: var(--accent-primary);">#[ORM\Id, ORM\GeneratedValue, ORM\Column]</span>
+
     <span style="color: var(--accent-primary);">private</span> ?int $id = <span style="color: var(--warning);">null</span>;
 
     <span style="color: var(--accent-primary);">#[ORM\ManyToOne(targetEntity:</span> Room::class<span style="color: var(--accent-primary);">)]</span>
+
     <span style="color: var(--accent-primary);">private</span> ?Room $room = <span style="color: var(--warning);">null</span>;
 
     <span style="color: var(--accent-primary);">#[ORM\ManyToOne(targetEntity:</span> User::class<span style="color: var(--accent-primary);">)]</span>
+
     <span style="color: var(--accent-primary);">private</span> ?User $user = <span style="color: var(--warning);">null</span>;
 
     <span style="color: var(--accent-primary);">#[ORM\Column(type:</span> <span style="color: var(--success);">'datetime'</span><span style="color: var(--accent-primary);">)]</span>
+
     <span style="color: var(--accent-primary);">private</span> ?\DateTimeInterface $startAt = <span style="color: var(--warning);">null</span>;
+
 }
+
 </pre>
+
                         </div>
+
                     </div>
 
                     <!-- TESTS -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-vial"></i> 5. Tests & Validation
+
                         </h3>
+
                         <div class="table-wrapper">
+
                             <table class="table">
+
                                 <thead>
+
                                     <tr><th>Test</th><th>Résultat attendu</th><th>Statut</th></tr>
+
                                 </thead>
+
                                 <tbody>
+
                                     <tr><td>Login administrateur</td><td>Accès au panneau admin</td><td><span class="status status-success">✓</span></td></tr>
+
                                     <tr><td>Login utilisateur</td><td>Accès aux réservations seulement</td><td><span class="status status-success">✓</span></td></tr>
+
                                     <tr><td>Création réservation</td><td>Créneau enregistré en BDD</td><td><span class="status status-success">✓</span></td></tr>
+
                                     <tr><td>Conflit de créneaux</td><td>Erreur bloquante</td><td><span class="status status-success">✓</span></td></tr>
+
                                     <tr><td>Tests PHPUnit</td><td>Suite verte</td><td><span class="status status-success">✓</span></td></tr>
+
                                     <tr><td>Déploiement VM Linux</td><td>Application accessible en prod</td><td><span class="status status-success">✓</span></td></tr>
+
                                 </tbody>
+
                             </table>
+
                         </div>
+
                     </div>
 
                     <!-- DIFFICULTÉS -->
+
                     <div class="card" style="margin-bottom: 2rem;">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-exclamation-circle"></i> 6. Difficultés & Solutions
+
                         </h3>
+
                         <div style="display: grid; gap: 1rem;">
+
                             <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--danger);">Problème 1 : Configuration Docker en production</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Les variables d'environnement différaient entre le dev et la VM de production.</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--success);">Solution :</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Utilisation de fichiers <code>.env</code>, <code>.env.dev</code> et <code>.env.local</code> séparés, avec guide de déploiement documenté.</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--danger); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--danger);">Problème 2 : Gestion des migrations Doctrine</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Conflits lors des modifications de schéma en cours de développement.</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--success);">Solution :</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Utilisation systématique de <code>doctrine:migrations:migrate</code> et suivi des versions avec Git.</p>
+
                             </div>
+
                         </div>
+
                     </div>
 
                     <!-- COMPÉTENCES BLOC 1 -->
+
                     <div class="card">
+
                         <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+
                             <i class="fas fa-graduation-cap"></i> 7. Compétences du Bloc 1 couvertes
+
                         </h3>
+
                         <div style="display: grid; gap: 1rem;">
+
                             <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--accent-primary);">B1.4 — Travailler en mode projet</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Suivi de 20 jalons, conventions de commits Git, guide de déploiement rédigé, planning respecté.</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--accent-primary);">B1.5 — Mettre à disposition un service informatique</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Déploiement complet sur VM Linux de l'école : Apache, MariaDB, HTTPS, gestion des droits.</p>
+
                             </div>
+
                             <div style="padding: 1rem; background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+
                                 <strong style="color: var(--accent-primary);">B1.6 — Organiser son développement professionnel</strong>
+
                                 <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Apprentissage autonome de Symfony 7, Doctrine ORM, PHPUnit et des pratiques DevOps (Docker, SSH, CI).</p>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
                 <!-- Sidebar -->
+
                 <div>
+
                     <div class="info-box" style="position: sticky; top: 100px;">
+
                         <h4 style="margin-bottom: 1.5rem; color: var(--accent-primary);">
+
                             <i class="fas fa-info-circle"></i> Informations
+
                         </h4>
+
                         <div class="info-item">
+
                             <i class="fas fa-calendar"></i>
+
                             <span class="info-label">Durée</span>
+
                             <span class="info-value">20 jalons</span>
+
                         </div>
+
                         <div class="info-item">
+
                             <i class="fas fa-user"></i>
+
                             <span class="info-label">Équipe</span>
+
                             <span class="info-value">Individuel</span>
+
                         </div>
+
                         <div class="info-item">
+
                             <i class="fas fa-school"></i>
+
                             <span class="info-label">Contexte</span>
+
                             <span class="info-value">Formation — 2ème année</span>
+
                         </div>
+
                         <div class="info-item">
+
                             <i class="fas fa-check-circle"></i>
+
                             <span class="info-label">Statut</span>
+
                             <span class="status status-success">Terminé</span>
+
                         </div>
 
                         <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
 
                         <h4 style="margin-bottom: 1rem;">Technologies</h4>
+
                         <div class="tags">
+
                             <span class="tag tag-primary">Symfony 7</span>
+
                             <span class="tag">PHP 8</span>
+
                             <span class="tag">Twig</span>
+
                             <span class="tag">Doctrine</span>
+
                             <span class="tag">MySQL</span>
+
                             <span class="tag">Docker</span>
+
                             <span class="tag">PHPUnit</span>
+
                             <span class="tag">Apache</span>
+
                         </div>
 
                         <hr style="border-color: var(--border-color); margin: 1.5rem 0;">
 
                         <h4 style="margin-bottom: 1rem;">Liens</h4>
+
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+
                             <a href="https://github.com/Momjax/RoomBooking" target="_blank" class="btn btn-secondary btn-sm" style="justify-content: center;">
+
                                 <i class="fab fa-github"></i> Code source
+
                             </a>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Navigation entre RP -->
+
     <section class="section section-alt">
+
         <div class="container">
+
             <div style="display: flex; justify-content: space-between; align-items: center;">
+
                 <a href="rp6.html" class="btn btn-secondary">
+
                     <i class="fas fa-arrow-left"></i> RP6 - ObsiLock
+
                 </a>
+
                 <a href="rp8.html" class="btn btn-primary">
+
                     RP8 - Andalounice V2 <i class="fas fa-arrow-right"></i>
+
                 </a>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Footer -->
+
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-content">
+
                 <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM</p>
+
                 <div class="footer-links">
+
                     <a href="https://github.com/Momjax" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
                     <a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
     <script src="js/main.js"></script>
+
 </body>
+
 </html>
+

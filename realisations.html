@@ -1,237 +1,495 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Réalisations Professionnelles | Mohamed BOUKHATEM</title>
-    
+
     <script>
+
         // Appliquer le thème instantanément pour éviter le flash
+
         (function() {
+
             const theme = localStorage.getItem('theme') || 'dark';
+
             if (theme === 'light') {
+
                 document.documentElement.classList.add('light-mode');
+
             }
+
         })();
+
     </script>
-    
+
     <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Custom CSS -->
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
+
     <!-- Navigation -->
+
     <nav class="navbar" id="navbar">
+
         <div class="container navbar-inner">
+
             <a href="index.html" class="navbar-brand">
+
                 <span class="logo-icon"><i class="fas fa-code"></i></span>
+
                 MB
+
             </a>
-            
+
             <ul class="navbar-nav" id="navbarNav">
+
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
+
                 <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+
                 <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+
                 <li>
+
                     <div class="theme-switch-wrapper">
+
                         <i class="fas fa-moon theme-icon"></i>
+
                         <label class="theme-switch">
+
                             <input type="checkbox" id="theme-toggle">
+
                             <span class="slider"></span>
+
                         </label>
+
                         <i class="fas fa-sun theme-icon"></i>
+
                     </div>
+
                 </li>
+
             </ul>
-            
+
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+
                 <span></span>
+
                 <span></span>
+
                 <span></span>
+
             </button>
+
         </div>
+
     </nav>
 
     <!-- Page Hero -->
+
     <section class="page-hero">
+
         <div class="container">
+
             <div class="breadcrumb">
+
                 <a href="index.html"><i class="fas fa-home"></i></a>
+
                 <i class="fas fa-chevron-right"></i>
+
                 <span>Réalisations Professionnelles</span>
+
             </div>
+
             <h1>Réalisations <span class="text-gradient">Professionnelles</span></h1>
+
             <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+
                 Découvrez les projets développés dans le cadre de ma formation BTS SIO SLAM, 
+
                 démontrant mes compétences en développement logiciel.
+
             </p>
+
         </div>
+
     </section>
 
     <!-- Tableau de Synthèse -->
+
     <section class="section">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-table text-gradient"></i> Tableau de Synthèse</h2>
+
                 <p>Vue d'ensemble de mes réalisations professionnelles et des compétences SLAM associées.</p>
+
             </div>
-            
+
             <div class="table-wrapper">
+
                 <table class="table">
+
                     <thead>
+
                         <tr>
+
                             <th>Projet</th>
+
                             <th>Contexte</th>
+
                             <th>Technologies</th>
+
                             <th>Compétences Bloc 1</th>
+
                             <th>Statut</th>
+
                             <th>Détails</th>
+
                         </tr>
+
                     </thead>
+
                     <tbody>
+
+                        <!-- En-tête de section 1ère année -->
+
+                        <tr style="background: rgba(88, 166, 255, 0.05); border-bottom: 2px solid var(--accent-primary);">
+
+                            <td colspan="6" style="padding: 1.5rem 1rem;">
+
+                                <h4 style="margin: 0; color: var(--accent-primary);"><i class="fas fa-calendar-alt"></i> Projets de Première Année</h4>
+
+                            </td>
+
+                        </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--accent-primary);">RP1 - Classcord</strong><br><small class="text-muted">Messagerie instantanée</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">Semaine Java</small></td>
+
                             <td><div class="tags"><span class="tag tag-warning">Java</span><span class="tag">Swing</span><span class="tag">TCP</span></div></td>
+
                             <td><small><strong>B1.4</strong> Mode projet<br><strong>B1.5</strong> Service info<br><strong>B1.6</strong> Dév. professionnel</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp1.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--warning);">RP2 - NutriFit</strong><br><small class="text-muted">Application nutrition</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">Projet pédagogique</small></td>
+
                             <td><div class="tags"><span class="tag tag-danger">HTML5</span><span class="tag tag-warning">JS</span><span class="tag">Bootstrap</span></div></td>
+
                             <td><small><strong>B1.3</strong> Présence en ligne<br><strong>B1.4</strong> Mode projet<br><strong>B1.6</strong> Dév. professionnel</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp2.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--success);">RP3 - Jeu d'Arène</strong><br><small class="text-muted">Jeu multijoueur Java</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">Projet Java</small></td>
+
                             <td><div class="tags"><span class="tag tag-warning">Java</span><span class="tag">Swing</span><span class="tag">Sockets</span></div></td>
+
                             <td><small><strong>B1.4</strong> Mode projet<br><strong>B1.5</strong> Service info<br><strong>B1.6</strong> Dév. professionnel</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp3.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
                         <tr>
                             <td><strong style="color: var(--info);">RP4 - E-Consulat</strong><br><small class="text-muted">Site consulaire avec RDV</small></td>
-                            <td><span class="tag">Formation</span><br><small class="text-muted">2ème année</small></td>
+                            <td><span class="tag">Formation</span><br><small class="text-muted">1ère année</small></td>
                             <td><div class="tags"><span class="tag tag-success">PHP</span><span class="tag tag-danger">HTML5</span><span class="tag">MySQL</span></div></td>
                             <td><small><strong>B1.2</strong> Assistance<br><strong>B1.3</strong> Présence en ligne<br><strong>B1.4</strong> Mode projet</small></td>
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
                             <td><a href="rp4.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
                         </tr>
+
+                        <!-- En-tête de section 2ème année -->
+
+                        <tr style="background: rgba(88, 166, 255, 0.05); border-bottom: 2px solid var(--accent-primary);">
+
+                            <td colspan="6" style="padding: 1.5rem 1rem;">
+
+                                <h4 style="margin: 0; color: var(--accent-primary);"><i class="fas fa-calendar-check"></i> Projets de Deuxième Année</h4>
+
+                            </td>
+
+                        </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--warning);">RP5 - MediaStock</strong><br><small class="text-muted">Gestion de prêt matériel</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">2ème année</small></td>
+
                             <td><div class="tags"><span class="tag tag-danger">HTML5</span><span class="tag tag-warning">JS</span><span class="tag">localStorage</span></div></td>
+
                             <td><small><strong>B1.1</strong> Patrimoine info.<br><strong>B1.4</strong> Mode projet<br><strong>B1.5</strong> Service info</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp5.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--success);">RP6 - ObsiLock</strong><br><small class="text-muted">Coffre-fort numérique (API REST)</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">TP API REST</small></td>
+
                             <td><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">Slim 4</span><span class="tag">Docker</span></div></td>
+
                             <td><small><strong>B1.1</strong> Patrimoine info.<br><strong>B1.5</strong> Service info<br><strong>B1.6</strong> Dév. professionnel</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp6.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--accent-primary);">RP7 - RoomBooking</strong><br><small class="text-muted">Réservation de salles</small></td>
+
                             <td><span class="tag">Formation</span><br><small class="text-muted">20 jalons — IRIS Nice</small></td>
+
                             <td><div class="tags"><span class="tag tag-primary">Symfony 7</span><span class="tag">Doctrine</span><span class="tag">Docker</span></div></td>
+
                             <td><small><strong>B1.4</strong> Mode projet<br><strong>B1.5</strong> Service info<br><strong>B1.6</strong> Dév. professionnel</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp7.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                         <tr>
+
                             <td><strong style="color: var(--success);">RP8 - Andalounice V2</strong><br><small class="text-muted">Refonte site associatif</small></td>
+
                             <td><span class="tag">Client réel</span><br><small class="text-muted">Association</small></td>
+
                             <td><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">MySQL</span><span class="tag">Google Maps</span></div></td>
+
                             <td><small><strong>B1.1</strong> Patrimoine info.<br><strong>B1.3</strong> Présence en ligne<br><strong>B1.5</strong> Service info</small></td>
+
                             <td><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></td>
+
                             <td><a href="rp8.html" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a></td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
-            
-            <!-- Lien vers le tableau PDF -->
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="files/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024 (1).pdf" target="_blank" class="btn btn-secondary">
-                    <i class="fas fa-file-pdf"></i>
-                    Télécharger le tableau de synthèse (PDF)
-                </a>
+
+            <!-- Aperçu et Lien vers le tableau PDF -->
+
+            <div class="card" style="margin-top: 3rem; text-align: center; border-top: 4px solid var(--accent-primary);">
+
+                <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">
+
+                    <i class="fas fa-file-invoice" style="color: var(--accent-primary);"></i> Document Officiel de Synthèse (E4)
+
+                </h3>
+
+                <!-- Viewport PDF -->
+
+                <div style="width: 100%; max-width: 1000px; height: 750px; margin: 0 auto 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);">
+
+                    <object data="files/tableau_synthese_E4.pdf" type="application/pdf" width="100%" height="100%">
+
+                        <iframe src="files/tableau_synthese_E4.pdf" width="100%" height="100%" style="border: none;">
+
+                            <p>Votre navigateur ne supporte pas l'affichage natif des PDF. Vous pouvez <a href="files/tableau_synthese_E4.pdf" target="_blank" style="color: var(--accent-primary); font-weight: bold;">télécharger le PDF ici</a>.</p>
+
+                        </iframe>
+
+                    </object>
+
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+
+                    <a href="files/tableau_synthese_E4.pdf" target="_blank" class="btn btn-secondary">
+
+                        <i class="fas fa-external-link-alt"></i> Ouvrir en plein écran
+
+                    </a>
+
+                    <a href="files/tableau_synthese_E4.pdf" download="Tableau_Synthese_E4_BOUKHATEM.pdf" class="btn btn-primary">
+
+                        <i class="fas fa-download"></i> Télécharger le PDF
+
+                    </a>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Compétences SLAM couvertes -->
+
     <section class="section section-alt">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-check-circle text-gradient"></i> Compétences Bloc 1</h2>
+
                 <p>Les 6 compétences obligatoires du Bloc 1 du référentiel BTS SIO, couvertes par mes réalisations.</p>
+
             </div>
-            
+
             <div class="grid grid-3" style="gap: 2rem;">
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-server"></i> B1.1</h4>
+
                     <strong style="font-size: 0.9rem;">Gérer le patrimoine informatique</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Inventaire, gestion des licences et équipements</p>
+
                     <div style="margin-top: 1rem;"><span class="tag tag-warning">RP5</span> <span class="tag">RP6</span> <span class="tag">RP8</span></div>
+
                 </div>
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-headset"></i> B1.2</h4>
+
                     <strong style="font-size: 0.9rem;">Répondre aux incidents et demandes</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Support, tickets, assistance utilisateurs</p>
+
                     <div style="margin-top: 1rem;"><span class="tag tag-primary">RP4</span></div>
+
                 </div>
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-globe"></i> B1.3</h4>
+
                     <strong style="font-size: 0.9rem;">Développer la présence en ligne</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Site web, réseaux sociaux, visibilité numérique</p>
+
                     <div style="margin-top: 1rem;"><span class="tag tag-warning">RP2</span> <span class="tag">RP4</span> <span class="tag tag-success">RP8</span></div>
+
                 </div>
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-tasks"></i> B1.4</h4>
+
                     <strong style="font-size: 0.9rem;">Travailler en mode projet</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Gantt, sprints, documentation, réunions</p>
+
                     <div style="margin-top: 1rem;"><span class="tag">RP1</span> <span class="tag">RP2</span> <span class="tag">RP3</span> <span class="tag">RP4</span> <span class="tag">RP5</span> <span class="tag tag-primary">RP7</span></div>
+
                 </div>
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-rocket"></i> B1.5</h4>
+
                     <strong style="font-size: 0.9rem;">Mettre à disposition un service</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Déploiement, mise en prod, livraison</p>
+
                     <div style="margin-top: 1rem;"><span class="tag">RP1</span> <span class="tag">RP3</span> <span class="tag">RP5</span> <span class="tag">RP6</span> <span class="tag tag-primary">RP7</span> <span class="tag tag-success">RP8</span></div>
+
                 </div>
+
                 <div class="card">
+
                     <h4 style="color: var(--accent-primary); margin-bottom: 1rem;"><i class="fas fa-graduation-cap"></i> B1.6</h4>
+
                     <strong style="font-size: 0.9rem;">Organiser son développement professionnel</strong>
+
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Veille, formations, certifications</p>
+
                     <div style="margin-top: 1rem;"><span class="tag">RP1</span> <span class="tag">RP2</span> <span class="tag">RP3</span> <span class="tag">RP6</span> <span class="tag tag-primary">RP7</span></div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- Liste des Réalisations -->
+
     <section class="section" id="projects">
+
         <div class="container">
+
             <div class="section-header">
+
                 <h2><i class="fas fa-project-diagram text-gradient"></i> Détail des Projets</h2>
+
                 <p>Cliquez sur un projet pour accéder à sa fiche détaillée complète.</p>
+
             </div>
-            
+
+            <h3 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem; display: inline-block;">
+
+                <i class="fas fa-calendar-alt" style="color: var(--accent-primary);"></i> Première Année de BTS
+
+            </h3>
+
             <div class="grid grid-3">
                 <!-- RP1 - Classcord -->
                 <div class="card" style="position: relative; overflow: hidden;">
@@ -278,7 +536,7 @@
                 <div class="card" style="position: relative; overflow: hidden;">
                     <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--info);"></div>
                     <div class="card-header">
-                        <div class="card-icon info"><i class="fas fa-landmark"></i></div>
+                        <div class="card-icon info"><i class="fas fa-passport"></i></div>
                         <div><h4 class="card-title">RP4 - E-Consulat</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
                     </div>
                     <p style="margin-bottom: 1rem;">Site web consulaire PHP/MySQL pour la prise de rendez-vous en ligne et la gestion des démarches administratives.</p>
@@ -288,85 +546,173 @@
                         <a href="https://github.com/Momjax/consulat" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
-                <!-- RP5 - MediaStock -->
-                <div class="card" style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--warning);"></div>
-                    <div class="card-header">
-                        <div class="card-icon warning"><i class="fas fa-box"></i></div>
-                        <div><h4 class="card-title">RP5 - MediaStock</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Application web de gestion de prêt de matériel audiovisuel — inventaire, états, historique et filtres en temps réel.</p>
-                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-danger">HTML5</span><span class="tag tag-warning">JS</span><span class="tag">localStorage</span></div></div>
-                    <div style="display: flex; gap: 0.5rem;">
-                        <a href="rp5.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
-                        <a href="https://github.com/Momjax/MediaStock" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-                <!-- RP6 - ObsiLock -->
-                <div class="card" style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-primary);"></div>
-                    <div class="card-header">
-                        <div class="card-icon primary"><i class="fas fa-lock"></i></div>
-                        <div><h4 class="card-title">RP6 - ObsiLock</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Coffre-fort numérique : API REST PHP (Slim 4) avec Docker, gestion quota, upload/download/delete de fichiers.</p>
-                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">Slim 4</span><span class="tag">Docker</span><span class="tag">Postman</span></div></div>
-                    <div style="display: flex; gap: 0.5rem;">
-                        <a href="rp6.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
-                        <a href="https://github.com/Momjax/ObsiLock" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-                <!-- RP7 - RoomBooking -->
-                <div class="card" style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-primary);"></div>
-                    <div class="card-header">
-                        <div class="card-icon primary"><i class="fas fa-calendar-check"></i></div>
-                        <div><h4 class="card-title">RP7 - RoomBooking</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Application Symfony 7 de réservation de salles avec authentification, rôles, migrations Doctrine et déploiement sur VM Linux.</p>
-                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-primary">Symfony 7</span><span class="tag">Doctrine</span><span class="tag">Docker</span><span class="tag">PHPUnit</span></div></div>
-                    <div style="display: flex; gap: 0.5rem;">
-                        <a href="rp7.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
-                        <a href="https://github.com/Momjax/RoomBooking" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-                <!-- RP8 - Andalounice V2 -->
-                <div class="card" style="position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--success);"></div>
-                    <div class="card-header">
-                        <div class="card-icon success"><i class="fas fa-music"></i></div>
-                        <div><h4 class="card-title">RP8 - Andalounice V2</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Refonte complète du site associatif Andalounice — modernisation, correction des informations, Google Maps, mise en production.</p>
-                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">MySQL</span><span class="tag tag-danger">HTML5</span><span class="tag">Google Maps</span></div></div>
-                    <div style="display: flex; gap: 0.5rem;">
-                        <a href="rp8.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
-                        <a href="https://github.com/Momjax/andalouniceV2" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
             </div>
+
+            <h3 style="color: var(--text-primary); margin-top: 4rem; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem; display: inline-block;">
+
+                <i class="fas fa-calendar-check" style="color: var(--accent-primary);"></i> Deuxième Année de BTS
+
+            </h3>
+
+            <div class="grid grid-3">
+
+                <!-- RP5 - MediaStock -->
+
+                <div class="card" style="position: relative; overflow: hidden;">
+
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--warning);"></div>
+
+                    <div class="card-header">
+
+                        <div class="card-icon warning"><i class="fas fa-box"></i></div>
+
+                        <div><h4 class="card-title">RP5 - MediaStock</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
+
+                    </div>
+
+                    <p style="margin-bottom: 1rem;">Application web de gestion de prêt de matériel audiovisuel — inventaire, états, historique et filtres en temps réel.</p>
+
+                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-danger">HTML5</span><span class="tag tag-warning">JS</span><span class="tag">localStorage</span></div></div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+
+                        <a href="rp5.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
+
+                        <a href="https://github.com/Momjax/MediaStock" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
+
+                    </div>
+
+                </div>
+
+                <!-- RP6 - ObsiLock -->
+
+                <div class="card" style="position: relative; overflow: hidden;">
+
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-primary);"></div>
+
+                    <div class="card-header">
+
+                        <div class="card-icon primary"><i class="fas fa-lock"></i></div>
+
+                        <div><h4 class="card-title">RP6 - ObsiLock</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
+
+                    </div>
+
+                    <p style="margin-bottom: 1rem;">Coffre-fort numérique : API REST PHP (Slim 4) avec Docker, gestion quota, upload/download/delete de fichiers.</p>
+
+                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">Slim 4</span><span class="tag">Docker</span><span class="tag">Postman</span></div></div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+
+                        <a href="rp6.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
+
+                        <a href="https://github.com/Momjax/ObsiLock" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
+
+                    </div>
+
+                </div>
+
+                <!-- RP7 - RoomBooking -->
+
+                <div class="card" style="position: relative; overflow: hidden;">
+
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-primary);"></div>
+
+                    <div class="card-header">
+
+                        <div class="card-icon primary"><i class="fas fa-calendar-check"></i></div>
+
+                        <div><h4 class="card-title">RP7 - RoomBooking</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
+
+                    </div>
+
+                    <p style="margin-bottom: 1rem;">Application Symfony 7 de réservation de salles avec authentification, rôles, migrations Doctrine et déploiement sur VM Linux.</p>
+
+                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-primary">Symfony 7</span><span class="tag">Doctrine</span><span class="tag">Docker</span><span class="tag">PHPUnit</span></div></div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+
+                        <a href="rp7.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
+
+                        <a href="https://github.com/Momjax/RoomBooking" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
+
+                    </div>
+
+                </div>
+
+                <!-- RP8 - Andalounice V2 -->
+
+                <div class="card" style="position: relative; overflow: hidden;">
+
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--success);"></div>
+
+                    <div class="card-header">
+
+                        <div class="card-icon success"><i class="fas fa-music"></i></div>
+
+                        <div><h4 class="card-title">RP8 - Andalounice V2</h4><span class="status status-success"><i class="fas fa-check"></i> Terminé</span></div>
+
+                    </div>
+
+                    <p style="margin-bottom: 1rem;">Refonte complète du site associatif Andalounice — modernisation, correction des informations, Google Maps, mise en production.</p>
+
+                    <div style="margin-bottom: 1.5rem;"><div class="tags"><span class="tag tag-success">PHP</span><span class="tag">MySQL</span><span class="tag tag-danger">HTML5</span><span class="tag">Google Maps</span></div></div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+
+                        <a href="rp8.html" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Fiche détaillée</a>
+
+                        <a href="https://github.com/Momjax/andalouniceV2" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> Code</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
     <!-- Footer -->
+
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-content">
+
                 <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+
                 <div class="footer-links">
+
                     <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub">
+
                         <i class="fab fa-github"></i>
+
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+
+                    <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank" aria-label="LinkedIn">
+
                         <i class="fab fa-linkedin"></i>
+
                     </a>
+
                     <a href="/cdn-cgi/l/email-protection#65060a0b1104061125001d04081509004b060a08" aria-label="Email">
+
                         <i class="fas fa-envelope"></i>
+
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
     <!-- JavaScript -->
+
     <script d
+
