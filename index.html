@@ -1,799 +1,1372 @@
 <!DOCTYPE html>
 
+
+
 <html lang="fr">
+
+
 
 <head>
 
+
+
     <meta charset="UTF-8">
+
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
     <title>Mohamed BOUKHATEM | Portfolio BTS SIO SLAM</title>
+
+
 
     <script>
 
+
+
         // Appliquer le thème instantanément pour éviter le flash
+
+
 
         (function () {
 
+
+
             const theme = localStorage.getItem('theme') || 'dark';
+
+
 
             if (theme === 'light') {
 
+
+
                 document.documentElement.classList.add('light-mode');
+
+
 
             }
 
+
+
         })();
+
+
 
     </script>
 
+
+
     <!-- Fonts -->
+
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+
+
     <link
-
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-
         rel="stylesheet">
+
+
 
     <!-- Font Awesome -->
 
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
 
     <!-- Custom CSS -->
 
+
+
     <link rel="stylesheet" href="css/style.css">
+
+
 
 </head>
 
+
+
 <body>
+
+
 
     <!-- Navigation -->
 
+
+
     <nav class="navbar" id="navbar">
+
+
 
         <div class="container navbar-inner">
 
+
+
             <a href="index.html" class="navbar-brand">
+
+
 
                 <span class="logo-icon"><i class="fas fa-code"></i></span>
 
+
+
                 MB
+
+
 
             </a>
 
+
+
             <ul class="navbar-nav" id="navbarNav">
+
+
 
                 <li><a href="index.html" class="nav-link active">Accueil</a></li>
 
+
+
                 <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+
+
 
                 <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
 
+
+
+                <li><a href="synthese.html" class="nav-link">Tableau E4</a></li>
+
+
+
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+
+
 
                 <li>
 
+
+
                     <div class="theme-switch-wrapper">
+
+
 
                         <i class="fas fa-moon theme-icon"></i>
 
+
+
                         <label class="theme-switch">
+
+
 
                             <input type="checkbox" id="theme-toggle">
 
+
+
                             <span class="slider"></span>
+
+
 
                         </label>
 
+
+
                         <i class="fas fa-sun theme-icon"></i>
 
+
+
                     </div>
+
+
 
                 </li>
 
+
+
             </ul>
+
+
 
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
 
-                <span></span>
+
 
                 <span></span>
 
+
+
                 <span></span>
+
+
+
+                <span></span>
+
+
 
             </button>
 
+
+
         </div>
+
+
 
     </nav>
 
+
+
     <!-- Hero Section -->
+
+
 
     <section class="hero">
 
+
+
         <div class="container">
+
+
 
             <div style="display: grid; grid-template-columns: 1.15fr auto; gap: 4rem; align-items: center;">
 
+
+
                 <div class="hero-content">
+
+
 
                     <div class="hero-badge">
 
+
+
                         <i class="fas fa-graduation-cap"></i>
+
+
 
                         BTS SIO option SLAM
 
+
+
                     </div>
+
+
 
                     <h1 class="hero-title">
 
+
+
                         Mohamed<br>
+
+
 
                         <span class="text-gradient">BOUKHATEM</span>
 
+
+
                     </h1>
+
+
 
                     <p class="hero-subtitle">
 
+
+
                         Développeur Full Stack en formation, passionné par le développement web et les technologies
+
+
 
                         innovantes.
 
+
+
                         Je crée des applications modernes et performantes.
 
+
+
                     </p>
+
+
 
                     <div class="hero-buttons">
 
+
+
                         <a href="realisations.html" class="btn btn-primary">
+
+
 
                             <i class="fas fa-folder-open"></i>
 
+
+
                             Voir mes réalisations
 
+
+
                         </a>
+
+
 
                         <a href="files/Mohamed Boukhatem (2).pdf" target="_blank" class="btn btn-secondary">
 
+
+
                             <i class="fas fa-download"></i>
+
+
 
                             Télécharger mon CV
 
+
+
                         </a>
 
+
+
                     </div>
+
+
 
                     <div class="hero-stats">
 
+
+
                         <div class="stat-item">
 
-                            <div class="stat-value">6</div>
+
+
+                            <div class="stat-value">7</div>
+
+
 
                             <div class="stat-label">Projets réalisés</div>
 
+
+
                         </div>
 
+
+
                         <div class="stat-item">
+
+
 
                             <div class="stat-value">2026</div>
 
+
+
                             <div class="stat-label">Diplôme prévu</div>
 
+
+
                         </div>
+
+
 
                         <div class="stat-item">
 
+
+
                             <div class="stat-value">Full Stack</div>
+
+
 
                             <div class="stat-label">Spécialisation</div>
 
+
+
                         </div>
+
+
 
                     </div>
 
+
+
                 </div>
+
+
 
                 <div class="hero-avatar">
 
+
+
                     <div class="avatar-wrapper">
+
+
 
                         <div class="avatar-inner">
 
-                            <img src="images/mohamed.png" alt="Mohamed BOUKHATEM"
 
+
+                            <img src="images/mohamed.png" alt="Mohamed BOUKHATEM"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
+
+
 
                         </div>
 
+
+
                     </div>
+
+
 
                 </div>
 
+
+
             </div>
+
+
 
         </div>
 
+
+
     </section>
+
+
 
     <!-- À propos -->
 
+
+
     <section class="section section-alt" id="about">
+
+
 
         <div class="container">
 
+
+
             <div class="section-header">
+
+
 
                 <h2>À propos de <span class="text-gradient">moi</span></h2>
 
+
+
                 <p>Découvrez mon parcours et ma formation en développement informatique.</p>
 
+
+
             </div>
+
+
 
             <div class="grid grid-2" style="gap: 3rem;">
 
+
+
                 <div class="card">
+
+
 
                     <div class="card-header">
 
+
+
                         <div class="card-icon primary">
+
+
 
                             <i class="fas fa-user-graduate"></i>
 
+
+
                         </div>
 
+
+
                         <div>
+
+
 
                             <h3 class="card-title">Mon Profil</h3>
 
+
+
                             <span class="card-badge">Étudiant en alternance</span>
+
+
 
                         </div>
 
+
+
                     </div>
 
+
+
                     <p>
+
+
 
                         Je suis un développeur web junior actuellement en formation en <strong>BTS SIO option
 
+
+
                             SLAM</strong>
 
-                        (Solutions Logicielles et Applications Métiers) à l'<a href="https://ecoleiris.fr/nice"
 
+
+                        (Solutions Logicielles et Applications Métiers) à l'<a href="https://ecoleiris.fr/nice"
                             target="_blank">École IRIS Nice</a>.
+
+
 
                     </p>
 
+
+
                     <p>
+
+
 
                         Passionné par le développement web et les technologies innovantes, j'ai acquis des compétences
 
+
+
                         solides
+
+
 
                         en conception et développement d'applications web, ainsi qu'une expérience concrète à travers
 
+
+
                         divers
+
+
 
                         projets personnels et scolaires.
 
+
+
                     </p>
 
+
+
                     <p>
+
+
 
                         Je recherche activement une expérience professionnelle en entreprise pour mettre en pratique mes
 
+
+
                         compétences et participer à des projets concrets.
+
+
 
                     </p>
 
+
+
                 </div>
+
+
 
                 <div class="card">
 
+
+
                     <div class="card-header">
 
+
+
                         <div class="card-icon success">
+
+
 
                             <i class="fas fa-graduation-cap"></i>
 
+
+
                         </div>
 
+
+
                         <div>
+
+
 
                             <h3 class="card-title">BTS SIO SLAM</h3>
 
+
+
                             <span class="card-badge">Services Informatiques aux Organisations</span>
+
+
 
                         </div>
 
+
+
                     </div>
+
+
 
                     <p>
 
+
+
                         Le <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et Applications Métiers)
+
+
 
                         forme aux métiers du développement d'applications. Cette formation couvre la conception,
 
+
+
                         le développement, la maintenance et l'évolution d'applications informatiques.
+
+
 
                     </p>
 
+
+
                     <ul class="feature-list">
+
+
 
                         <li><i class="fas fa-check"></i> Développement d'applications web et mobiles</li>
 
+
+
                         <li><i class="fas fa-check"></i> Gestion de bases de données</li>
+
+
 
                         <li><i class="fas fa-check"></i> Conception et modélisation (UML, MCD)</li>
 
+
+
                         <li><i class="fas fa-check"></i> Gestion de projets informatiques</li>
+
+
 
                         <li><i class="fas fa-check"></i> Sécurisation des applications</li>
 
+
+
                     </ul>
+
+
 
                 </div>
 
+
+
             </div>
+
+
 
         </div>
 
+
+
     </section>
+
+
 
     <!-- Compétences -->
 
+
+
     <section class="section" id="skills">
+
+
 
         <div class="container">
 
+
+
             <div class="section-header">
+
+
 
                 <h2>Mes <span class="text-gradient">Compétences</span></h2>
 
+
+
                 <p>Technologies et outils maîtrisés au cours de ma formation.</p>
 
+
+
             </div>
+
+
 
             <div class="grid grid-2" style="gap: 2rem;">
 
+
+
                 <!-- Compétences techniques -->
+
+
 
                 <div class="card">
 
+
+
                     <div class="card-header">
 
+
+
                         <div class="card-icon primary">
+
+
 
                             <i class="fas fa-code"></i>
 
+
+
                         </div>
+
+
 
                         <h3 class="card-title">Compétences Techniques</h3>
 
+
+
                     </div>
+
+
 
                     <div style="margin-bottom: 1.5rem;">
 
+
+
                         <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+
+
 
                             <i class="fas fa-laptop-code"></i> Langages de programmation
 
+
+
                         </h4>
 
+
+
                         <div class="tags">
+
                             <span class="tag tag-primary">HTML</span>
+
                             <span class="tag tag-primary">CSS</span>
+
                             <span class="tag tag-primary">JavaScript</span>
+
                             <span class="tag tag-success">PHP</span>
+
                             <span class="tag tag-warning">Python</span>
+
                             <span class="tag tag-danger">Java</span>
+
                         </div>
+
+
 
                     </div>
 
+
+
                     <div style="margin-bottom: 1.5rem;">
 
+
+
                         <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+
+
 
                             <i class="fas fa-database"></i> Bases de données
 
+
+
                         </h4>
 
+
+
                         <div class="tags">
+
                             <span class="tag tag-info">SQL</span>
+
                         </div>
+
+
 
                     </div>
 
+
+
                     <div style="margin-bottom: 1.5rem;">
+
                         <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+
                             <i class="fas fa-brush"></i> Maquettage
+
                         </h4>
+
                         <div class="tags">
+
                             <span class="tag tag-warning">Figma</span>
+
                         </div>
+
                     </div>
+
                     <div style="margin-bottom: 1.5rem;">
+
                         <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+
                             <i class="fas fa-tools"></i> Outils de développement
+
                         </h4>
+
                         <div class="tags">
+
                             <span class="tag tag-warning">Visual Studio Code</span>
+
                             <span class="tag tag-warning">Git / GitHub</span>
+
                             <span class="tag tag-warning">Docker</span>
+
                             <span class="tag tag-warning">Eclipse</span>
+
                         </div>
+
                     </div>
+
+
 
                     <div>
 
+
+
                         <h4 style="color: var(--accent-primary); font-size: 0.95rem; margin-bottom: 0.75rem;">
+
+
 
                             <i class="fas fa-project-diagram"></i> Modélisation
 
+
+
                         </h4>
 
+
+
                         <div class="tags">
+
                             <span class="tag">UML</span>
+
                             <span class="tag">Merise 1 / Merise 2</span>
+
                         </div>
+
+
 
                     </div>
 
+
+
                 </div>
+
+
 
                 <!-- Compétences métier -->
 
+
+
                 <div class="card">
+
+
 
                     <div class="card-header">
 
+
+
                         <div class="card-icon success">
+
+
 
                             <i class="fas fa-briefcase"></i>
 
+
+
                         </div>
+
+
 
                         <h3 class="card-title">Compétences Métier SLAM</h3>
 
+
+
                     </div>
+
+
 
                     <ul class="feature-list">
 
+
+
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Analyse des besoins</strong> et rédaction de cahiers des charges
 
+
+
                         </li>
+
+
 
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Conception</strong> et développement d'applications web et logicielles
 
+
+
                         </li>
+
+
 
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Maintenance corrective</strong> et évolutive des applications
 
+
+
                         </li>
+
+
 
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Gestion et exploitation</strong> de bases de données
 
+
+
                         </li>
+
+
 
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Participation à un projet</strong> informatique en équipe (Agile/Scrum)
 
+
+
                         </li>
+
+
 
                         <li>
 
+
+
                             <i class="fas fa-check"></i>
+
+
 
                             <strong>Documentation technique</strong> et veille technologique
 
+
+
                         </li>
+
+
 
                     </ul>
 
-                    <div
 
+
+                    <div
                         style="background: rgba(88, 166, 255, 0.1); border: 1px solid rgba(88, 166, 255, 0.2); border-radius: var(--radius-md); padding: 1rem; margin-top: 1.5rem;">
+
+
 
                         <p style="margin: 0; font-size: 0.9rem;">
 
+
+
                             <i class="fas fa-laptop"></i> <strong>Environnements :</strong> Windows, Linux
+
+
 
                         </p>
 
+
+
                     </div>
+
+
 
                 </div>
 
+
+
             </div>
+
+
 
         </div>
 
+
+
     </section>
+
+
 
     <!-- Aperçu des réalisations -->
 
+
+
     <section class="section section-alt" id="projects-preview">
+
+
 
         <div class="container">
 
+
+
             <div class="section-header">
+
+
 
                 <h2>Mes <span class="text-gradient">Réalisations</span></h2>
 
+
+
                 <p>Découvrez les projets réalisés dans le cadre de ma formation BTS SIO SLAM.</p>
 
-            </div>
 
-            <div class="grid grid-3">
-
-                <!-- RP1 -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <div class="card-icon primary">
-
-                            <i class="fas fa-comments"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4 class="card-title">Classcord</h4>
-
-                            <span class="card-badge">Java / Swing</span>
-
-                        </div>
-
-                    </div>
-
-                    <p>Application de messagerie instantanée en Java avec communication réseau TCP et interface
-
-                        graphique Swing.</p>
-
-                    <a href="rp1.html" class="btn btn-secondary btn-sm">
-
-                        <i class="fas fa-arrow-right"></i> Voir le projet
-
-                    </a>
-
-                </div>
-
-                <!-- RP2 -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <div class="card-icon warning">
-
-                            <i class="fas fa-apple-alt"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4 class="card-title">NutriFit</h4>
-
-                            <span class="card-badge">Web / JavaScript</span>
-
-                        </div>
-
-                    </div>
-
-                    <p>Application web de suivi nutritionnel avec calcul BMR, recherche d'aliments et génération de
-
-                        profils personnalisés.</p>
-
-                    <a href="rp2.html" class="btn btn-secondary btn-sm">
-
-                        <i class="fas fa-arrow-right"></i> Voir le projet
-
-                    </a>
-
-                </div>
-
-                <!-- RP3 -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <div class="card-icon success">
-
-                            <i class="fas fa-gamepad"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4 class="card-title">Jeu d'Arène</h4>
-
-                            <span class="card-badge">Java / Réseau</span>
-
-                        </div>
-
-                    </div>
-
-                    <p>Jeu multijoueur en Java avec architecture client-serveur, interface graphique et synchronisation
-
-                        temps réel.</p>
-
-                    <a href="rp3.html" class="btn btn-secondary btn-sm">
-
-                        <i class="fas fa-arrow-right"></i> Voir le projet
-
-                    </a>
-
-                </div>
 
             </div>
+
+
 
             <div style="text-align: center; margin-top: 3rem;">
 
+
+
                 <a href="realisations.html" class="btn btn-primary btn-lg">
+
+
 
                     <i class="fas fa-folder-open"></i>
 
+
+
                     Voir toutes les réalisations
+
+
 
                 </a>
 
+
+
             </div>
+
+
 
         </div>
 
+
+
     </section>
+
+
 
     <!-- Contact -->
 
+
+
     <section class="section" id="contact">
 
+
+
         <div class="container">
+
+
 
             <div class="section-header">
 
+
+
                 <h2>Me <span class="text-gradient">Contacter</span></h2>
+
+
 
                 <p>N'hésitez pas à me contacter pour toute question ou opportunité professionnelle.</p>
 
+
+
             </div>
+
+
 
             <div style="max-width: 600px; margin: 0 auto;">
 
+
+
                 <div class="card">
+
+
 
                     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
+
+
                         <div class="grid grid-2">
 
+
+
                             <div class="form-group">
+
+
 
                                 <label class="form-label" for="name">Nom</label>
 
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom"
 
+
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom"
                                     required>
 
+
+
                             </div>
+
+
 
                             <div class="form-group">
 
+
+
                                 <label class="form-label" for="email">Email</label>
 
-                                <input type="email" class="form-control" id="email" name="email"
 
+
+                                <input type="email" class="form-control" id="email" name="email"
                                     placeholder="votre@email.com" required>
+
+
 
                             </div>
 
+
+
                         </div>
 
+
+
                         <div class="form-group">
+
+
 
                             <label class="form-label" for="subject">Sujet</label>
 
-                            <input type="text" class="form-control" id="subject" name="subject"
 
+
+                            <input type="text" class="form-control" id="subject" name="subject"
                                 placeholder="Sujet de votre message" required>
 
+
+
                         </div>
+
+
 
                         <div class="form-group">
 
+
+
                             <label class="form-label" for="message">Message</label>
 
-                            <textarea class="form-control" id="message" name="message" placeholder="Votre message..."
 
+
+                            <textarea class="form-control" id="message" name="message" placeholder="Votre message..."
                                 required></textarea>
+
+
 
                         </div>
 
+
+
                         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+
+
 
                             <i class="fas fa-paper-plane"></i>
 
+
+
                             Envoyer le message
+
+
 
                         </button>
 
+
+
                     </form>
+
+
 
                 </div>
 
+
+
             </div>
 
+
+
         </div>
+
+
 
     </section>
 
+
+
     <!-- Footer -->
+
+
 
     <footer class="footer">
 
+
+
         <div class="container">
+
+
 
             <div class="footer-content">
 
-                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.</p>
+
+
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.<br>
+
+
+
+                    <a href="mentions-legales.html" class="text-muted"
+                        style="text-decoration: underline; margin-right: 15px;">Mentions Légales</a>
+
+
+
+                    <a href="sitemap.html" class="text-muted" style="text-decoration: underline;">Plan du site</a>
+                </p>
+
+
 
                 <div class="footer-links">
 
+
+
                     <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub">
+
+
 
                         <i class="fab fa-github"></i>
 
+
+
                     </a>
+
+
 
                     <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank" aria-label="LinkedIn">
 
+
+
                         <i class="fab fa-linkedin"></i>
 
+
+
                     </a>
+
+
 
                     <a href="/cdn-cgi/l/email-protection#89eae6e7fde8eafdc9ecf1e8e4f9e5eca7eae6e4" aria-label="Email">
 
+
+
                         <i class="fas fa-envelope"></i>
+
+
 
                     </a>
 
+
+
                 </div>
+
+
 
             </div>
 
+
+
         </div>
+
+
 
     </footer>
 
+
+
     <!-- JavaScript -->
+
+
 
     <script src="js/main.js"></script>
 
+
+
 </body>
+
+
 
 </html>

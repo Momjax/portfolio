@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan du site | Mohamed BOUKHATEM</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span> MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="synthese.html" class="nav-link">Synthèse E4</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+            </ul>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-sitemap text-gradient"></i> Plan du site</h2>
+            </div>
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="index.html" style="font-size: 1.25rem; font-weight: bold; color: var(--accent-primary);"><i class="fas fa-home"></i> Accueil</a>
+                        <ul style="list-style: none; padding-left: 2rem; margin-top: 0.5rem; border-left: 2px solid var(--border-color);">
+                            <li><a href="index.html#competences" class="nav-link" style="padding: 0.5rem 0;">Mes Compétences</a></li>
+                            <li><a href="index.html#contact" class="nav-link" style="padding: 0.5rem 0;">Me Contacter</a></li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="realisations.html" style="font-size: 1.25rem; font-weight: bold; color: var(--accent-primary);"><i class="fas fa-folder-open"></i> Réalisations Professionnelles</a>
+                        <ul style="list-style: none; padding-left: 2rem; margin-top: 0.5rem; border-left: 2px solid var(--border-color);">
+                            <li><a href="rp1.html" class="nav-link" style="padding: 0.5rem 0;">RP1 - Classcord</a></li>
+                            <li><a href="rp2.html" class="nav-link" style="padding: 0.5rem 0;">RP2 - NutriFit</a></li>
+                            <li><a href="rp4.html" class="nav-link" style="padding: 0.5rem 0;">RP4 - E-Consulat</a></li>
+                            <li><a href="rp3.html" class="nav-link" style="padding: 0.5rem 0;">RP5 - MediaStock</a></li>
+                            <li><a href="rp5.html" class="nav-link" style="padding: 0.5rem 0;">RP6 - ObsiLock</a></li>
+                            <li><a href="rp6.html" class="nav-link" style="padding: 0.5rem 0;">RP7 - RoomBooking</a></li>
+                            <li><a href="rp7.html" class="nav-link" style="padding: 0.5rem 0;">RP8 - Andalounice</a></li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="synthese.html" style="font-size: 1.25rem; font-weight: bold; color: var(--accent-primary);"><i class="fas fa-file-invoice"></i> Tableau de Synthèse E4</a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="veille.html" style="font-size: 1.25rem; font-weight: bold; color: var(--accent-primary);"><i class="fas fa-satellite-dish"></i> Veille Technologique</a>
+                    </li>
+                    <li>
+                        <a href="mentions-legales.html" style="font-size: 1.25rem; font-weight: bold; color: var(--accent-primary);"><i class="fas fa-balance-scale"></i> Mentions Légales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.<br>
+                <a href="mentions-legales.html" class="text-muted" style="text-decoration: underline; margin-right: 15px;">Mentions Légales</a>
+                <a href="sitemap.html" class="text-muted" style="text-decoration: underline;">Plan du site</a></p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

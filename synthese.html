@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Synthèse E4 | Mohamed BOUKHATEM</title>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .synth-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .synth-table th {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        .synth-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        .synth-table tr:hover {
+            background: rgba(88, 166, 255, 0.05);
+        }
+        .synth-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+            color: var(--accent-primary);
+            width: 25%;
+        }
+        .synth-table td.check {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .info-box {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 2rem;
+        }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
+            margin-top: 2rem;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="synthese.html" class="nav-link active">Tableau E4</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <i class="fas fa-moon theme-icon"></i>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun theme-icon"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Tableau E4</span>
+            </div>
+            <h1>Tableau de <span class="text-gradient">Synthèse E4</span></h1>
+            <p class="text-secondary" style="max-width: 800px; margin: 1rem auto 0;">
+                Récapitulatif des compétences certifiées pour l'épreuve E4 "Mise en œuvre d'une solution applicative" (BTS SIO Option SLAM).
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Tableau -->
+    <section class="section">
+        <div class="container">
+            <div class="info-box">
+                <h4 style="margin-top: 0; color: var(--accent-primary);"><i class="fas fa-check-circle"></i> Correspondance Globale</h4>
+                <p style="margin-bottom: 0;">Ce tableau démontre la couverture exhaustive de l'ensemble des compétences exigées par le référentiel du BTS SIO (Bloc 1) au travers de mes réalisations professionnelles, aussi bien dans un cadre de formation (projets pédagogiques) qu'en situation professionnelle (stages).</p>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="synth-table">
+                    <thead>
+                        <tr>
+                            <th>Réalisation professionnelle (intitulé et liste des productions)</th>
+                            <th>Période</th>
+                            <th style="font-size: 0.75rem;">Gérer le patrimoine informatique (B1.1)</th>
+                            <th style="font-size: 0.75rem;">Répondre aux incidents et demandes d'assistance (B1.2)</th>
+                            <th style="font-size: 0.75rem;">Développer la présence en ligne de l'organisation (B1.3)</th>
+                            <th style="font-size: 0.75rem;">Travailler en mode projet (B1.4)</th>
+                            <th style="font-size: 0.75rem;">Mettre à disposition un service informatique (B1.5)</th>
+                            <th style="font-size: 0.75rem;">Organiser son développement professionnel (B1.6)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- === Réalisations en cours de formation === -->
+                        <tr style="background: rgba(88, 166, 255, 0.08);">
+                            <td colspan="8" style="font-weight: 600; color: var(--accent-primary); padding: 0.6rem 1rem; font-size: 0.85rem; letter-spacing: 0.03em;">
+                                <i class="fas fa-graduation-cap"></i> Réalisations en cours de formation
+                            </td>
+                        </tr>
+                        <!-- RP1 - Classcord -->
+                        <tr>
+                            <td><strong>RP1 – Classcord</strong> – Client de messagerie</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">16/09/24 au 27/09/24</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+                        <!-- RP2 - Nutrifit -->
+                        <tr>
+                            <td><strong>RP2 – Nutrifit</strong> – Application nutritionnelle</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">07/10/24 au 25/10/24</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+                        <!-- RP3 - MediaStock -->
+                        <tr>
+                            <td><strong>RP3 – MediaStock</strong> – Gestion de matériel</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">06/01/25 au 31/01/25</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+                        <!-- RP5 - ObsiLock -->
+                        <tr>
+                            <td><strong>RP5 – ObsiLock</strong> – Coffre-fort numérique</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">03/02/25 au 28/02/25</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+                        <!-- RP6 - RoomBooking -->
+                        <tr>
+                            <td><strong>RP6 – RoomBooking</strong> – Réservation d'espaces</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">03/03/25 au 18/04/25</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+
+                        <!-- === Réalisations en milieu professionnel – 1ère année === -->
+                        <tr style="background: rgba(40, 167, 69, 0.08);">
+                            <td colspan="8" style="font-weight: 600; color: var(--success); padding: 0.6rem 1rem; font-size: 0.85rem; letter-spacing: 0.03em;">
+                                <i class="fas fa-briefcase"></i> Réalisations en milieu professionnel – 1ère année
+                            </td>
+                        </tr>
+                        <!-- RP4 - E-Consulat -->
+                        <tr>
+                            <td><strong>RP4 – E-Consulat</strong> – Site consulaire avec RDV</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">25/11/24 au 20/12/24</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+
+                        <!-- === Réalisations en milieu professionnel – 2ème année === -->
+                        <tr style="background: rgba(40, 167, 69, 0.08);">
+                            <td colspan="8" style="font-weight: 600; color: var(--success); padding: 0.6rem 1rem; font-size: 0.85rem; letter-spacing: 0.03em;">
+                                <i class="fas fa-briefcase"></i> Réalisations en milieu professionnel – 2ème année
+                            </td>
+                        </tr>
+                        <!-- RP7 - Andalounice -->
+                        <tr>
+                            <td><strong>RP7 – Andalounice</strong> – Refonte site association</td>
+                            <td style="font-size:0.8rem; white-space:nowrap;">24/04/25 au 23/05/25</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card" style="margin-top: 3rem; text-align: center; border-top: 4px solid var(--accent-primary);">
+                <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                    <i class="fas fa-file-invoice" style="color: var(--accent-primary);"></i> Aperçu du Document Officiel (E4)
+                </h3>
+                
+                <div style="width: 100%; max-width: 1000px; height: 750px; margin: 0 auto 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <object data="files/TABLEU DE SYNTHESE FINAL MOMO.pdf" type="application/pdf" width="100%" height="100%">
+                        <iframe src="files/TABLEU DE SYNTHESE FINAL MOMO.pdf" width="100%" height="100%" style="border: none;">
+                            <p>Votre navigateur ne supporte pas l'affichage natif des PDF. Vous pouvez <a href="files/TABLEU DE SYNTHESE FINAL MOMO.pdf" target="_blank" style="color: var(--accent-primary); font-weight: bold;">télécharger le PDF ici</a>.</p>
+                        </iframe>
+                    </object>
+                </div>
+
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">La version officielle pour le jury peut être téléchargée ci-dessous.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="files/TABLEU DE SYNTHESE FINAL MOMO.pdf" target="_blank" class="btn btn-secondary" style="border: 1px solid var(--border-color); color: var(--text-primary); text-decoration: none; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
+                        <i class="fas fa-external-link-alt"></i> Ouvrir en plein écran
+                    </a>
+                    <a href="files/TABLEU DE SYNTHESE FINAL MOMO.pdf" class="btn-download" download="Tableau_Synthese_E4_BOUKHATEM.pdf" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Télécharger le Tableau E4 Bilan (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mohamed BOUKHATEM. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="sitemap.html">Plan du site</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

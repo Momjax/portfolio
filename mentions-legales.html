@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | Mohamed BOUKHATEM</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon"><i class="fas fa-code"></i></span> MB
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="synthese.html" class="nav-link">Synthèse E4</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+            </ul>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <h1 style="color: var(--accent-primary); margin-bottom: 2rem;"><i class="fas fa-balance-scale"></i> Mentions Légales</h1>
+            <div class="card">
+                <h3 style="color: var(--info);">1. Éditeur du site</h3>
+                <p>Ce site est édité par Mohamed BOUKHATEM, étudiant en BTS SIO option SLAM.</p>
+                <h3 style="color: var(--info); margin-top: 1.5rem;">2. Hébergement</h3>
+                <p>Ce site est hébergé par GitHub Pages. Pour toute question, veuillez nous contacter via la page d'accueil.</p>
+                <h3 style="color: var(--info); margin-top: 1.5rem;">3. Propriété Intellectuelle</h3>
+                <p>L'ensemble de ce site relève des législations française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés.</p>
+                <h3 style="color: var(--info); margin-top: 1.5rem;">4. Données Personnelles / RGPD</h3>
+                <p>Ce site peut collecter des données via le formulaire de contact. Ces données sont utilisées uniquement pour répondre aux demandes et ne sont jamais cédées à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et d'effacement de vos données.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="text-muted">© 2025 Mohamed BOUKHATEM - Portfolio BTS SIO SLAM. Tous droits réservés.<br>
+                <a href="mentions-legales.html" class="text-muted" style="text-decoration: underline; margin-right: 15px;">Mentions Légales</a>
+                <a href="sitemap.html" class="text-muted" style="text-decoration: underline;">Plan du site</a></p>
+                <div class="footer-links">
+                    <a href="https://github.com/Momjax" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamed-boukhatem/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
